@@ -41,6 +41,10 @@ int main() {
         BeginDrawing();
         plug_update(&plug);
         if (IsKeyPressed(KEY_H)) load_plug();
+        if (IsKeyPressed(KEY_R)) {
+            load_plug();
+            plug_init(&plug);
+        }
         EndDrawing();
     }
     return 0;

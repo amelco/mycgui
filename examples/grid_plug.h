@@ -9,13 +9,13 @@
 #define SCREEN_HEIGHT 600
 #define TOP_GAP 50
 #define LEFT_GAP 50
-#define CELL_SIZE 100
 
 // State to be stored and transefered between reloads.
 // In case any of these structs change, hotreload will not work
 //  and another full compilation needs to be done.
 typedef struct {
     Vector2 gridQty;
+    int cell_size;
     Container debugMenu;
     Checkbox chkGridCoords;
     Checkbox chkMouseCoords;

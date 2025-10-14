@@ -2,25 +2,25 @@
 #include "grid_plug.h"
 
 
-IVector2 screenToGrid(float pxX, float pxY) {
+IVector2 screenToGrid(float pxX, float pxY, int cell_size) {
     return (IVector2){
-        .x = ceil(pxX/CELL_SIZE), 
-        .y = ceil(pxY/CELL_SIZE)
+        .x = ceil(pxX/cell_size), 
+        .y = ceil(pxY/cell_size)
     };
 }
-Vector2 gridToScreen(int x, int y) {
+Vector2 gridToScreen(int x, int y, int cell_size) {
     return (Vector2){
-        .x = x * CELL_SIZE - LEFT_GAP - x+1,
-        .y = y * CELL_SIZE - TOP_GAP - y+1
+        .x = x * cell_size - LEFT_GAP - x+1,
+        .y = y * cell_size - TOP_GAP - y+1
     };
 }
 
-void drawGrid(int rows, int cols) {
+void drawGrid(int rows, int cols, int cell_size) {
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
-            float x = LEFT_GAP + i*(CELL_SIZE - 1);
-            float y = LEFT_GAP + j*(CELL_SIZE - 1);
-            DrawRectangleLines(x, y, CELL_SIZE, CELL_SIZE, RED);
+            float x = LEFT_GAP + i*(cell_size - 1);
+            float y = LEFT_GAP + j*(cell_size - 1);
+            DrawRectangleLines(x, y, cell_size, cell_size, RED);
         }
     }
 }
@@ -38,11 +38,11 @@ void drawGridCoords(Plug plug) {
     int cols = ceil(plug.gridQty.y);
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
-            float x = LEFT_GAP + i*(CELL_SIZE - 1);
-            float y = LEFT_GAP + j*(CELL_SIZE - 1);
+            float x = LEFT_GAP + i*(plug.cell_size - 1);
+            float y = LEFT_GAP + j*(plug.cell_size - 1);
             char coord[128] = {0};
-            IVector2 gcoord = screenToGrid(x, y);
-            Vector2 scoord = gridToScreen(gcoord.x, gcoord.y);
+            IVector2 gcoord = screenToGrid(x, y, plug.cell_size);
+            Vector2 scoord = gridToScreen(gcoord.x, gcoord.y, plug.cell_size);
             sprintf(coord, "  %4.2f, %4.2f\n  (%d, %d)\n  %4.2f, %4.2f", x, y, gcoord.x, gcoord.y, scoord.x, scoord.y);
             DrawText(coord, x, y, 10, GREEN);
         }
@@ -52,8 +52,9 @@ void drawGridCoords(Plug plug) {
 
 
 void plug_init(Plug* plug) {
-    plug->gridQty.x = 5;
-    plug->gridQty.y = 3;
+    plug->gridQty.x = 20;
+    plug->gridQty.y = 10;
+    plug->cell_size = 30;
 
     plug->showGridCoords = false;
     plug->showMouseCoords = false;
@@ -73,7 +74,7 @@ void plug_init(Plug* plug) {
 
 void plug_update(Plug* plug) {
     ClearBackground(GRAY);
-    drawGrid(plug->gridQty.x, plug->gridQty.y);
+    drawGrid(plug->gridQty.x, plug->gridQty.y, plug->cell_size);
 
     if (plug->showGridCoords) drawGridCoords(*plug);
 
