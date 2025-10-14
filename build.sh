@@ -1,9 +1,4 @@
 #!/bin/bash
-
 set -xe
 
-# gcc -g -O3 -o test mg_test.c -I raylib/build/raylib/include -L raylib/build/raylib -l:libraylib.a -lm
-
-#gcc -g -O3 -o $1 $1.c -I raylib/build/raylib/include -L raylib/build/raylib -l:libraylib.a -lm
-
-gcc -g -O3 -o $1 $1.c -I ./ -L ./ -l:libraylib.a -lm
+gcc -g -o ./bin/$1 -I./include -I./src -I./lib ./examples/$1.c -L./lib -L./include -l:libraylib.a -lm
