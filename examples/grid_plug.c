@@ -1,19 +1,6 @@
-#ifndef GRID_PLUG_H
-#define  GRID_PLUG_H
+#include <math.h>
+#include "grid_plug.h"
 
-#include "raylib.h"
-//
-// State to be stored and transefered between reloads.
-// In case any of these structs change, hotreload will not work
-//  and another full compilation needs to be done.
-typedef struct {
-    Vector2 gridQty;
-    Container debugMenu;
-    Checkbox chkGridCoords;
-    Checkbox chkMouseCoords;
-    bool showGridCoords;
-    bool showMouseCoords;
-} Plug;
 
 IVector2 screenToGrid(float pxX, float pxY) {
     return (IVector2){
@@ -63,8 +50,6 @@ void drawGridCoords(Plug plug) {
 }
 
 
-typedef void (*plug_init_t)(Plug* plug);
-typedef void (*plug_update_t)(Plug* plug);
 
 void plug_init(Plug* plug) {
     plug->gridQty.x = 5;
@@ -90,6 +75,8 @@ void plug_update(Plug* plug) {
     ClearBackground(GRAY);
     drawGrid(plug->gridQty.x, plug->gridQty.y);
 
+    if (plug->showGridCoords) drawGridCoords(*plug);
+
     // debug menu -----
     if (IsKeyPressed(KEY_M)) plug->debugMenu.visible = !plug->debugMenu.visible;
     if (plug->debugMenu.visible) {
@@ -104,9 +91,6 @@ void plug_update(Plug* plug) {
     // ----------------
 
     if (plug->showMouseCoords) drawMouseCoords();
-    if (plug->showGridCoords) drawGridCoords(*plug);
 
     if (IsKeyPressed(KEY_Q)) exit(0);
 }
-
-#endif //GRID_PLUG_H
