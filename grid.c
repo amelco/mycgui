@@ -9,6 +9,8 @@
 #define LEFT_GAP 50
 #define CELL_SIZE 100
 
+#include "guiObjects.h"
+
 // switches
 bool showGridCoords = false;
 bool showMouseCoords = true;
@@ -51,24 +53,6 @@ void drawMouseCoords() {
     DrawText(coord, pos.x, pos.y - textHeight, textHeight, GREEN);
 }
 
-
-Container debugMenu = {
-    .visible = true,
-    .pos = (Vector2){ 3*SCREEN_WIDTH/4, 20},
-    .size = (Vector2){150, 200},
-};
-
-Checkbox chkGridCoords = {
-    .pos = {0},
-    .padding = (Vector2){ 5, 25 },
-    .checked = false
-};
-
-Checkbox chkMouseCoords = {
-    .pos = {0},
-    .padding = (Vector2){ 5, 40 },
-    .checked = false
-};
 
 int main() {
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Test application of mygui.h");
