@@ -1,5 +1,5 @@
-#ifndef MYGUI_H
-#define MYGUI_H
+#ifndef MYGUI_H_
+#define MYGUI_H_
 
 #include "raylib.h"
 
@@ -52,7 +52,6 @@ void mg_textbox(Textbox* tb);
 void mg_container(Container* cc, const char* title);
 void mg_checkbox(Checkbox* chk, const char* text);
 
-#endif // MYGUI_H
 
 
 ///////////////////////////////////////////////////
@@ -88,7 +87,7 @@ void mg_container(Container* cc, const char* title) {
         DrawRectangleV(cc->pos, cc->size, DEFAULT_BACKGROUND_COLOR);
 
         // title bar
-        DrawRectangle(cc->pos.x, cc->pos.y, cc->size.x, titleHeight, RED);
+        DrawRectangle(cc->pos.x, cc->pos.y, cc->size.x, titleHeight, BLUE);
         Rectangle closeArea = {
             .x = cc->pos.x + cc->size.x - titleHeight,
             .y = cc->pos.y,
@@ -212,3 +211,5 @@ void mg_textbox(Textbox* tb) {
 
 
 #endif // MYGUI_IMPLEMENTATION
+
+#endif // MYGUI_H
