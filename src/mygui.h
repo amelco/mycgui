@@ -1,15 +1,44 @@
 #ifndef MYGUI_H_
 #define MYGUI_H_
 
+#include <stdlib.h>
+#include <string.h>
 #include "raylib.h"
 
-#define STRING_BUILDER_IMPLEMENTATION
-#include "string_builder.h"
+#include "cstr.h"
+
+// TODO: replace all string builder functions with string.h ones, using arena instead of malloc
+//#define STRING_BUILDER_IMPLEMENTATION
+//#include "string_builder.h"
 
 #define DEFAULT_FOREGROUND_COLOR LIGHTGRAY
 #define DEFAULT_BACKGROUND_COLOR (Color){240, 240, 240, 255}
 #define DEFAULT_TEXT_COLOR       (Color){20,   20,  20, 255}
 #define FONT_SIZE 15
+
+// Arena
+typedef struct {
+    int capacity;
+    int size;
+    void* memory;
+} Arena;
+void arena_init(Arena* arena, int size) {
+    arena->capacity = size;
+    arena->size = 0;
+    arena->memory = calloc(size, sizeof(char));
+}
+void* arena_alloc(Arena* arena, size_t size) {
+    // TODO: make it dynamic
+    if (arena->size > arena->capacity) {
+        TraceLog(LOG_ERROR, "Arena reached its limit. Maybe is a memory leak? Allocate more memory on its initialization.");
+        exit(1);
+    }
+    void* r = arena->memory + size;
+    arena->size += size;
+    return r;
+}
+/////////////
+
 
 typedef struct IVector2 {
     int x;
@@ -22,16 +51,23 @@ typedef struct {
   bool active;
   int selected_index;
   bool selected_item;
-  String selected_text;
-  StringList items;
+  char* selected_text;
+  CstrList items;
 } Dropdown;
 
+//typedef struct {
+  //Vector2 pos;
+  //Vector2 size;
+  //bool active;
+  //int extra_chars;
+  //String text;
+//} Textbox;
 typedef struct {
   Vector2 pos;
   Vector2 size;
   bool active;
   int extra_chars;
-  String text;
+  char* text;   // max. text size = 512 chars
 } Textbox;
 
 typedef struct {
@@ -148,7 +184,7 @@ void mg_dropdown(Dropdown* dd) {
     }
 
     if (dd->active) {
-        for (int i=0; i < dd->items.size; ++i) {
+        for (int i=0; i < dd->items.len; ++i) {
             int x = pos.x;
             int y = pos.y + (i+1) * FONT_SIZE;
             int sx = size.x;
@@ -157,7 +193,7 @@ void mg_dropdown(Dropdown* dd) {
             if (hovered) DrawRectangle(x, y, sx, sy+2, GRAY);
 
             DrawRectangleLines(x, y, sx, sy+2, GRAY);
-            DrawText(dd->items.items[i].content, x + 5, y, FONT_SIZE, DEFAULT_TEXT_COLOR);
+            DrawText(dd->items.items[i], x + 5, y, FONT_SIZE, DEFAULT_TEXT_COLOR);
             if (hovered && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
                 dd->selected_item = true;
                 dd->active = false;
@@ -167,21 +203,19 @@ void mg_dropdown(Dropdown* dd) {
         }
     } else {
         if (dd->selected_item) {
-            DrawText(dd->items.items[dd->selected_index].content, pos.x + 5, pos.y, FONT_SIZE, DEFAULT_TEXT_COLOR);
+            DrawText(dd->items.items[dd->selected_index], pos.x + 5, pos.y, FONT_SIZE, DEFAULT_TEXT_COLOR);
         }
     }
 }
 
-// TODO(Andre): consertar parte do código que oculta o texto quando ele passa do tamanho da caixa de texto
-// TODO(Andre): construir cursor e fazer andar no texto, apagar e adicionar conteúdo.
 void mg_textbox(Textbox* tb) {
-  int txt_size = MeasureText(tb->text.content, FONT_SIZE);
+  int txt_size = MeasureText(tb->text, FONT_SIZE);
   int folga = 15;
-  bool big = (txt_size - tb->size.x + folga) >= 0;
+  bool big = (txt_size - tb->size.x + folga) >= 0; // text is bigger than the length of the textbox
   if (big) {
   }
   DrawRectangleLines(tb->pos.x, tb->pos.y, tb->size.x, FONT_SIZE, tb->active ? BLUE : GRAY);
-  DrawText(tb->text.content, tb->pos.x + 5, tb->pos.y, FONT_SIZE, DEFAULT_TEXT_COLOR);
+  DrawText(tb->text, tb->pos.x + 5, tb->pos.y, FONT_SIZE, DEFAULT_TEXT_COLOR);
 
   bool hovered = is_hovered(tb->pos, tb->size);
   if (hovered && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
@@ -191,7 +225,7 @@ void mg_textbox(Textbox* tb) {
   if (tb->active) {
     // blinking cursor
     bool blinktime = ((int)(GetTime() * 5) % 2) > 0;
-    printf("%d/n", blinktime);
+    //printf("%d/n", blinktime);
     DrawLine(tb->pos.x + txt_size + 5+1, tb->pos.y+2, tb->pos.x + txt_size + 5+1, tb->pos.y + FONT_SIZE-2, blinktime ? BLACK : DEFAULT_BACKGROUND_COLOR);
 
     int k = GetKeyPressed();
@@ -199,9 +233,9 @@ void mg_textbox(Textbox* tb) {
     {
       tb->active = false;
     }
-    else if (k == KEY_BACKSPACE && tb->text.length > 0)
+    else if (k == KEY_BACKSPACE && strlen(tb->text) > 0)
     {
-      tb->text = string_substring(tb->text, 0, tb->text.length - 1);
+        tb->text[strlen(tb->text) - 2] = '\0';
       if (big && tb->extra_chars > 0) tb->extra_chars -=1;
     }
   }

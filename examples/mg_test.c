@@ -1,3 +1,5 @@
+#define CSTR_IMPLEMENTATION
+#include "cstr.h"
 #define MYGUI_IMPLEMENTATION
 #include "mygui.h"
 
@@ -5,12 +7,12 @@ int main() {
   Dropdown dd = {0};
   dd.pos = (Vector2){10, 50};
   dd.size = (Vector2){100, 0};
-  dd.items = string_split(string_new("primeiro|segundo"), '|');
+  dd.items = cstr_split("primeiro|segundo", '|');
 
   Textbox tb = {0};
   tb.pos = (Vector2){10, 100};
   tb.size = (Vector2){100, 0};
-  tb.text = string_new("Um texto");
+  tb.text = "Um teaxto";
 
   InitWindow(800, 600, "Test application of mygui.h");
   while (!WindowShouldClose())
@@ -23,9 +25,11 @@ int main() {
     
     mg_dropdown(&dd);
     mg_textbox(&tb);
+    //if (tb.text != NULL) TraceLog(LOG_INFO, tb.text);
+
+    if (IsKeyPressed(KEY_Q)) return 0;
     EndDrawing();
   }
-  stringlist_free(&dd.items);
-  string_free(&tb.text);
+  cstrlist_free(dd.items);
   return 0;
 }

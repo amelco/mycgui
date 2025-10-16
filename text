@@ -1,0 +1,12 @@
+src/mygui.h:212:  int txt_size = MeasureText(tb->text, FONT_SIZE);
+src/mygui.h:214:  bool big = (txt_size - tb->size.x + folga) >= 0; // text is bigger than the length of the textbox
+src/mygui.h:217:  DrawRectangleLines(tb->pos.x, tb->pos.y, tb->size.x, FONT_SIZE, tb->active ? BLUE : GRAY);
+src/mygui.h:218:  DrawText(tb->text, tb->pos.x + 5, tb->pos.y, FONT_SIZE, DEFAULT_TEXT_COLOR);
+src/mygui.h:220:  bool hovered = is_hovered(tb->pos, tb->size);
+src/mygui.h:222:    tb->active = true;
+src/mygui.h:225:  if (tb->active) {
+src/mygui.h:229:    DrawLine(tb->pos.x + txt_size + 5+1, tb->pos.y+2, tb->pos.x + txt_size + 5+1, tb->pos.y + FONT_SIZE-2, blinktime ? BLACK : DEFAULT_BACKGROUND_COLOR);
+src/mygui.h:234:      tb->active = false;
+src/mygui.h:236:    else if (k == KEY_BACKSPACE && strlen(tb->text) > 0)
+src/mygui.h:238:        tb->text[strlen(tb->text) - 2] = '\0';
+src/mygui.h:239:      if (big && tb->extra_chars > 0) tb->extra_chars -=1;
