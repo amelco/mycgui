@@ -7,14 +7,20 @@
 
 #include "cstr.h"
 
-// TODO: replace all string builder functions with string.h ones, using arena instead of malloc
-//#define STRING_BUILDER_IMPLEMENTATION
-//#include "string_builder.h"
+#define MG_FOREGROUND_COLOR LIGHTGRAY
+#define MG_BACKGROUND_COLOR (Color){240, 240, 240, 255}
+#define MG_TEXT_COLOR       (Color){20,   20,  20, 255}
+#define MG_FONT_SIZE 15
+#define MG_ARENA_DEFAULT_SIZE 1024 * 1024  // 1 MB
 
-#define DEFAULT_FOREGROUND_COLOR LIGHTGRAY
-#define DEFAULT_BACKGROUND_COLOR (Color){240, 240, 240, 255}
-#define DEFAULT_TEXT_COLOR       (Color){20,   20,  20, 255}
-#define FONT_SIZE 15
+const char allowed_keys[] = {39, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 59, 61, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 96,32};
+
+bool is_key_allowed(int k) {
+    for (int i = 0; i < (int)sizeof(allowed_keys)/(int)sizeof(allowed_keys[0]); ++i) {
+        if (k == allowed_keys[i]) return true;
+    }
+    return false;
+}
 
 // Arena
 typedef struct {
@@ -28,6 +34,8 @@ void arena_init(Arena* arena, int size) {
     arena->memory = calloc(size, sizeof(char));
 }
 void* arena_alloc(Arena* arena, size_t size) {
+    if (arena == NULL) arena_init(arena, MG_ARENA_DEFAULT_SIZE);
+
     // TODO: make it dynamic
     if (arena->size > arena->capacity) {
         TraceLog(LOG_ERROR, "Arena reached its limit. Maybe is a memory leak? Allocate more memory on its initialization.");
@@ -45,44 +53,40 @@ typedef struct IVector2 {
     int y;
 } IVector2;
 
+#define UICOMMOM \
+    Vector2 pos;\
+    Vector2 size;\
+    Color text_color;\
+    void* parent;
+
 typedef struct {
-  Vector2 pos;
-  Vector2 size;
-  bool active;
-  int selected_index;
-  bool selected_item;
-  char* selected_text;
-  CstrList items;
+    UICOMMOM;
+    bool active;
+    int selected_index;
+    bool selected_item;
+    char* selected_text;
+    CstrList items;
 } Dropdown;
 
-//typedef struct {
-  //Vector2 pos;
-  //Vector2 size;
-  //bool active;
-  //int extra_chars;
-  //String text;
-//} Textbox;
 typedef struct {
-  Vector2 pos;
-  Vector2 size;
-  bool active;
-  int extra_chars;
-  char* text;   // max. text size = 512 chars
+    UICOMMOM;
+    bool active;
+    int extra_chars;
+    char* text;
 } Textbox;
 
 typedef struct {
-  Vector2 pos;
-  Vector2 size;
-  bool visible;
+    UICOMMOM;
+    bool visible;
 } Container;
 
 typedef struct {
-  Vector2 pos;
-  Vector2 padding;
-  bool checked;
+    UICOMMOM;
+    Vector2 padding;
+    bool checked;
 } Checkbox;
 
-bool mg_button(Vector2 pos, char* text);
+bool mg_button(Vector2 pos, char* text, Color text_color);
 void mg_dropdown(Dropdown* dd);
 void mg_textbox(Textbox* tb);
 void mg_container(Container* cc, const char* title);
@@ -98,7 +102,7 @@ bool is_hovered(Vector2 thing_pos, Vector2 thing_size) {
   return mouse_pos.x >= thing_pos.x && mouse_pos.x <= thing_pos.x+thing_size.x && mouse_pos.y >= thing_pos.y && mouse_pos.y <= thing_pos.y+thing_size.y;
 }
 
-bool mg_button(Vector2 pos, char* text) {
+bool mg_button(Vector2 pos, char* text, Color text_color) {
   int font_size = 15;
   float padding = font_size + 1.1;
   Vector2 size = {
@@ -107,11 +111,11 @@ bool mg_button(Vector2 pos, char* text) {
   };
 
   bool hovered = is_hovered(pos, size);
-  DrawRectangleV(pos, size, hovered ? GRAY : DEFAULT_FOREGROUND_COLOR);
+  DrawRectangleV(pos, size, hovered ? GRAY : text_color);
 
   int x = pos.x + padding / 2;
   int y = pos.y + padding / 2;
-  DrawText(text, x, y, FONT_SIZE, DEFAULT_TEXT_COLOR);
+  DrawText(text, x, y, MG_FONT_SIZE, MG_TEXT_COLOR);
   if (hovered && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) return true;
   return false;
 }
@@ -120,7 +124,7 @@ void mg_container(Container* cc, const char* title) {
     int textSize = 20;
     int titleHeight = 20;
     if (cc->visible) {
-        DrawRectangleV(cc->pos, cc->size, DEFAULT_BACKGROUND_COLOR);
+        DrawRectangleV(cc->pos, cc->size, MG_BACKGROUND_COLOR);
 
         // title bar
         DrawRectangle(cc->pos.x, cc->pos.y, cc->size.x, titleHeight, BLUE);
@@ -160,7 +164,7 @@ void mg_checkbox(Checkbox* chk, const char* text) {
 
     if (chk->checked) DrawRectangle(x, y, size.x, size.y, GREEN);
     DrawRectangleLines(x, y, size.x, size.y, hovered ? BLUE : BLACK);
-    DrawText(text, x + size.x + 5, y, font_size, DEFAULT_TEXT_COLOR);
+    DrawText(text, x + size.x + 5, y, font_size, chk->text_color);
     if (hovered && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) chk->checked = !chk->checked;
 }
 
@@ -169,7 +173,7 @@ void mg_dropdown(Dropdown* dd) {
     Vector2 size = dd->size;
 
     // draw box
-    DrawRectangleLines(pos.x, pos.y, size.x, FONT_SIZE, GRAY);
+    DrawRectangleLines(pos.x, pos.y, size.x, MG_FONT_SIZE, GRAY);
     Vector2 p1 = {dd->pos.x + dd->size.x - 15, dd->pos.y + 3};
     Vector2 p2 = {dd->pos.x + dd->size.x - 10, dd->pos.y + 13};
     Vector2 p3 = {dd->pos.x + dd->size.x - 5, dd->pos.y + 3};
@@ -177,7 +181,7 @@ void mg_dropdown(Dropdown* dd) {
 
     // TODO(Andre): dropdown list must be closed when clicked outside and
     // the selected item should not be changed (if any) when this happens
-    bool box_hovered = is_hovered(pos, (Vector2){size.x, FONT_SIZE});
+    bool box_hovered = is_hovered(pos, (Vector2){size.x, MG_FONT_SIZE});
     if (box_hovered && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
         dd->active = true;
         dd->selected_item = false;
@@ -186,14 +190,14 @@ void mg_dropdown(Dropdown* dd) {
     if (dd->active) {
         for (int i=0; i < dd->items.len; ++i) {
             int x = pos.x;
-            int y = pos.y + (i+1) * FONT_SIZE;
+            int y = pos.y + (i+1) * MG_FONT_SIZE;
             int sx = size.x;
-            int sy = FONT_SIZE-1;
+            int sy = MG_FONT_SIZE-1;
             bool hovered = is_hovered((Vector2){x, y}, (Vector2){sx, sy});	
             if (hovered) DrawRectangle(x, y, sx, sy+2, GRAY);
 
             DrawRectangleLines(x, y, sx, sy+2, GRAY);
-            DrawText(dd->items.items[i], x + 5, y, FONT_SIZE, DEFAULT_TEXT_COLOR);
+            DrawText(dd->items.items[i], x + 5, y, MG_FONT_SIZE, dd->text_color);
             if (hovered && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
                 dd->selected_item = true;
                 dd->active = false;
@@ -203,42 +207,53 @@ void mg_dropdown(Dropdown* dd) {
         }
     } else {
         if (dd->selected_item) {
-            DrawText(dd->items.items[dd->selected_index], pos.x + 5, pos.y, FONT_SIZE, DEFAULT_TEXT_COLOR);
+            DrawText(dd->items.items[dd->selected_index], pos.x + 5, pos.y, MG_FONT_SIZE, dd->text_color);
         }
     }
 }
 
 void mg_textbox(Textbox* tb) {
-  int txt_size = MeasureText(tb->text, FONT_SIZE);
-  int folga = 15;
-  bool big = (txt_size - tb->size.x + folga) >= 0; // text is bigger than the length of the textbox
-  if (big) {
-  }
-  DrawRectangleLines(tb->pos.x, tb->pos.y, tb->size.x, FONT_SIZE, tb->active ? BLUE : GRAY);
-  DrawText(tb->text, tb->pos.x + 5, tb->pos.y, FONT_SIZE, DEFAULT_TEXT_COLOR);
-
-  bool hovered = is_hovered(tb->pos, tb->size);
-  if (hovered && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-    tb->active = true;
-  }
-  
-  if (tb->active) {
-    // blinking cursor
-    bool blinktime = ((int)(GetTime() * 5) % 2) > 0;
-    //printf("%d/n", blinktime);
-    DrawLine(tb->pos.x + txt_size + 5+1, tb->pos.y+2, tb->pos.x + txt_size + 5+1, tb->pos.y + FONT_SIZE-2, blinktime ? BLACK : DEFAULT_BACKGROUND_COLOR);
-
-    int k = GetKeyPressed();
-    if (k == KEY_ENTER)
-    {
-      tb->active = false;
+    // TODO: make all components positions be optionally dependent of a container, like bellow
+    Vector2 parent_pos = {0};
+    if (tb->parent != NULL) {
+        Container* cnt = tb->parent;
+        parent_pos.x = cnt->pos.x;
+        parent_pos.y = cnt->pos.y;
     }
-    else if (k == KEY_BACKSPACE && strlen(tb->text) > 0)
-    {
-        tb->text[strlen(tb->text) - 2] = '\0';
-      if (big && tb->extra_chars > 0) tb->extra_chars -=1;
+
+    int txt_size = MeasureText(tb->text, MG_FONT_SIZE);
+    int folga = 15;
+    bool big = (txt_size - tb->size.x + folga) >= 0; // text is bigger than the length of the textbox
+    if (big) {
     }
-  }
+    float tbposx = tb->pos.x;
+    float tbposy = tb->pos.y;
+    DrawRectangleLines(tbposx + parent_pos.x, tbposy + parent_pos.y, tb->size.x, MG_FONT_SIZE, tb->active ? BLUE : RED);
+    DrawText(tb->text, tbposx + parent_pos.x + 5, tbposy + parent_pos.y, MG_FONT_SIZE, tb->text_color);
+
+    bool hovered = is_hovered((Vector2){tbposx + parent_pos.x, tbposy + parent_pos.y}, (Vector2){tb->size.x, MG_FONT_SIZE});
+    if (hovered && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+        tb->active = true;
+    }
+
+    if (tb->active) {
+        // blinking cursor
+        bool blinktime = ((int)(GetTime() * 5) % 2) > 0;
+        DrawLine(tbposx + parent_pos.x + txt_size + 5+1, tbposy + parent_pos.y + 2, tbposx + parent_pos.x + txt_size + 5+1, tbposy + parent_pos.y + MG_FONT_SIZE-2, blinktime ? BLACK : MG_BACKGROUND_COLOR);
+
+        int k = GetKeyPressed();
+        int c = GetCharPressed();
+        if (k == KEY_ENTER) {
+            tb->active = false;
+        }
+        else if (k == KEY_BACKSPACE) {
+            tb->text[strlen(tb->text)-1] = '\0';
+        }
+        else if (32 <= c && c <= 126) {
+            tb->text[strlen(tb->text)] = c;
+            tb->text[strlen(tb->text)+1] = '\0';
+        }
+    }
 }
 
 
@@ -247,3 +262,4 @@ void mg_textbox(Textbox* tb) {
 #endif // MYGUI_IMPLEMENTATION
 
 #endif // MYGUI_H
+

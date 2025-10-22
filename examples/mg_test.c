@@ -1,35 +1,58 @@
+#include <stdio.h>
+#include <dlfcn.h>
 #define CSTR_IMPLEMENTATION
 #include "cstr.h"
 #define MYGUI_IMPLEMENTATION
 #include "mygui.h"
 
-int main() {
-  Dropdown dd = {0};
-  dd.pos = (Vector2){10, 50};
-  dd.size = (Vector2){100, 0};
-  dd.items = cstr_split("primeiro|segundo", '|');
+#include "mg_test_plug.h"
 
-  Textbox tb = {0};
-  tb.pos = (Vector2){10, 100};
-  tb.size = (Vector2){100, 0};
-  tb.text = "Um teaxto";
+plug_init_t plug_init = NULL; 
+plug_update_t plug_update = NULL; 
+plug_end_t plug_end = NULL; 
 
-  InitWindow(800, 600, "Test application of mygui.h");
-  while (!WindowShouldClose())
-  {
-    BeginDrawing();
-    ClearBackground(RAYWHITE);
-    if (mg_button((Vector2){10, 10}, "Ok")) {
-      TraceLog(LOG_INFO, "Button pressed!");
+void plug_load() {
+    TraceLog(LOG_INFO, "Hot reloading...");
+    void* handle = dlopen("libmg_test.so", RTLD_NOW);
+    if (!handle) {
+        fprintf(stderr, "Could not load 'libmg_test.so' file: %s", dlerror());
+        exit(1);
     }
-    
-    mg_dropdown(&dd);
-    mg_textbox(&tb);
-    //if (tb.text != NULL) TraceLog(LOG_INFO, tb.text);
+    plug_init = dlsym(handle, "plug_init");
+    if (!plug_init) {
+        fprintf(stderr, "Could not load 'plug_init' function: %s", dlerror());
+        exit(1);
+    }
+    plug_update = dlsym(handle, "plug_update");
+    if (!plug_update) {
+        fprintf(stderr, "Could not load 'plug_update' function: %s", dlerror());
+        exit(1);
+    }
+    plug_end = dlsym(handle, "plug_end");
+    if (!plug_end) {
+        fprintf(stderr, "Could not load 'plug_end' function: %s", dlerror());
+        exit(1);
+    }
+    TraceLog(LOG_INFO, "Hot reloading successful.");
+}
 
-    if (IsKeyPressed(KEY_Q)) return 0;
-    EndDrawing();
-  }
-  cstrlist_free(dd.items);
-  return 0;
+int main() {
+    Plug plug = {0};
+
+    plug_load();
+    plug_init(&plug);
+
+    InitWindow(800, 600, "Test application of mygui.h");
+    while (!WindowShouldClose())
+    {
+        BeginDrawing();
+
+        plug_update(&plug);
+
+        if (IsKeyPressed(KEY_Q)) return 0;
+        if (IsKeyPressed(KEY_H)) plug_load(&plug);
+        EndDrawing();
+    }
+    plug_end(&plug);
+    return 0;
 }

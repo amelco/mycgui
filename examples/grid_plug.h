@@ -19,8 +19,7 @@ typedef struct {
     Container debugMenu;
     Checkbox chkGridCoords;
     Checkbox chkMouseCoords;
-    bool showGridCoords;
-    bool showMouseCoords;
+    Textbox txtCellSize;
 } Plug;
 
 typedef void (*plug_init_t)(Plug* plug);
