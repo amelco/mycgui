@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "raylib.h"
+#include "raymath.h"
 
 #include "cstr.h"
 
@@ -61,6 +62,11 @@ typedef struct IVector2 {
 
 typedef struct {
     UICOMMOM;
+    char* text;
+} Button;
+
+typedef struct {
+    UICOMMOM;
     bool active;
     int selected_index;
     bool selected_item;
@@ -86,7 +92,7 @@ typedef struct {
     bool checked;
 } Checkbox;
 
-bool mg_button(Vector2 pos, char* text, Color text_color);
+bool mg_button(Button btn);
 void mg_dropdown(Dropdown* dd);
 void mg_textbox(Textbox* tb);
 void mg_container(Container* cc, const char* title);
@@ -102,22 +108,29 @@ bool is_hovered(Vector2 thing_pos, Vector2 thing_size) {
   return mouse_pos.x >= thing_pos.x && mouse_pos.x <= thing_pos.x+thing_size.x && mouse_pos.y >= thing_pos.y && mouse_pos.y <= thing_pos.y+thing_size.y;
 }
 
-bool mg_button(Vector2 pos, char* text, Color text_color) {
-  int font_size = 15;
-  float padding = font_size + 1.1;
-  Vector2 size = {
-    MeasureText(text, font_size) + padding,
+bool mg_button(Button btn) {
+    Vector2 parent_pos = {0};
+    if (btn.parent != NULL) {
+        Container* cnt = btn.parent;
+        parent_pos.x = cnt->pos.x;
+        parent_pos.y = cnt->pos.y;
+    }
+
+    int font_size = 15;
+    float padding = font_size + 1.1;
+    Vector2 size = {
+        MeasureText(btn.text, font_size) + padding,
         (15 + padding)
-  };
+    };
 
-  bool hovered = is_hovered(pos, size);
-  DrawRectangleV(pos, size, hovered ? GRAY : text_color);
+    bool hovered = is_hovered(Vector2Add(parent_pos, btn.pos), size);
+    DrawRectangleV(Vector2Add(parent_pos, btn.pos), size, hovered ? GRAY : LIGHTGRAY);
 
-  int x = pos.x + padding / 2;
-  int y = pos.y + padding / 2;
-  DrawText(text, x, y, MG_FONT_SIZE, MG_TEXT_COLOR);
-  if (hovered && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) return true;
-  return false;
+    int x = parent_pos.x + btn.pos.x + padding / 2;
+    int y = parent_pos.y + btn.pos.y + padding / 2;
+    DrawText(btn.text, x, y, MG_FONT_SIZE, MG_TEXT_COLOR);
+    if (hovered && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) return true;
+    return false;
 }
 
 void mg_container(Container* cc, const char* title) {
@@ -213,7 +226,6 @@ void mg_dropdown(Dropdown* dd) {
 }
 
 void mg_textbox(Textbox* tb) {
-    // TODO: make all components positions be optionally dependent of a container, like bellow
     Vector2 parent_pos = {0};
     if (tb->parent != NULL) {
         Container* cnt = tb->parent;

@@ -20,6 +20,7 @@ typedef struct {
     Checkbox chkGridCoords;
     Checkbox chkMouseCoords;
     Textbox txtCellSize;
+    Button btnApply;
 } Plug;
 
 typedef void (*plug_init_t)(Plug* plug);

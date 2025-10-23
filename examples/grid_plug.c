@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #include "grid_plug.h"
 
@@ -53,6 +54,11 @@ void drawGridCoords(Plug plug) {
 
 
 void plug_init(Plug* plug) {
+    Vector2 a = { 1, 2 };
+    Vector2 b = { 2, 1 };
+    Vector2 c = Vector2Add(a, b);
+    TraceLog(LOG_INFO, "v2 sum: %f, %f", c.x, c.y);
+
     plug->gridQty.x = 20;
     plug->gridQty.y = 10;
     plug->cell_size = 30;
@@ -76,6 +82,14 @@ void plug_init(Plug* plug) {
     plug->txtCellSize.parent = &plug->debugMenu;
     plug->txtCellSize.pos = (Vector2){ 5, 55 };
     plug->txtCellSize.size = (Vector2){ 50, MG_FONT_SIZE };
+    plug->txtCellSize.text = malloc(5);
+    plug->txtCellSize.text_color = BLACK;
+    sprintf(plug->txtCellSize.text, "%d", plug->cell_size);
+
+    plug->btnApply.parent = &plug->debugMenu;
+    plug->btnApply.pos = (Vector2){ 60, 55 };
+    plug->btnApply.text = "Apply";
+    plug->btnApply.text_color = BLACK;
 
 }
 
@@ -87,16 +101,23 @@ void plug_update(Plug* plug) {
 
     // debug menu -----
     if (IsKeyPressed(KEY_M)) plug->debugMenu.visible = !plug->debugMenu.visible;
+
     if (plug->debugMenu.visible) {
         plug->chkGridCoords.pos = plug->debugMenu.pos;
         plug->chkMouseCoords.pos = plug->debugMenu.pos;
-        //plug->txtCellSize.pos = plug->debugMenu.pos;
+
         mg_container(&plug->debugMenu, "Debug");
+        
         mg_checkbox(&plug->chkGridCoords, "Show Grid Coords");
         mg_checkbox(&plug->chkMouseCoords, "Show Mouse Coords");
+
         mg_textbox(&plug->txtCellSize);
-        if (mg_button((Vector2){ 60, 55 }, "Apply", BLACK)) {
-            // define the value of the textbox as being the cellSize
+        
+        if (mg_button(plug->btnApply)) {
+            int cellSize = atoi(plug->txtCellSize.text);
+            if (cellSize > 0) {
+                plug->cell_size = cellSize;
+            }
         };
     }
     // ----------------
