@@ -69,7 +69,7 @@ typedef struct {
     UICOMMOM;
     bool active;
     int selected_index;
-    bool selected_item;
+    bool selected_item; 
     char* selected_text;
     CstrList items;
 } Dropdown;
@@ -182,14 +182,21 @@ void mg_checkbox(Checkbox* chk, const char* text) {
 }
 
 void mg_dropdown(Dropdown* dd) {
-    Vector2 pos = dd->pos;
+    Vector2 parent_pos = {0};
+    if (dd->parent != NULL) {
+        Container* cnt = dd->parent;
+        parent_pos.x = cnt->pos.x;
+        parent_pos.y = cnt->pos.y;
+    }
+
+    Vector2 pos = Vector2Add(dd->pos, parent_pos);
     Vector2 size = dd->size;
 
     // draw box
     DrawRectangleLines(pos.x, pos.y, size.x, MG_FONT_SIZE, GRAY);
-    Vector2 p1 = {dd->pos.x + dd->size.x - 15, dd->pos.y + 3};
-    Vector2 p2 = {dd->pos.x + dd->size.x - 10, dd->pos.y + 13};
-    Vector2 p3 = {dd->pos.x + dd->size.x - 5, dd->pos.y + 3};
+    Vector2 p1 = {pos.x + size.x - 15, pos.y + 3};
+    Vector2 p2 = {pos.x + size.x - 10, pos.y + 13};
+    Vector2 p3 = {pos.x + size.x - 5, pos.y + 3};
     DrawTriangle(p1, p2, p3, DARKGRAY);
 
     // TODO(Andre): dropdown list must be closed when clicked outside and

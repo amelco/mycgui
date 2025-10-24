@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#define CSTR_IMPLEMENTATION
+#include "cstr.h"
 #include "grid_plug.h"
 
 
@@ -81,7 +83,7 @@ void plug_init(Plug* plug) {
 
     plug->txtCellSize.parent = &plug->debugMenu;
     plug->txtCellSize.pos = (Vector2){ 5, 55 };
-    plug->txtCellSize.size = (Vector2){ 50, MG_FONT_SIZE };
+    plug->txtCellSize.size = (Vector2){ 50, MG_FONT_SIZE + 4 };
     plug->txtCellSize.text = malloc(5);
     plug->txtCellSize.text_color = BLACK;
     sprintf(plug->txtCellSize.text, "%d", plug->cell_size);
@@ -90,7 +92,12 @@ void plug_init(Plug* plug) {
     plug->btnApply.pos = (Vector2){ 60, 55 };
     plug->btnApply.text = "Apply";
     plug->btnApply.text_color = BLACK;
-
+    
+    plug->ddOptions.parent = &plug->debugMenu;
+    plug->ddOptions.pos = (Vector2){ 5, 90 };
+    plug->ddOptions.size = (Vector2){ 100, MG_FONT_SIZE + 4 };
+    plug->ddOptions.items = cstr_split("Item 1|Item 2", '|');
+    plug->ddOptions.text_color = BLACK;
 }
 
 void plug_update(Plug* plug) {
@@ -119,6 +126,8 @@ void plug_update(Plug* plug) {
                 plug->cell_size = cellSize;
             }
         };
+
+        mg_dropdown(&plug->ddOptions);
     }
     // ----------------
 
