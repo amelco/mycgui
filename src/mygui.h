@@ -167,11 +167,18 @@ void mg_container(Container* cc, const char* title) {
 
 
 void mg_checkbox(Checkbox* chk, const char* text) {
+    Vector2 parent_pos = {0};
+    if (chk->parent != NULL) {
+        Container* cnt = chk->parent;
+        parent_pos.x = cnt->pos.x;
+        parent_pos.y = cnt->pos.y;
+    }
+
     int font_size = 5;
     Vector2 size = {10, 10};
 
-    int x = chk->pos.x + chk->padding.x;
-    int y = chk->pos.y + chk->padding.y;
+    int x = chk->pos.x + parent_pos.x + chk->padding.x;
+    int y = chk->pos.y + parent_pos.y + chk->padding.y;
 
     bool hovered = is_hovered((Vector2){x, y}, size);
 

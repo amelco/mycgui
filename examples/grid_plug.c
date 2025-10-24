@@ -69,12 +69,14 @@ void plug_init(Plug* plug) {
     plug->debugMenu.pos = (Vector2){ 3*SCREEN_WIDTH/4, 20};
     plug->debugMenu.size = (Vector2){150, 200};
 
+    plug->chkGridCoords.parent = &plug->debugMenu; 
     plug->chkGridCoords.pos = (Vector2){ 0, 0 };
     plug->chkGridCoords.padding = (Vector2){ 5, 25 };
     plug->chkGridCoords.checked = false;
     plug->chkGridCoords.text_color = BLACK;
     plug->chkGridCoords.checked = false;
 
+    plug->chkMouseCoords.parent = &plug->debugMenu; 
     plug->chkMouseCoords.pos = (Vector2){ 0, 0 };
     plug->chkMouseCoords.padding = (Vector2){ 5, 40 };
     plug->chkMouseCoords.checked = false;
@@ -110,9 +112,6 @@ void plug_update(Plug* plug) {
     if (IsKeyPressed(KEY_M)) plug->debugMenu.visible = !plug->debugMenu.visible;
 
     if (plug->debugMenu.visible) {
-        plug->chkGridCoords.pos = plug->debugMenu.pos;
-        plug->chkMouseCoords.pos = plug->debugMenu.pos;
-
         mg_container(&plug->debugMenu, "Debug");
         
         mg_checkbox(&plug->chkGridCoords, "Show Grid Coords");
