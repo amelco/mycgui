@@ -119,7 +119,7 @@ void plug_update(Plug* plug) {
 
         mg_textbox(&plug->txtCellSize);
         
-        if (mg_button(plug->btnApply)) {
+        if (mg_button(&plug->btnApply)) {
             int cellSize = atoi(plug->txtCellSize.text);
             if (cellSize > 0) {
                 plug->cell_size = cellSize;
