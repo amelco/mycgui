@@ -14,14 +14,6 @@
 #define MG_FONT_SIZE 15
 #define MG_ARENA_DEFAULT_SIZE 1024 * 1024  // 1 MB
 
-const char allowed_keys[] = {39, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 59, 61, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 96,32};
-
-bool is_key_allowed(int k) {
-    for (int i = 0; i < (int)sizeof(allowed_keys)/(int)sizeof(allowed_keys[0]); ++i) {
-        if (k == allowed_keys[i]) return true;
-    }
-    return false;
-}
 
 // Arena
 typedef struct {
@@ -195,7 +187,6 @@ void mg_dropdown(Dropdown* dd) {
         parent_pos.x = cnt->pos.x;
         parent_pos.y = cnt->pos.y;
     }
-
     Vector2 pos = Vector2Add(dd->pos, parent_pos);
     Vector2 size = dd->size;
 
@@ -211,7 +202,7 @@ void mg_dropdown(Dropdown* dd) {
     bool box_hovered = is_hovered(pos, (Vector2){size.x, MG_FONT_SIZE});
     if (box_hovered && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
         dd->active = true;
-        dd->selected_item = false;
+        //dd->selected_item = false;
     }
 
     if (dd->active) {
@@ -220,21 +211,29 @@ void mg_dropdown(Dropdown* dd) {
             int y = pos.y + (i+1) * MG_FONT_SIZE;
             int sx = size.x;
             int sy = MG_FONT_SIZE-1;
-            bool hovered = is_hovered((Vector2){x, y}, (Vector2){sx, sy});	
-            if (hovered) DrawRectangle(x, y, sx, sy+2, GRAY);
+            bool item_hovered = is_hovered((Vector2){x, y}, (Vector2){sx, sy});	
+            if (item_hovered) DrawRectangle(x, y, sx, sy+2, GRAY);
 
             DrawRectangleLines(x, y, sx, sy+2, GRAY);
             DrawText(dd->items.items[i], x + 5, y, MG_FONT_SIZE, dd->text_color);
-            if (hovered && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+
+            if (item_hovered && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
                 dd->selected_item = true;
                 dd->active = false;
                 dd->selected_index = i;
                 dd->selected_text = dd->items.items[i];
             }
+
+            Vector2 mouse_pos = GetMousePosition();
+            if (!item_hovered 
+                  && !CheckCollisionPointRec(mouse_pos, (Rectangle){pos.x, pos.y, size.x, size.y})
+                  && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+                dd->active = false;
+            }
         }
     } else {
         if (dd->selected_item) {
-            DrawText(dd->items.items[dd->selected_index], pos.x + 5, pos.y, MG_FONT_SIZE, dd->text_color);
+            DrawText(dd->selected_text, pos.x + 5, pos.y, MG_FONT_SIZE, dd->text_color);
         }
     }
 }
