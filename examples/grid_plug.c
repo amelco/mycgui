@@ -6,25 +6,25 @@
 #include "grid_plug.h"
 
 
-IVector2 screenToGrid(float pxX, float pxY, int cell_size) {
+IVector2 screenToGrid(float screenX, float screenY, Plug plug) {
     return (IVector2){
-        .x = ceil(pxX/cell_size), 
-        .y = ceil(pxY/cell_size)
+        .x = ceil((screenX - plug.gridPos.x)/(plug.cell_size - 1)), 
+        .y = ceil((screenY - plug.gridPos.y)/(plug.cell_size - 1))
     };
 }
-Vector2 gridToScreen(int x, int y, int cell_size) {
+Vector2 gridToScreen(int x, int y, Plug plug) {
     return (Vector2){
-        .x = x * cell_size - LEFT_GAP - x+1,
-        .y = y * cell_size - TOP_GAP - y+1
+        .x = ((float)x - 1) * plug.cell_size + plug.gridPos.x,
+        .y = ((float)y - 1) * plug.cell_size + plug.gridPos.y,
     };
 }
 
-void drawGrid(int rows, int cols, int cell_size) {
+void drawGrid(int rows, int cols, Plug plug) {
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
-            float x = LEFT_GAP + i*(cell_size - 1);
-            float y = LEFT_GAP + j*(cell_size - 1);
-            DrawRectangleLines(x, y, cell_size, cell_size, RED);
+            float x = plug.gridPos.x + i*(plug.cell_size - 1);
+            float y = plug.gridPos.y + j*(plug.cell_size - 1);
+            DrawRectangleLines(x, y, plug.cell_size, plug.cell_size, RED);
         }
     }
 }
@@ -37,16 +37,17 @@ void drawMouseCoords() {
     DrawText(coord, pos.x, pos.y - textHeight, textHeight, GREEN);
 }
 
+// TODO: fix this to display the correct values on the correct places
 void drawGridCoords(Plug plug) {
     int rows = ceil(plug.gridQty.x);
     int cols = ceil(plug.gridQty.y);
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
-            float x = LEFT_GAP + i*(plug.cell_size - 1);
-            float y = LEFT_GAP + j*(plug.cell_size - 1);
+            float x = plug.gridPos.x + i*(plug.cell_size - 1);
+            float y = plug.gridPos.x + j*(plug.cell_size - 1);
             char coord[128] = {0};
-            IVector2 gcoord = screenToGrid(x, y, plug.cell_size);
-            Vector2 scoord = gridToScreen(gcoord.x, gcoord.y, plug.cell_size);
+            IVector2 gcoord = screenToGrid(x, y, plug);
+            Vector2 scoord = gridToScreen(gcoord.x, gcoord.y, plug);
             sprintf(coord, "  %4.2f, %4.2f\n  (%d, %d)\n  %4.2f, %4.2f", x, y, gcoord.x, gcoord.y, scoord.x, scoord.y);
             DrawText(coord, x, y, 10, GREEN);
         }
@@ -56,14 +57,12 @@ void drawGridCoords(Plug plug) {
 
 
 void plug_init(Plug* plug) {
-    Vector2 a = { 1, 2 };
-    Vector2 b = { 2, 1 };
-    Vector2 c = Vector2Add(a, b);
-    TraceLog(LOG_INFO, "v2 sum: %f, %f", c.x, c.y);
+    plug->gridPos.x = 10;
+    plug->gridPos.y = 20;
 
-    plug->gridQty.x = 20;
-    plug->gridQty.y = 10;
-    plug->cell_size = 30;
+    plug->gridQty.x = 5;
+    plug->gridQty.y = 2;
+    plug->cell_size = 100;
 
     plug->debugMenu.visible = true;
     plug->debugMenu.pos = (Vector2){ 3*SCREEN_WIDTH/4, 20};
@@ -104,9 +103,17 @@ void plug_init(Plug* plug) {
 
 void plug_update(Plug* plug) {
     ClearBackground(GRAY);
-    drawGrid(plug->gridQty.x, plug->gridQty.y, plug->cell_size);
+    drawGrid(plug->gridQty.x, plug->gridQty.y, *plug);
 
     if (plug->chkGridCoords.checked) drawGridCoords(*plug);
+
+    Vector2 mouse_pos = GetMousePosition();
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+        IVector2 res = screenToGrid(mouse_pos.x, mouse_pos.y, *plug);
+        Vector2 res2 = gridToScreen(res.x, res.y, *plug);
+        TraceLog(LOG_INFO, "%3.2f, %3.2f", res2.x, res2.y);
+    }
+
 
     // debug menu -----
     if (IsKeyPressed(KEY_M)) plug->debugMenu.visible = !plug->debugMenu.visible;
@@ -133,4 +140,5 @@ void plug_update(Plug* plug) {
     if (plug->chkMouseCoords.checked) drawMouseCoords();
 
     if (IsKeyPressed(KEY_Q)) exit(0);
+
 }
