@@ -14,33 +14,6 @@
 #define MG_FONT_SIZE 15
 #define MG_ARENA_DEFAULT_SIZE 1024 * 1024  // 1 MB
 
-
-// Arena
-typedef struct {
-    int capacity;
-    int size;
-    void* memory;
-} Arena;
-void arena_init(Arena* arena, int size) {
-    arena->capacity = size;
-    arena->size = 0;
-    arena->memory = calloc(size, sizeof(char));
-}
-void* arena_alloc(Arena* arena, size_t size) {
-    if (arena == NULL) arena_init(arena, MG_ARENA_DEFAULT_SIZE);
-
-    // TODO: make it dynamic
-    if (arena->size > arena->capacity) {
-        TraceLog(LOG_ERROR, "Arena reached its limit. Maybe is a memory leak? Allocate more memory on its initialization.");
-        exit(1);
-    }
-    void* r = arena->memory + size;
-    arena->size += size;
-    return r;
-}
-/////////////
-
-
 typedef struct IVector2 {
     int x;
     int y;
@@ -197,12 +170,9 @@ void mg_dropdown(Dropdown* dd) {
     Vector2 p3 = {pos.x + size.x - 5, pos.y + 3};
     DrawTriangle(p1, p2, p3, DARKGRAY);
 
-    // TODO(Andre): dropdown list must be closed when clicked outside and
-    // the selected item should not be changed (if any) when this happens
     bool box_hovered = is_hovered(pos, (Vector2){size.x, MG_FONT_SIZE});
     if (box_hovered && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
         dd->active = true;
-        //dd->selected_item = false;
     }
 
     if (dd->active) {
