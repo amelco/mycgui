@@ -55,8 +55,6 @@ void drawGridCoords(Plug plug) {
     }
 }
 
-
-
 void plug_init(Plug* plug) {
     plug->gridPos.x = 10;
     plug->gridPos.y = 20;
@@ -107,15 +105,6 @@ void plug_update(Plug* plug) {
     drawGrid(plug->gridQty.x, plug->gridQty.y, *plug);
 
     if (plug->chkGridCoords.checked) drawGridCoords(*plug);
-
-    Vector2 mouse_pos = GetMousePosition();
-    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
-        IVector2 res = screenToGrid(mouse_pos.x, mouse_pos.y, *plug);
-        TraceLog(LOG_INFO, "%d, %d", res.x, res.y);
-        Vector2 res2 = gridToScreen(res.x, res.y, *plug);
-        TraceLog(LOG_INFO, "%3.2f, %3.2f", res2.x, res2.y);
-    }
-
 
     // debug menu -----
     if (IsKeyPressed(KEY_M)) plug->debugMenu.visible = !plug->debugMenu.visible;
