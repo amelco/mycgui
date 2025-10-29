@@ -37,19 +37,20 @@ void drawMouseCoords() {
     DrawText(coord, pos.x, pos.y - textHeight, textHeight, GREEN);
 }
 
-// TODO: fix this to display the correct values on the correct places
 void drawGridCoords(Plug plug) {
-    int rows = ceil(plug.gridQty.x);
-    int cols = ceil(plug.gridQty.y);
+    int font_size = 10;
+    int gap = 3;
+    int rows = plug.gridQty.y;
+    int cols = plug.gridQty.x;
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
-            float x = plug.gridPos.x + i*(plug.cell_size - 1);
-            float y = plug.gridPos.x + j*(plug.cell_size - 1);
+            float x = plug.gridPos.x + j*(plug.cell_size) + 1;
+            float y = plug.gridPos.y + i*(plug.cell_size) + 1;
             char coord[128] = {0};
             IVector2 gcoord = screenToGrid(x, y, plug);
             Vector2 scoord = gridToScreen(gcoord.x, gcoord.y, plug);
-            sprintf(coord, "  %4.2f, %4.2f\n  (%d, %d)\n  %4.2f, %4.2f", x, y, gcoord.x, gcoord.y, scoord.x, scoord.y);
-            DrawText(coord, x, y, 10, GREEN);
+            sprintf(coord, "(%d, %d)\n%4.2f, %4.2f", gcoord.x, gcoord.y, scoord.x, scoord.y);
+            DrawText(coord, x+gap, y+gap, font_size, GREEN);
         }
     }
 }
@@ -110,6 +111,7 @@ void plug_update(Plug* plug) {
     Vector2 mouse_pos = GetMousePosition();
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
         IVector2 res = screenToGrid(mouse_pos.x, mouse_pos.y, *plug);
+        TraceLog(LOG_INFO, "%d, %d", res.x, res.y);
         Vector2 res2 = gridToScreen(res.x, res.y, *plug);
         TraceLog(LOG_INFO, "%3.2f, %3.2f", res2.x, res2.y);
     }

@@ -12,7 +12,7 @@
 // In case any of these structs change, hotreload will not work
 //  and another full compilation needs to be done.
 typedef struct {
-    Vector2 gridQty;
+    IVector2 gridQty;
     Vector2 gridPos;
     int cell_size;
     Container debugMenu;
