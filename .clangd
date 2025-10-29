@@ -1,0 +1,5 @@
+CompileFlags:
+  Add:
+    - "-I/home/andre/projetos/c/mygui/headers"
+    - "-I/home/andre/projetos/c/mygui/src"
+    - "-I/home/andre/projetos/c/mygui/examples"

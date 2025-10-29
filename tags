@@ -1,0 +1,1557 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+APIENTRY	./headers/rlgl.h	840;"	d
+APIENTRY	./headers/rlgl.h	842;"	d
+AudioCallback	./headers/raylib.h	/^typedef void (*AudioCallback)(void *bufferData, unsigned int frames);$/;"	t
+AudioStream	./headers/raylib.h	/^typedef struct AudioStream {$/;"	s
+AudioStream	./headers/raylib.h	/^} AudioStream;$/;"	t	typeref:struct:AudioStream
+AutomationEvent	./headers/raylib.h	/^typedef struct AutomationEvent {$/;"	s
+AutomationEvent	./headers/raylib.h	/^} AutomationEvent;$/;"	t	typeref:struct:AutomationEvent
+AutomationEventList	./headers/raylib.h	/^typedef struct AutomationEventList {$/;"	s
+AutomationEventList	./headers/raylib.h	/^} AutomationEventList;$/;"	t	typeref:struct:AutomationEventList
+BEIGE	./headers/raylib.h	187;"	d
+BLACK	./headers/raylib.h	192;"	d
+BLANK	./headers/raylib.h	193;"	d
+BLEND_ADDITIVE	./headers/raylib.h	/^    BLEND_ADDITIVE,                 \/\/ Blend textures adding colors$/;"	e	enum:__anon30
+BLEND_ADD_COLORS	./headers/raylib.h	/^    BLEND_ADD_COLORS,               \/\/ Blend textures adding colors (alternative)$/;"	e	enum:__anon30
+BLEND_ALPHA	./headers/raylib.h	/^    BLEND_ALPHA = 0,                \/\/ Blend textures considering alpha (default)$/;"	e	enum:__anon30
+BLEND_ALPHA_PREMULTIPLY	./headers/raylib.h	/^    BLEND_ALPHA_PREMULTIPLY,        \/\/ Blend premultiplied textures considering alpha$/;"	e	enum:__anon30
+BLEND_CUSTOM	./headers/raylib.h	/^    BLEND_CUSTOM,                   \/\/ Blend textures using custom src\/dst factors (use rlSetBlendFactors())$/;"	e	enum:__anon30
+BLEND_CUSTOM_SEPARATE	./headers/raylib.h	/^    BLEND_CUSTOM_SEPARATE           \/\/ Blend textures using custom rgb\/alpha separate src\/dst factors (use rlSetBlendFactorsSeparate())$/;"	e	enum:__anon30
+BLEND_MULTIPLIED	./headers/raylib.h	/^    BLEND_MULTIPLIED,               \/\/ Blend textures multiplying colors$/;"	e	enum:__anon30
+BLEND_SUBTRACT_COLORS	./headers/raylib.h	/^    BLEND_SUBTRACT_COLORS,          \/\/ Blend textures subtracting colors (alternative)$/;"	e	enum:__anon30
+BLUE	./headers/raylib.h	182;"	d
+BROWN	./headers/raylib.h	188;"	d
+Bar	./tmp.c	/^} Bar;$/;"	t	typeref:struct:__anon41	file:
+BlendMode	./headers/raylib.h	/^} BlendMode;$/;"	t	typeref:enum:__anon30
+BoneInfo	./headers/raylib.h	/^typedef struct BoneInfo {$/;"	s
+BoneInfo	./headers/raylib.h	/^} BoneInfo;$/;"	t	typeref:struct:BoneInfo
+BoundingBox	./headers/raylib.h	/^typedef struct BoundingBox {$/;"	s
+BoundingBox	./headers/raylib.h	/^} BoundingBox;$/;"	t	typeref:struct:BoundingBox
+Button	./src/mygui.h	/^} Button;$/;"	t	typeref:struct:__anon36
+CAMERA_CUSTOM	./headers/raylib.h	/^    CAMERA_CUSTOM = 0,              \/\/ Camera custom, controlled by user (UpdateCamera() does nothing)$/;"	e	enum:__anon32
+CAMERA_FIRST_PERSON	./headers/raylib.h	/^    CAMERA_FIRST_PERSON,            \/\/ Camera first person$/;"	e	enum:__anon32
+CAMERA_FREE	./headers/raylib.h	/^    CAMERA_FREE,                    \/\/ Camera free mode$/;"	e	enum:__anon32
+CAMERA_ORBITAL	./headers/raylib.h	/^    CAMERA_ORBITAL,                 \/\/ Camera orbital, around target, zoom supported$/;"	e	enum:__anon32
+CAMERA_ORTHOGRAPHIC	./headers/raylib.h	/^    CAMERA_ORTHOGRAPHIC             \/\/ Orthographic projection$/;"	e	enum:__anon33
+CAMERA_PERSPECTIVE	./headers/raylib.h	/^    CAMERA_PERSPECTIVE = 0,         \/\/ Perspective projection$/;"	e	enum:__anon33
+CAMERA_THIRD_PERSON	./headers/raylib.h	/^    CAMERA_THIRD_PERSON             \/\/ Camera third person$/;"	e	enum:__anon32
+CLITERAL	./headers/raylib.h	143;"	d
+CLITERAL	./headers/raylib.h	145;"	d
+CSTR_H_	./headers/cstr.h	6;"	d
+CSTR_IMPLEMENTATION	./examples/grid_plug.c	4;"	d	file:
+CSTR_IMPLEMENTATION	./examples/mg_test.c	3;"	d	file:
+CSTR_IMPLEMENTATION	./examples/mg_test_plug.c	3;"	d	file:
+CUBEMAP_LAYOUT_AUTO_DETECT	./headers/raylib.h	/^    CUBEMAP_LAYOUT_AUTO_DETECT = 0,         \/\/ Automatically detect layout type$/;"	e	enum:__anon28
+CUBEMAP_LAYOUT_CROSS_FOUR_BY_THREE	./headers/raylib.h	/^    CUBEMAP_LAYOUT_CROSS_FOUR_BY_THREE,     \/\/ Layout is defined by a 4x3 cross with cubemap faces$/;"	e	enum:__anon28
+CUBEMAP_LAYOUT_CROSS_THREE_BY_FOUR	./headers/raylib.h	/^    CUBEMAP_LAYOUT_CROSS_THREE_BY_FOUR,     \/\/ Layout is defined by a 3x4 cross with cubemap faces$/;"	e	enum:__anon28
+CUBEMAP_LAYOUT_LINE_HORIZONTAL	./headers/raylib.h	/^    CUBEMAP_LAYOUT_LINE_HORIZONTAL,         \/\/ Layout is defined by a horizontal line with faces$/;"	e	enum:__anon28
+CUBEMAP_LAYOUT_LINE_VERTICAL	./headers/raylib.h	/^    CUBEMAP_LAYOUT_LINE_VERTICAL,           \/\/ Layout is defined by a vertical line with faces$/;"	e	enum:__anon28
+CUBEMAP_LAYOUT_PANORAMA	./headers/raylib.h	/^    CUBEMAP_LAYOUT_PANORAMA                 \/\/ Layout is defined by a panorama image (equirrectangular map)$/;"	e	enum:__anon28
+Camera	./headers/raylib.h	/^typedef Camera3D Camera;    \/\/ Camera type fallback, defaults to Camera3D$/;"	t
+Camera2D	./headers/raylib.h	/^typedef struct Camera2D {$/;"	s
+Camera2D	./headers/raylib.h	/^} Camera2D;$/;"	t	typeref:struct:Camera2D
+Camera3D	./headers/raylib.h	/^typedef struct Camera3D {$/;"	s
+Camera3D	./headers/raylib.h	/^} Camera3D;$/;"	t	typeref:struct:Camera3D
+CameraMode	./headers/raylib.h	/^} CameraMode;$/;"	t	typeref:enum:__anon32
+CameraProjection	./headers/raylib.h	/^} CameraProjection;$/;"	t	typeref:enum:__anon33
+Checkbox	./src/mygui.h	/^} Checkbox;$/;"	t	typeref:struct:__anon40
+Clamp	./headers/raymath.h	/^RMAPI float Clamp(float value, float min, float max)$/;"	f
+Color	./headers/raylib.h	/^typedef struct Color {$/;"	s
+Color	./headers/raylib.h	/^} Color;$/;"	t	typeref:struct:Color
+ConfigFlags	./headers/raylib.h	/^} ConfigFlags;$/;"	t	typeref:enum:__anon14
+Container	./src/mygui.h	/^} Container;$/;"	t	typeref:struct:__anon39
+CstrList	./headers/cstr.h	/^} CstrList;$/;"	t	typeref:struct:__anon35
+CubemapLayout	./headers/raylib.h	/^} CubemapLayout;$/;"	t	typeref:enum:__anon28
+DARKBLUE	./headers/raylib.h	183;"	d
+DARKBROWN	./headers/raylib.h	189;"	d
+DARKGRAY	./headers/raylib.h	171;"	d
+DARKGREEN	./headers/raylib.h	180;"	d
+DARKPURPLE	./headers/raylib.h	186;"	d
+DEG2RAD	./headers/raylib.h	118;"	d
+DEG2RAD	./headers/raymath.h	93;"	d
+DEG2RAD	./headers/rlgl.h	899;"	d
+Dropdown	./src/mygui.h	/^} Dropdown;$/;"	t	typeref:struct:__anon37
+EPSILON	./headers/raymath.h	1190;"	d
+EPSILON	./headers/raymath.h	1441;"	d
+EPSILON	./headers/raymath.h	2177;"	d
+EPSILON	./headers/raymath.h	221;"	d
+EPSILON	./headers/raymath.h	2513;"	d
+EPSILON	./headers/raymath.h	541;"	d
+EPSILON	./headers/raymath.h	89;"	d
+ExtSupported	./headers/rlgl.h	/^    } ExtSupported;     \/\/ Extensions supported flags$/;"	m	struct:rlglData	typeref:struct:rlglData::__anon13
+FLAG_BORDERLESS_WINDOWED_MODE	./headers/raylib.h	/^    FLAG_BORDERLESS_WINDOWED_MODE = 0x00008000, \/\/ Set to run program in borderless windowed mode$/;"	e	enum:__anon14
+FLAG_FULLSCREEN_MODE	./headers/raylib.h	/^    FLAG_FULLSCREEN_MODE    = 0x00000002,   \/\/ Set to run program in fullscreen$/;"	e	enum:__anon14
+FLAG_INTERLACED_HINT	./headers/raylib.h	/^    FLAG_INTERLACED_HINT    = 0x00010000    \/\/ Set to try enabling interlaced video format (for V3D)$/;"	e	enum:__anon14
+FLAG_MSAA_4X_HINT	./headers/raylib.h	/^    FLAG_MSAA_4X_HINT       = 0x00000020,   \/\/ Set to try enabling MSAA 4X$/;"	e	enum:__anon14
+FLAG_VSYNC_HINT	./headers/raylib.h	/^    FLAG_VSYNC_HINT         = 0x00000040,   \/\/ Set to try enabling V-Sync on GPU$/;"	e	enum:__anon14
+FLAG_WINDOW_ALWAYS_RUN	./headers/raylib.h	/^    FLAG_WINDOW_ALWAYS_RUN  = 0x00000100,   \/\/ Set to allow windows running while minimized$/;"	e	enum:__anon14
+FLAG_WINDOW_HIDDEN	./headers/raylib.h	/^    FLAG_WINDOW_HIDDEN      = 0x00000080,   \/\/ Set to hide window$/;"	e	enum:__anon14
+FLAG_WINDOW_HIGHDPI	./headers/raylib.h	/^    FLAG_WINDOW_HIGHDPI     = 0x00002000,   \/\/ Set to support HighDPI$/;"	e	enum:__anon14
+FLAG_WINDOW_MAXIMIZED	./headers/raylib.h	/^    FLAG_WINDOW_MAXIMIZED   = 0x00000400,   \/\/ Set to maximize window (expanded to monitor)$/;"	e	enum:__anon14
+FLAG_WINDOW_MINIMIZED	./headers/raylib.h	/^    FLAG_WINDOW_MINIMIZED   = 0x00000200,   \/\/ Set to minimize window (iconify)$/;"	e	enum:__anon14
+FLAG_WINDOW_MOUSE_PASSTHROUGH	./headers/raylib.h	/^    FLAG_WINDOW_MOUSE_PASSTHROUGH = 0x00004000, \/\/ Set to support mouse passthrough, only supported when FLAG_WINDOW_UNDECORATED$/;"	e	enum:__anon14
+FLAG_WINDOW_RESIZABLE	./headers/raylib.h	/^    FLAG_WINDOW_RESIZABLE   = 0x00000004,   \/\/ Set to allow resizable window$/;"	e	enum:__anon14
+FLAG_WINDOW_TOPMOST	./headers/raylib.h	/^    FLAG_WINDOW_TOPMOST     = 0x00001000,   \/\/ Set to window always on top$/;"	e	enum:__anon14
+FLAG_WINDOW_TRANSPARENT	./headers/raylib.h	/^    FLAG_WINDOW_TRANSPARENT = 0x00000010,   \/\/ Set to allow transparent framebuffer$/;"	e	enum:__anon14
+FLAG_WINDOW_UNDECORATED	./headers/raylib.h	/^    FLAG_WINDOW_UNDECORATED = 0x00000008,   \/\/ Set to disable window decoration (frame and buttons)$/;"	e	enum:__anon14
+FLAG_WINDOW_UNFOCUSED	./headers/raylib.h	/^    FLAG_WINDOW_UNFOCUSED   = 0x00000800,   \/\/ Set to window non focused$/;"	e	enum:__anon14
+FONT_BITMAP	./headers/raylib.h	/^    FONT_BITMAP,                    \/\/ Bitmap font generation, no anti-aliasing$/;"	e	enum:__anon29
+FONT_DEFAULT	./headers/raylib.h	/^    FONT_DEFAULT = 0,               \/\/ Default font generation, anti-aliased$/;"	e	enum:__anon29
+FONT_SDF	./headers/raylib.h	/^    FONT_SDF                        \/\/ SDF font generation, requires external shader$/;"	e	enum:__anon29
+FilePathList	./headers/raylib.h	/^typedef struct FilePathList {$/;"	s
+FilePathList	./headers/raylib.h	/^} FilePathList;$/;"	t	typeref:struct:FilePathList
+FloatEquals	./headers/raymath.h	/^RMAPI int FloatEquals(float x, float y)$/;"	f
+Font	./headers/raylib.h	/^typedef struct Font {$/;"	s
+Font	./headers/raylib.h	/^} Font;$/;"	t	typeref:struct:Font
+FontType	./headers/raylib.h	/^} FontType;$/;"	t	typeref:enum:__anon29
+GAMEPAD_AXIS_LEFT_TRIGGER	./headers/raylib.h	/^    GAMEPAD_AXIS_LEFT_TRIGGER  = 4,     \/\/ Gamepad back trigger left, pressure level: [1..-1]$/;"	e	enum:__anon20
+GAMEPAD_AXIS_LEFT_X	./headers/raylib.h	/^    GAMEPAD_AXIS_LEFT_X        = 0,     \/\/ Gamepad left stick X axis$/;"	e	enum:__anon20
+GAMEPAD_AXIS_LEFT_Y	./headers/raylib.h	/^    GAMEPAD_AXIS_LEFT_Y        = 1,     \/\/ Gamepad left stick Y axis$/;"	e	enum:__anon20
+GAMEPAD_AXIS_RIGHT_TRIGGER	./headers/raylib.h	/^    GAMEPAD_AXIS_RIGHT_TRIGGER = 5      \/\/ Gamepad back trigger right, pressure level: [1..-1]$/;"	e	enum:__anon20
+GAMEPAD_AXIS_RIGHT_X	./headers/raylib.h	/^    GAMEPAD_AXIS_RIGHT_X       = 2,     \/\/ Gamepad right stick X axis$/;"	e	enum:__anon20
+GAMEPAD_AXIS_RIGHT_Y	./headers/raylib.h	/^    GAMEPAD_AXIS_RIGHT_Y       = 3,     \/\/ Gamepad right stick Y axis$/;"	e	enum:__anon20
+GAMEPAD_BUTTON_LEFT_FACE_DOWN	./headers/raylib.h	/^    GAMEPAD_BUTTON_LEFT_FACE_DOWN,      \/\/ Gamepad left DPAD down button$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_LEFT_FACE_LEFT	./headers/raylib.h	/^    GAMEPAD_BUTTON_LEFT_FACE_LEFT,      \/\/ Gamepad left DPAD left button$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_LEFT_FACE_RIGHT	./headers/raylib.h	/^    GAMEPAD_BUTTON_LEFT_FACE_RIGHT,     \/\/ Gamepad left DPAD right button$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_LEFT_FACE_UP	./headers/raylib.h	/^    GAMEPAD_BUTTON_LEFT_FACE_UP,        \/\/ Gamepad left DPAD up button$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_LEFT_THUMB	./headers/raylib.h	/^    GAMEPAD_BUTTON_LEFT_THUMB,          \/\/ Gamepad joystick pressed button left$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_LEFT_TRIGGER_1	./headers/raylib.h	/^    GAMEPAD_BUTTON_LEFT_TRIGGER_1,      \/\/ Gamepad top\/back trigger left (first), it could be a trailing button$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_LEFT_TRIGGER_2	./headers/raylib.h	/^    GAMEPAD_BUTTON_LEFT_TRIGGER_2,      \/\/ Gamepad top\/back trigger left (second), it could be a trailing button$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_MIDDLE	./headers/raylib.h	/^    GAMEPAD_BUTTON_MIDDLE,              \/\/ Gamepad center buttons, middle one (i.e. PS3: PS, Xbox: XBOX)$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_MIDDLE_LEFT	./headers/raylib.h	/^    GAMEPAD_BUTTON_MIDDLE_LEFT,         \/\/ Gamepad center buttons, left one (i.e. PS3: Select)$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_MIDDLE_RIGHT	./headers/raylib.h	/^    GAMEPAD_BUTTON_MIDDLE_RIGHT,        \/\/ Gamepad center buttons, right one (i.e. PS3: Start)$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_RIGHT_FACE_DOWN	./headers/raylib.h	/^    GAMEPAD_BUTTON_RIGHT_FACE_DOWN,     \/\/ Gamepad right button down (i.e. PS3: Cross, Xbox: A)$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_RIGHT_FACE_LEFT	./headers/raylib.h	/^    GAMEPAD_BUTTON_RIGHT_FACE_LEFT,     \/\/ Gamepad right button left (i.e. PS3: Square, Xbox: X)$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_RIGHT_FACE_RIGHT	./headers/raylib.h	/^    GAMEPAD_BUTTON_RIGHT_FACE_RIGHT,    \/\/ Gamepad right button right (i.e. PS3: Circle, Xbox: B)$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_RIGHT_FACE_UP	./headers/raylib.h	/^    GAMEPAD_BUTTON_RIGHT_FACE_UP,       \/\/ Gamepad right button up (i.e. PS3: Triangle, Xbox: Y)$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_RIGHT_THUMB	./headers/raylib.h	/^    GAMEPAD_BUTTON_RIGHT_THUMB          \/\/ Gamepad joystick pressed button right$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_RIGHT_TRIGGER_1	./headers/raylib.h	/^    GAMEPAD_BUTTON_RIGHT_TRIGGER_1,     \/\/ Gamepad top\/back trigger right (first), it could be a trailing button$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_RIGHT_TRIGGER_2	./headers/raylib.h	/^    GAMEPAD_BUTTON_RIGHT_TRIGGER_2,     \/\/ Gamepad top\/back trigger right (second), it could be a trailing button$/;"	e	enum:__anon19
+GAMEPAD_BUTTON_UNKNOWN	./headers/raylib.h	/^    GAMEPAD_BUTTON_UNKNOWN = 0,         \/\/ Unknown button, just for error checking$/;"	e	enum:__anon19
+GESTURE_DOUBLETAP	./headers/raylib.h	/^    GESTURE_DOUBLETAP   = 2,        \/\/ Double tap gesture$/;"	e	enum:__anon31
+GESTURE_DRAG	./headers/raylib.h	/^    GESTURE_DRAG        = 8,        \/\/ Drag gesture$/;"	e	enum:__anon31
+GESTURE_HOLD	./headers/raylib.h	/^    GESTURE_HOLD        = 4,        \/\/ Hold gesture$/;"	e	enum:__anon31
+GESTURE_NONE	./headers/raylib.h	/^    GESTURE_NONE        = 0,        \/\/ No gesture$/;"	e	enum:__anon31
+GESTURE_PINCH_IN	./headers/raylib.h	/^    GESTURE_PINCH_IN    = 256,      \/\/ Pinch in gesture$/;"	e	enum:__anon31
+GESTURE_PINCH_OUT	./headers/raylib.h	/^    GESTURE_PINCH_OUT   = 512       \/\/ Pinch out gesture$/;"	e	enum:__anon31
+GESTURE_SWIPE_DOWN	./headers/raylib.h	/^    GESTURE_SWIPE_DOWN  = 128,      \/\/ Swipe down gesture$/;"	e	enum:__anon31
+GESTURE_SWIPE_LEFT	./headers/raylib.h	/^    GESTURE_SWIPE_LEFT  = 32,       \/\/ Swipe left gesture$/;"	e	enum:__anon31
+GESTURE_SWIPE_RIGHT	./headers/raylib.h	/^    GESTURE_SWIPE_RIGHT = 16,       \/\/ Swipe right gesture$/;"	e	enum:__anon31
+GESTURE_SWIPE_UP	./headers/raylib.h	/^    GESTURE_SWIPE_UP    = 64,       \/\/ Swipe up gesture$/;"	e	enum:__anon31
+GESTURE_TAP	./headers/raylib.h	/^    GESTURE_TAP         = 1,        \/\/ Tap gesture$/;"	e	enum:__anon31
+GLAD_API_CALL_EXPORT	./headers/rlgl.h	828;"	d
+GLAD_API_CALL_EXPORT_BUILD	./headers/rlgl.h	829;"	d
+GLAD_FREE	./headers/rlgl.h	856;"	d
+GLAD_GLES2_IMPLEMENTATION	./headers/rlgl.h	870;"	d
+GLAD_GL_IMPLEMENTATION	./headers/rlgl.h	858;"	d
+GLAD_MALLOC	./headers/rlgl.h	855;"	d
+GL_COMPRESSED_RGB8_ETC2	./headers/rlgl.h	925;"	d
+GL_COMPRESSED_RGBA8_ETC2_EAC	./headers/rlgl.h	928;"	d
+GL_COMPRESSED_RGBA_ASTC_4x4_KHR	./headers/rlgl.h	937;"	d
+GL_COMPRESSED_RGBA_ASTC_8x8_KHR	./headers/rlgl.h	940;"	d
+GL_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG	./headers/rlgl.h	934;"	d
+GL_COMPRESSED_RGBA_S3TC_DXT1_EXT	./headers/rlgl.h	913;"	d
+GL_COMPRESSED_RGBA_S3TC_DXT3_EXT	./headers/rlgl.h	916;"	d
+GL_COMPRESSED_RGBA_S3TC_DXT5_EXT	./headers/rlgl.h	919;"	d
+GL_COMPRESSED_RGB_PVRTC_4BPPV1_IMG	./headers/rlgl.h	931;"	d
+GL_COMPRESSED_RGB_S3TC_DXT1_EXT	./headers/rlgl.h	910;"	d
+GL_DRAW_FRAMEBUFFER	./headers/rlgl.h	973;"	d
+GL_ETC1_RGB8_OES	./headers/rlgl.h	922;"	d
+GL_GLEXT_PROTOTYPES	./headers/rlgl.h	864;"	d
+GL_GLEXT_PROTOTYPES	./headers/rlgl.h	873;"	d
+GL_LINE_WIDTH	./headers/rlgl.h	955;"	d
+GL_LUMINANCE	./headers/rlgl.h	965;"	d
+GL_LUMINANCE_ALPHA	./headers/rlgl.h	966;"	d
+GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT	./headers/rlgl.h	2555;"	d
+GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT	./headers/rlgl.h	944;"	d
+GL_PROGRAM_POINT_SIZE	./headers/rlgl.h	951;"	d
+GL_READ_FRAMEBUFFER	./headers/rlgl.h	972;"	d
+GL_SHADING_LANGUAGE_VERSION	./headers/rlgl.h	906;"	d
+GL_TEXTURE_MAX_ANISOTROPY_EXT	./headers/rlgl.h	947;"	d
+GL_UNSIGNED_SHORT_4_4_4_4	./headers/rlgl.h	961;"	d
+GL_UNSIGNED_SHORT_5_5_5_1	./headers/rlgl.h	960;"	d
+GL_UNSIGNED_SHORT_5_6_5	./headers/rlgl.h	959;"	d
+GOLD	./headers/raylib.h	173;"	d
+GRAPHICS_API_OPENGL_21	./headers/rlgl.h	164;"	d
+GRAPHICS_API_OPENGL_33	./headers/rlgl.h	158;"	d
+GRAPHICS_API_OPENGL_33	./headers/rlgl.h	167;"	d
+GRAPHICS_API_OPENGL_33	./headers/rlgl.h	180;"	d
+GRAPHICS_API_OPENGL_33	./headers/rlgl.h	185;"	d
+GRAPHICS_API_OPENGL_43	./headers/rlgl.h	170;"	d
+GRAPHICS_API_OPENGL_ES2	./headers/rlgl.h	173;"	d
+GRAPHICS_API_OPENGL_ES2	./headers/rlgl.h	190;"	d
+GRAY	./headers/raylib.h	170;"	d
+GREEN	./headers/raylib.h	178;"	d
+GRID_PLUG_H	./examples/grid_plug.h	2;"	d
+GamepadAxis	./headers/raylib.h	/^} GamepadAxis;$/;"	t	typeref:enum:__anon20
+GamepadButton	./headers/raylib.h	/^} GamepadButton;$/;"	t	typeref:enum:__anon19
+Gesture	./headers/raylib.h	/^} Gesture;$/;"	t	typeref:enum:__anon31
+GetMouseRay	./headers/raylib.h	1057;"	d
+GlyphInfo	./headers/raylib.h	/^typedef struct GlyphInfo {$/;"	s
+GlyphInfo	./headers/raylib.h	/^} GlyphInfo;$/;"	t	typeref:struct:GlyphInfo
+IVector2	./src/mygui.h	/^typedef struct IVector2 {$/;"	s
+IVector2	./src/mygui.h	/^} IVector2;$/;"	t	typeref:struct:IVector2
+Image	./headers/raylib.h	/^typedef struct Image {$/;"	s
+Image	./headers/raylib.h	/^} Image;$/;"	t	typeref:struct:Image
+KEY_A	./headers/raylib.h	/^    KEY_A               = 65,       \/\/ Key: A | a$/;"	e	enum:__anon16
+KEY_APOSTROPHE	./headers/raylib.h	/^    KEY_APOSTROPHE      = 39,       \/\/ Key: '$/;"	e	enum:__anon16
+KEY_B	./headers/raylib.h	/^    KEY_B               = 66,       \/\/ Key: B | b$/;"	e	enum:__anon16
+KEY_BACK	./headers/raylib.h	/^    KEY_BACK            = 4,        \/\/ Key: Android back button$/;"	e	enum:__anon16
+KEY_BACKSLASH	./headers/raylib.h	/^    KEY_BACKSLASH       = 92,       \/\/ Key: '\\'$/;"	e	enum:__anon16
+KEY_BACKSPACE	./headers/raylib.h	/^    KEY_BACKSPACE       = 259,      \/\/ Key: Backspace$/;"	e	enum:__anon16
+KEY_C	./headers/raylib.h	/^    KEY_C               = 67,       \/\/ Key: C | c$/;"	e	enum:__anon16
+KEY_CAPS_LOCK	./headers/raylib.h	/^    KEY_CAPS_LOCK       = 280,      \/\/ Key: Caps lock$/;"	e	enum:__anon16
+KEY_COMMA	./headers/raylib.h	/^    KEY_COMMA           = 44,       \/\/ Key: ,$/;"	e	enum:__anon16
+KEY_D	./headers/raylib.h	/^    KEY_D               = 68,       \/\/ Key: D | d$/;"	e	enum:__anon16
+KEY_DELETE	./headers/raylib.h	/^    KEY_DELETE          = 261,      \/\/ Key: Del$/;"	e	enum:__anon16
+KEY_DOWN	./headers/raylib.h	/^    KEY_DOWN            = 264,      \/\/ Key: Cursor down$/;"	e	enum:__anon16
+KEY_E	./headers/raylib.h	/^    KEY_E               = 69,       \/\/ Key: E | e$/;"	e	enum:__anon16
+KEY_EIGHT	./headers/raylib.h	/^    KEY_EIGHT           = 56,       \/\/ Key: 8$/;"	e	enum:__anon16
+KEY_END	./headers/raylib.h	/^    KEY_END             = 269,      \/\/ Key: End$/;"	e	enum:__anon16
+KEY_ENTER	./headers/raylib.h	/^    KEY_ENTER           = 257,      \/\/ Key: Enter$/;"	e	enum:__anon16
+KEY_EQUAL	./headers/raylib.h	/^    KEY_EQUAL           = 61,       \/\/ Key: =$/;"	e	enum:__anon16
+KEY_ESCAPE	./headers/raylib.h	/^    KEY_ESCAPE          = 256,      \/\/ Key: Esc$/;"	e	enum:__anon16
+KEY_F	./headers/raylib.h	/^    KEY_F               = 70,       \/\/ Key: F | f$/;"	e	enum:__anon16
+KEY_F1	./headers/raylib.h	/^    KEY_F1              = 290,      \/\/ Key: F1$/;"	e	enum:__anon16
+KEY_F10	./headers/raylib.h	/^    KEY_F10             = 299,      \/\/ Key: F10$/;"	e	enum:__anon16
+KEY_F11	./headers/raylib.h	/^    KEY_F11             = 300,      \/\/ Key: F11$/;"	e	enum:__anon16
+KEY_F12	./headers/raylib.h	/^    KEY_F12             = 301,      \/\/ Key: F12$/;"	e	enum:__anon16
+KEY_F2	./headers/raylib.h	/^    KEY_F2              = 291,      \/\/ Key: F2$/;"	e	enum:__anon16
+KEY_F3	./headers/raylib.h	/^    KEY_F3              = 292,      \/\/ Key: F3$/;"	e	enum:__anon16
+KEY_F4	./headers/raylib.h	/^    KEY_F4              = 293,      \/\/ Key: F4$/;"	e	enum:__anon16
+KEY_F5	./headers/raylib.h	/^    KEY_F5              = 294,      \/\/ Key: F5$/;"	e	enum:__anon16
+KEY_F6	./headers/raylib.h	/^    KEY_F6              = 295,      \/\/ Key: F6$/;"	e	enum:__anon16
+KEY_F7	./headers/raylib.h	/^    KEY_F7              = 296,      \/\/ Key: F7$/;"	e	enum:__anon16
+KEY_F8	./headers/raylib.h	/^    KEY_F8              = 297,      \/\/ Key: F8$/;"	e	enum:__anon16
+KEY_F9	./headers/raylib.h	/^    KEY_F9              = 298,      \/\/ Key: F9$/;"	e	enum:__anon16
+KEY_FIVE	./headers/raylib.h	/^    KEY_FIVE            = 53,       \/\/ Key: 5$/;"	e	enum:__anon16
+KEY_FOUR	./headers/raylib.h	/^    KEY_FOUR            = 52,       \/\/ Key: 4$/;"	e	enum:__anon16
+KEY_G	./headers/raylib.h	/^    KEY_G               = 71,       \/\/ Key: G | g$/;"	e	enum:__anon16
+KEY_GRAVE	./headers/raylib.h	/^    KEY_GRAVE           = 96,       \/\/ Key: `$/;"	e	enum:__anon16
+KEY_H	./headers/raylib.h	/^    KEY_H               = 72,       \/\/ Key: H | h$/;"	e	enum:__anon16
+KEY_HOME	./headers/raylib.h	/^    KEY_HOME            = 268,      \/\/ Key: Home$/;"	e	enum:__anon16
+KEY_I	./headers/raylib.h	/^    KEY_I               = 73,       \/\/ Key: I | i$/;"	e	enum:__anon16
+KEY_INSERT	./headers/raylib.h	/^    KEY_INSERT          = 260,      \/\/ Key: Ins$/;"	e	enum:__anon16
+KEY_J	./headers/raylib.h	/^    KEY_J               = 74,       \/\/ Key: J | j$/;"	e	enum:__anon16
+KEY_K	./headers/raylib.h	/^    KEY_K               = 75,       \/\/ Key: K | k$/;"	e	enum:__anon16
+KEY_KB_MENU	./headers/raylib.h	/^    KEY_KB_MENU         = 348,      \/\/ Key: KB menu$/;"	e	enum:__anon16
+KEY_KP_0	./headers/raylib.h	/^    KEY_KP_0            = 320,      \/\/ Key: Keypad 0$/;"	e	enum:__anon16
+KEY_KP_1	./headers/raylib.h	/^    KEY_KP_1            = 321,      \/\/ Key: Keypad 1$/;"	e	enum:__anon16
+KEY_KP_2	./headers/raylib.h	/^    KEY_KP_2            = 322,      \/\/ Key: Keypad 2$/;"	e	enum:__anon16
+KEY_KP_3	./headers/raylib.h	/^    KEY_KP_3            = 323,      \/\/ Key: Keypad 3$/;"	e	enum:__anon16
+KEY_KP_4	./headers/raylib.h	/^    KEY_KP_4            = 324,      \/\/ Key: Keypad 4$/;"	e	enum:__anon16
+KEY_KP_5	./headers/raylib.h	/^    KEY_KP_5            = 325,      \/\/ Key: Keypad 5$/;"	e	enum:__anon16
+KEY_KP_6	./headers/raylib.h	/^    KEY_KP_6            = 326,      \/\/ Key: Keypad 6$/;"	e	enum:__anon16
+KEY_KP_7	./headers/raylib.h	/^    KEY_KP_7            = 327,      \/\/ Key: Keypad 7$/;"	e	enum:__anon16
+KEY_KP_8	./headers/raylib.h	/^    KEY_KP_8            = 328,      \/\/ Key: Keypad 8$/;"	e	enum:__anon16
+KEY_KP_9	./headers/raylib.h	/^    KEY_KP_9            = 329,      \/\/ Key: Keypad 9$/;"	e	enum:__anon16
+KEY_KP_ADD	./headers/raylib.h	/^    KEY_KP_ADD          = 334,      \/\/ Key: Keypad +$/;"	e	enum:__anon16
+KEY_KP_DECIMAL	./headers/raylib.h	/^    KEY_KP_DECIMAL      = 330,      \/\/ Key: Keypad .$/;"	e	enum:__anon16
+KEY_KP_DIVIDE	./headers/raylib.h	/^    KEY_KP_DIVIDE       = 331,      \/\/ Key: Keypad \/$/;"	e	enum:__anon16
+KEY_KP_ENTER	./headers/raylib.h	/^    KEY_KP_ENTER        = 335,      \/\/ Key: Keypad Enter$/;"	e	enum:__anon16
+KEY_KP_EQUAL	./headers/raylib.h	/^    KEY_KP_EQUAL        = 336,      \/\/ Key: Keypad =$/;"	e	enum:__anon16
+KEY_KP_MULTIPLY	./headers/raylib.h	/^    KEY_KP_MULTIPLY     = 332,      \/\/ Key: Keypad *$/;"	e	enum:__anon16
+KEY_KP_SUBTRACT	./headers/raylib.h	/^    KEY_KP_SUBTRACT     = 333,      \/\/ Key: Keypad -$/;"	e	enum:__anon16
+KEY_L	./headers/raylib.h	/^    KEY_L               = 76,       \/\/ Key: L | l$/;"	e	enum:__anon16
+KEY_LEFT	./headers/raylib.h	/^    KEY_LEFT            = 263,      \/\/ Key: Cursor left$/;"	e	enum:__anon16
+KEY_LEFT_ALT	./headers/raylib.h	/^    KEY_LEFT_ALT        = 342,      \/\/ Key: Alt left$/;"	e	enum:__anon16
+KEY_LEFT_BRACKET	./headers/raylib.h	/^    KEY_LEFT_BRACKET    = 91,       \/\/ Key: [$/;"	e	enum:__anon16
+KEY_LEFT_CONTROL	./headers/raylib.h	/^    KEY_LEFT_CONTROL    = 341,      \/\/ Key: Control left$/;"	e	enum:__anon16
+KEY_LEFT_SHIFT	./headers/raylib.h	/^    KEY_LEFT_SHIFT      = 340,      \/\/ Key: Shift left$/;"	e	enum:__anon16
+KEY_LEFT_SUPER	./headers/raylib.h	/^    KEY_LEFT_SUPER      = 343,      \/\/ Key: Super left$/;"	e	enum:__anon16
+KEY_M	./headers/raylib.h	/^    KEY_M               = 77,       \/\/ Key: M | m$/;"	e	enum:__anon16
+KEY_MENU	./headers/raylib.h	/^    KEY_MENU            = 5,        \/\/ Key: Android menu button$/;"	e	enum:__anon16
+KEY_MINUS	./headers/raylib.h	/^    KEY_MINUS           = 45,       \/\/ Key: -$/;"	e	enum:__anon16
+KEY_N	./headers/raylib.h	/^    KEY_N               = 78,       \/\/ Key: N | n$/;"	e	enum:__anon16
+KEY_NINE	./headers/raylib.h	/^    KEY_NINE            = 57,       \/\/ Key: 9$/;"	e	enum:__anon16
+KEY_NULL	./headers/raylib.h	/^    KEY_NULL            = 0,        \/\/ Key: NULL, used for no key pressed$/;"	e	enum:__anon16
+KEY_NUM_LOCK	./headers/raylib.h	/^    KEY_NUM_LOCK        = 282,      \/\/ Key: Num lock$/;"	e	enum:__anon16
+KEY_O	./headers/raylib.h	/^    KEY_O               = 79,       \/\/ Key: O | o$/;"	e	enum:__anon16
+KEY_ONE	./headers/raylib.h	/^    KEY_ONE             = 49,       \/\/ Key: 1$/;"	e	enum:__anon16
+KEY_P	./headers/raylib.h	/^    KEY_P               = 80,       \/\/ Key: P | p$/;"	e	enum:__anon16
+KEY_PAGE_DOWN	./headers/raylib.h	/^    KEY_PAGE_DOWN       = 267,      \/\/ Key: Page down$/;"	e	enum:__anon16
+KEY_PAGE_UP	./headers/raylib.h	/^    KEY_PAGE_UP         = 266,      \/\/ Key: Page up$/;"	e	enum:__anon16
+KEY_PAUSE	./headers/raylib.h	/^    KEY_PAUSE           = 284,      \/\/ Key: Pause$/;"	e	enum:__anon16
+KEY_PERIOD	./headers/raylib.h	/^    KEY_PERIOD          = 46,       \/\/ Key: .$/;"	e	enum:__anon16
+KEY_PRINT_SCREEN	./headers/raylib.h	/^    KEY_PRINT_SCREEN    = 283,      \/\/ Key: Print screen$/;"	e	enum:__anon16
+KEY_Q	./headers/raylib.h	/^    KEY_Q               = 81,       \/\/ Key: Q | q$/;"	e	enum:__anon16
+KEY_R	./headers/raylib.h	/^    KEY_R               = 82,       \/\/ Key: R | r$/;"	e	enum:__anon16
+KEY_RIGHT	./headers/raylib.h	/^    KEY_RIGHT           = 262,      \/\/ Key: Cursor right$/;"	e	enum:__anon16
+KEY_RIGHT_ALT	./headers/raylib.h	/^    KEY_RIGHT_ALT       = 346,      \/\/ Key: Alt right$/;"	e	enum:__anon16
+KEY_RIGHT_BRACKET	./headers/raylib.h	/^    KEY_RIGHT_BRACKET   = 93,       \/\/ Key: ]$/;"	e	enum:__anon16
+KEY_RIGHT_CONTROL	./headers/raylib.h	/^    KEY_RIGHT_CONTROL   = 345,      \/\/ Key: Control right$/;"	e	enum:__anon16
+KEY_RIGHT_SHIFT	./headers/raylib.h	/^    KEY_RIGHT_SHIFT     = 344,      \/\/ Key: Shift right$/;"	e	enum:__anon16
+KEY_RIGHT_SUPER	./headers/raylib.h	/^    KEY_RIGHT_SUPER     = 347,      \/\/ Key: Super right$/;"	e	enum:__anon16
+KEY_S	./headers/raylib.h	/^    KEY_S               = 83,       \/\/ Key: S | s$/;"	e	enum:__anon16
+KEY_SCROLL_LOCK	./headers/raylib.h	/^    KEY_SCROLL_LOCK     = 281,      \/\/ Key: Scroll down$/;"	e	enum:__anon16
+KEY_SEMICOLON	./headers/raylib.h	/^    KEY_SEMICOLON       = 59,       \/\/ Key: ;$/;"	e	enum:__anon16
+KEY_SEVEN	./headers/raylib.h	/^    KEY_SEVEN           = 55,       \/\/ Key: 7$/;"	e	enum:__anon16
+KEY_SIX	./headers/raylib.h	/^    KEY_SIX             = 54,       \/\/ Key: 6$/;"	e	enum:__anon16
+KEY_SLASH	./headers/raylib.h	/^    KEY_SLASH           = 47,       \/\/ Key: \/$/;"	e	enum:__anon16
+KEY_SPACE	./headers/raylib.h	/^    KEY_SPACE           = 32,       \/\/ Key: Space$/;"	e	enum:__anon16
+KEY_T	./headers/raylib.h	/^    KEY_T               = 84,       \/\/ Key: T | t$/;"	e	enum:__anon16
+KEY_TAB	./headers/raylib.h	/^    KEY_TAB             = 258,      \/\/ Key: Tab$/;"	e	enum:__anon16
+KEY_THREE	./headers/raylib.h	/^    KEY_THREE           = 51,       \/\/ Key: 3$/;"	e	enum:__anon16
+KEY_TWO	./headers/raylib.h	/^    KEY_TWO             = 50,       \/\/ Key: 2$/;"	e	enum:__anon16
+KEY_U	./headers/raylib.h	/^    KEY_U               = 85,       \/\/ Key: U | u$/;"	e	enum:__anon16
+KEY_UP	./headers/raylib.h	/^    KEY_UP              = 265,      \/\/ Key: Cursor up$/;"	e	enum:__anon16
+KEY_V	./headers/raylib.h	/^    KEY_V               = 86,       \/\/ Key: V | v$/;"	e	enum:__anon16
+KEY_VOLUME_DOWN	./headers/raylib.h	/^    KEY_VOLUME_DOWN     = 25        \/\/ Key: Android volume down button$/;"	e	enum:__anon16
+KEY_VOLUME_UP	./headers/raylib.h	/^    KEY_VOLUME_UP       = 24,       \/\/ Key: Android volume up button$/;"	e	enum:__anon16
+KEY_W	./headers/raylib.h	/^    KEY_W               = 87,       \/\/ Key: W | w$/;"	e	enum:__anon16
+KEY_X	./headers/raylib.h	/^    KEY_X               = 88,       \/\/ Key: X | x$/;"	e	enum:__anon16
+KEY_Y	./headers/raylib.h	/^    KEY_Y               = 89,       \/\/ Key: Y | y$/;"	e	enum:__anon16
+KEY_Z	./headers/raylib.h	/^    KEY_Z               = 90,       \/\/ Key: Z | z$/;"	e	enum:__anon16
+KEY_ZERO	./headers/raylib.h	/^    KEY_ZERO            = 48,       \/\/ Key: 0$/;"	e	enum:__anon16
+KeyboardKey	./headers/raylib.h	/^} KeyboardKey;$/;"	t	typeref:enum:__anon16
+LIGHTGRAY	./headers/raylib.h	169;"	d
+LIME	./headers/raylib.h	179;"	d
+LOG_ALL	./headers/raylib.h	/^    LOG_ALL = 0,        \/\/ Display all logs$/;"	e	enum:__anon15
+LOG_DEBUG	./headers/raylib.h	/^    LOG_DEBUG,          \/\/ Debug logging, used for internal debugging, it should be disabled on release builds$/;"	e	enum:__anon15
+LOG_ERROR	./headers/raylib.h	/^    LOG_ERROR,          \/\/ Error logging, used on unrecoverable failures$/;"	e	enum:__anon15
+LOG_FATAL	./headers/raylib.h	/^    LOG_FATAL,          \/\/ Fatal logging, used to abort program: exit(EXIT_FAILURE)$/;"	e	enum:__anon15
+LOG_INFO	./headers/raylib.h	/^    LOG_INFO,           \/\/ Info logging, used for program execution info$/;"	e	enum:__anon15
+LOG_NONE	./headers/raylib.h	/^    LOG_NONE            \/\/ Disable logging$/;"	e	enum:__anon15
+LOG_TRACE	./headers/raylib.h	/^    LOG_TRACE,          \/\/ Trace logging, intended for internal use only$/;"	e	enum:__anon15
+LOG_WARNING	./headers/raylib.h	/^    LOG_WARNING,        \/\/ Warning logging, used on recoverable failures$/;"	e	enum:__anon15
+Lerp	./headers/raymath.h	/^RMAPI float Lerp(float start, float end, float amount)$/;"	f
+LoadFileDataCallback	./headers/raylib.h	/^typedef unsigned char *(*LoadFileDataCallback)(const char *fileName, int *dataSize);    \/\/ FileIO: Load binary data$/;"	t
+LoadFileTextCallback	./headers/raylib.h	/^typedef char *(*LoadFileTextCallback)(const char *fileName);            \/\/ FileIO: Load text data$/;"	t
+MAGENTA	./headers/raylib.h	194;"	d
+MAROON	./headers/raylib.h	177;"	d
+MATERIAL_MAP_ALBEDO	./headers/raylib.h	/^    MATERIAL_MAP_ALBEDO = 0,        \/\/ Albedo material (same as: MATERIAL_MAP_DIFFUSE)$/;"	e	enum:__anon21
+MATERIAL_MAP_BRDF	./headers/raylib.h	/^    MATERIAL_MAP_BRDF               \/\/ Brdf material$/;"	e	enum:__anon21
+MATERIAL_MAP_CUBEMAP	./headers/raylib.h	/^    MATERIAL_MAP_CUBEMAP,           \/\/ Cubemap material (NOTE: Uses GL_TEXTURE_CUBE_MAP)$/;"	e	enum:__anon21
+MATERIAL_MAP_DIFFUSE	./headers/raylib.h	765;"	d
+MATERIAL_MAP_EMISSION	./headers/raylib.h	/^    MATERIAL_MAP_EMISSION,          \/\/ Emission material$/;"	e	enum:__anon21
+MATERIAL_MAP_HEIGHT	./headers/raylib.h	/^    MATERIAL_MAP_HEIGHT,            \/\/ Heightmap material$/;"	e	enum:__anon21
+MATERIAL_MAP_IRRADIANCE	./headers/raylib.h	/^    MATERIAL_MAP_IRRADIANCE,        \/\/ Irradiance material (NOTE: Uses GL_TEXTURE_CUBE_MAP)$/;"	e	enum:__anon21
+MATERIAL_MAP_METALNESS	./headers/raylib.h	/^    MATERIAL_MAP_METALNESS,         \/\/ Metalness material (same as: MATERIAL_MAP_SPECULAR)$/;"	e	enum:__anon21
+MATERIAL_MAP_NORMAL	./headers/raylib.h	/^    MATERIAL_MAP_NORMAL,            \/\/ Normal material$/;"	e	enum:__anon21
+MATERIAL_MAP_OCCLUSION	./headers/raylib.h	/^    MATERIAL_MAP_OCCLUSION,         \/\/ Ambient occlusion material$/;"	e	enum:__anon21
+MATERIAL_MAP_PREFILTER	./headers/raylib.h	/^    MATERIAL_MAP_PREFILTER,         \/\/ Prefilter material (NOTE: Uses GL_TEXTURE_CUBE_MAP)$/;"	e	enum:__anon21
+MATERIAL_MAP_ROUGHNESS	./headers/raylib.h	/^    MATERIAL_MAP_ROUGHNESS,         \/\/ Roughness material$/;"	e	enum:__anon21
+MATERIAL_MAP_SPECULAR	./headers/raylib.h	766;"	d
+MAX	./headers/rlgl.h	3554;"	d
+MG_ARENA_DEFAULT_SIZE	./src/mygui.h	15;"	d
+MG_BACKGROUND_COLOR	./src/mygui.h	12;"	d
+MG_FONT_SIZE	./src/mygui.h	14;"	d
+MG_FOREGROUND_COLOR	./src/mygui.h	11;"	d
+MG_TEST_PLUG_H	./examples/mg_test_plug.h	2;"	d
+MG_TEXT_COLOR	./src/mygui.h	13;"	d
+MIN	./headers/rlgl.h	3553;"	d
+MOUSE_BUTTON_BACK	./headers/raylib.h	/^    MOUSE_BUTTON_BACK    = 6,       \/\/ Mouse button back (advanced mouse device)$/;"	e	enum:__anon17
+MOUSE_BUTTON_EXTRA	./headers/raylib.h	/^    MOUSE_BUTTON_EXTRA   = 4,       \/\/ Mouse button extra (advanced mouse device)$/;"	e	enum:__anon17
+MOUSE_BUTTON_FORWARD	./headers/raylib.h	/^    MOUSE_BUTTON_FORWARD = 5,       \/\/ Mouse button forward (advanced mouse device)$/;"	e	enum:__anon17
+MOUSE_BUTTON_LEFT	./headers/raylib.h	/^    MOUSE_BUTTON_LEFT    = 0,       \/\/ Mouse button left$/;"	e	enum:__anon17
+MOUSE_BUTTON_MIDDLE	./headers/raylib.h	/^    MOUSE_BUTTON_MIDDLE  = 2,       \/\/ Mouse button middle (pressed wheel)$/;"	e	enum:__anon17
+MOUSE_BUTTON_RIGHT	./headers/raylib.h	/^    MOUSE_BUTTON_RIGHT   = 1,       \/\/ Mouse button right$/;"	e	enum:__anon17
+MOUSE_BUTTON_SIDE	./headers/raylib.h	/^    MOUSE_BUTTON_SIDE    = 3,       \/\/ Mouse button side (advanced mouse device)$/;"	e	enum:__anon17
+MOUSE_CURSOR_ARROW	./headers/raylib.h	/^    MOUSE_CURSOR_ARROW         = 1,     \/\/ Arrow shape$/;"	e	enum:__anon18
+MOUSE_CURSOR_CROSSHAIR	./headers/raylib.h	/^    MOUSE_CURSOR_CROSSHAIR     = 3,     \/\/ Cross shape$/;"	e	enum:__anon18
+MOUSE_CURSOR_DEFAULT	./headers/raylib.h	/^    MOUSE_CURSOR_DEFAULT       = 0,     \/\/ Default pointer shape$/;"	e	enum:__anon18
+MOUSE_CURSOR_IBEAM	./headers/raylib.h	/^    MOUSE_CURSOR_IBEAM         = 2,     \/\/ Text writing cursor shape$/;"	e	enum:__anon18
+MOUSE_CURSOR_NOT_ALLOWED	./headers/raylib.h	/^    MOUSE_CURSOR_NOT_ALLOWED   = 10     \/\/ The operation-not-allowed shape$/;"	e	enum:__anon18
+MOUSE_CURSOR_POINTING_HAND	./headers/raylib.h	/^    MOUSE_CURSOR_POINTING_HAND = 4,     \/\/ Pointing hand cursor$/;"	e	enum:__anon18
+MOUSE_CURSOR_RESIZE_ALL	./headers/raylib.h	/^    MOUSE_CURSOR_RESIZE_ALL    = 9,     \/\/ The omnidirectional resize\/move cursor shape$/;"	e	enum:__anon18
+MOUSE_CURSOR_RESIZE_EW	./headers/raylib.h	/^    MOUSE_CURSOR_RESIZE_EW     = 5,     \/\/ Horizontal resize\/move arrow shape$/;"	e	enum:__anon18
+MOUSE_CURSOR_RESIZE_NESW	./headers/raylib.h	/^    MOUSE_CURSOR_RESIZE_NESW   = 8,     \/\/ The top-right to bottom-left diagonal resize\/move arrow shape$/;"	e	enum:__anon18
+MOUSE_CURSOR_RESIZE_NS	./headers/raylib.h	/^    MOUSE_CURSOR_RESIZE_NS     = 6,     \/\/ Vertical resize\/move arrow shape$/;"	e	enum:__anon18
+MOUSE_CURSOR_RESIZE_NWSE	./headers/raylib.h	/^    MOUSE_CURSOR_RESIZE_NWSE   = 7,     \/\/ Top-left to bottom-right diagonal resize\/move arrow shape$/;"	e	enum:__anon18
+MOUSE_LEFT_BUTTON	./headers/raylib.h	688;"	d
+MOUSE_MIDDLE_BUTTON	./headers/raylib.h	690;"	d
+MOUSE_RIGHT_BUTTON	./headers/raylib.h	689;"	d
+MYGUI_H_	./src/mygui.h	2;"	d
+MYGUI_IMPLEMENTATION	./examples/grid.c	6;"	d	file:
+MYGUI_IMPLEMENTATION	./examples/grid_plug.h	5;"	d
+MYGUI_IMPLEMENTATION	./examples/mg_test.c	5;"	d	file:
+MYGUI_IMPLEMENTATION	./examples/mg_test_plug.h	4;"	d
+Material	./headers/raylib.h	/^typedef struct Material {$/;"	s
+Material	./headers/raylib.h	/^} Material;$/;"	t	typeref:struct:Material
+MaterialMap	./headers/raylib.h	/^typedef struct MaterialMap {$/;"	s
+MaterialMap	./headers/raylib.h	/^} MaterialMap;$/;"	t	typeref:struct:MaterialMap
+MaterialMapIndex	./headers/raylib.h	/^} MaterialMapIndex;$/;"	t	typeref:enum:__anon21
+Matrix	./headers/raylib.h	/^typedef struct Matrix {$/;"	s
+Matrix	./headers/raylib.h	/^} Matrix;$/;"	t	typeref:struct:Matrix
+Matrix	./headers/raymath.h	/^typedef struct Matrix {$/;"	s
+Matrix	./headers/raymath.h	/^} Matrix;$/;"	t	typeref:struct:Matrix
+Matrix	./headers/rlgl.h	/^typedef struct Matrix {$/;"	s
+Matrix	./headers/rlgl.h	/^} Matrix;$/;"	t	typeref:struct:Matrix
+MatrixAdd	./headers/raymath.h	/^RMAPI Matrix MatrixAdd(Matrix left, Matrix right)$/;"	f
+MatrixDecompose	./headers/raymath.h	/^RMAPI void MatrixDecompose(Matrix mat, Vector3 *translation, Quaternion *rotation, Vector3 *scale)$/;"	f
+MatrixDeterminant	./headers/raymath.h	/^RMAPI float MatrixDeterminant(Matrix mat)$/;"	f
+MatrixFrustum	./headers/raymath.h	/^RMAPI Matrix MatrixFrustum(double left, double right, double bottom, double top, double nearPlane, double farPlane)$/;"	f
+MatrixIdentity	./headers/raymath.h	/^RMAPI Matrix MatrixIdentity(void)$/;"	f
+MatrixInvert	./headers/raymath.h	/^RMAPI Matrix MatrixInvert(Matrix mat)$/;"	f
+MatrixLookAt	./headers/raymath.h	/^RMAPI Matrix MatrixLookAt(Vector3 eye, Vector3 target, Vector3 up)$/;"	f
+MatrixMultiply	./headers/raymath.h	/^RMAPI Matrix MatrixMultiply(Matrix left, Matrix right)$/;"	f
+MatrixOrtho	./headers/raymath.h	/^RMAPI Matrix MatrixOrtho(double left, double right, double bottom, double top, double nearPlane, double farPlane)$/;"	f
+MatrixPerspective	./headers/raymath.h	/^RMAPI Matrix MatrixPerspective(double fovY, double aspect, double nearPlane, double farPlane)$/;"	f
+MatrixRotate	./headers/raymath.h	/^RMAPI Matrix MatrixRotate(Vector3 axis, float angle)$/;"	f
+MatrixRotateX	./headers/raymath.h	/^RMAPI Matrix MatrixRotateX(float angle)$/;"	f
+MatrixRotateXYZ	./headers/raymath.h	/^RMAPI Matrix MatrixRotateXYZ(Vector3 angle)$/;"	f
+MatrixRotateY	./headers/raymath.h	/^RMAPI Matrix MatrixRotateY(float angle)$/;"	f
+MatrixRotateZ	./headers/raymath.h	/^RMAPI Matrix MatrixRotateZ(float angle)$/;"	f
+MatrixRotateZYX	./headers/raymath.h	/^RMAPI Matrix MatrixRotateZYX(Vector3 angle)$/;"	f
+MatrixScale	./headers/raymath.h	/^RMAPI Matrix MatrixScale(float x, float y, float z)$/;"	f
+MatrixSubtract	./headers/raymath.h	/^RMAPI Matrix MatrixSubtract(Matrix left, Matrix right)$/;"	f
+MatrixToFloat	./headers/raymath.h	102;"	d
+MatrixToFloatV	./headers/raymath.h	/^RMAPI float16 MatrixToFloatV(Matrix mat)$/;"	f
+MatrixTrace	./headers/raymath.h	/^RMAPI float MatrixTrace(Matrix mat)$/;"	f
+MatrixTranslate	./headers/raymath.h	/^RMAPI Matrix MatrixTranslate(float x, float y, float z)$/;"	f
+MatrixTranspose	./headers/raymath.h	/^RMAPI Matrix MatrixTranspose(Matrix mat)$/;"	f
+Mesh	./headers/raylib.h	/^typedef struct Mesh {$/;"	s
+Mesh	./headers/raylib.h	/^} Mesh;$/;"	t	typeref:struct:Mesh
+Model	./headers/raylib.h	/^typedef struct Model {$/;"	s
+Model	./headers/raylib.h	/^} Model;$/;"	t	typeref:struct:Model
+ModelAnimation	./headers/raylib.h	/^typedef struct ModelAnimation {$/;"	s
+ModelAnimation	./headers/raylib.h	/^} ModelAnimation;$/;"	t	typeref:struct:ModelAnimation
+MouseButton	./headers/raylib.h	/^} MouseButton;$/;"	t	typeref:enum:__anon17
+MouseCursor	./headers/raylib.h	/^} MouseCursor;$/;"	t	typeref:enum:__anon18
+Music	./headers/raylib.h	/^typedef struct Music {$/;"	s
+Music	./headers/raylib.h	/^} Music;$/;"	t	typeref:struct:Music
+NPATCH_NINE_PATCH	./headers/raylib.h	/^    NPATCH_NINE_PATCH = 0,          \/\/ Npatch layout: 3x3 tiles$/;"	e	enum:__anon34
+NPATCH_THREE_PATCH_HORIZONTAL	./headers/raylib.h	/^    NPATCH_THREE_PATCH_HORIZONTAL   \/\/ Npatch layout: 3x1 tiles$/;"	e	enum:__anon34
+NPATCH_THREE_PATCH_VERTICAL	./headers/raylib.h	/^    NPATCH_THREE_PATCH_VERTICAL,    \/\/ Npatch layout: 1x3 tiles$/;"	e	enum:__anon34
+NPatchInfo	./headers/raylib.h	/^typedef struct NPatchInfo {$/;"	s
+NPatchInfo	./headers/raylib.h	/^} NPatchInfo;$/;"	t	typeref:struct:NPatchInfo
+NPatchLayout	./headers/raylib.h	/^} NPatchLayout;$/;"	t	typeref:enum:__anon34
+Normalize	./headers/raymath.h	/^RMAPI float Normalize(float value, float start, float end)$/;"	f
+ORANGE	./headers/raylib.h	174;"	d
+PFNGLDRAWARRAYSINSTANCEDEXTPROC	./headers/rlgl.h	/^    typedef void (GL_APIENTRYP PFNGLDRAWARRAYSINSTANCEDEXTPROC) (GLenum mode, GLint start, GLsizei count, GLsizei primcount);$/;"	t
+PFNGLDRAWELEMENTSINSTANCEDEXTPROC	./headers/rlgl.h	/^    typedef void (GL_APIENTRYP PFNGLDRAWELEMENTSINSTANCEDEXTPROC) (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount);$/;"	t
+PFNGLVERTEXATTRIBDIVISOREXTPROC	./headers/rlgl.h	/^    typedef void (GL_APIENTRYP PFNGLVERTEXATTRIBDIVISOREXTPROC) (GLuint index, GLuint divisor);$/;"	t
+PI	./headers/raylib.h	115;"	d
+PI	./headers/raymath.h	85;"	d
+PI	./headers/rlgl.h	896;"	d
+PINK	./headers/raylib.h	175;"	d
+PIXELFORMAT_COMPRESSED_ASTC_4x4_RGBA	./headers/raylib.h	/^    PIXELFORMAT_COMPRESSED_ASTC_4x4_RGBA,   \/\/ 8 bpp$/;"	e	enum:__anon25
+PIXELFORMAT_COMPRESSED_ASTC_8x8_RGBA	./headers/raylib.h	/^    PIXELFORMAT_COMPRESSED_ASTC_8x8_RGBA    \/\/ 2 bpp$/;"	e	enum:__anon25
+PIXELFORMAT_COMPRESSED_DXT1_RGB	./headers/raylib.h	/^    PIXELFORMAT_COMPRESSED_DXT1_RGB,        \/\/ 4 bpp (no alpha)$/;"	e	enum:__anon25
+PIXELFORMAT_COMPRESSED_DXT1_RGBA	./headers/raylib.h	/^    PIXELFORMAT_COMPRESSED_DXT1_RGBA,       \/\/ 4 bpp (1 bit alpha)$/;"	e	enum:__anon25
+PIXELFORMAT_COMPRESSED_DXT3_RGBA	./headers/raylib.h	/^    PIXELFORMAT_COMPRESSED_DXT3_RGBA,       \/\/ 8 bpp$/;"	e	enum:__anon25
+PIXELFORMAT_COMPRESSED_DXT5_RGBA	./headers/raylib.h	/^    PIXELFORMAT_COMPRESSED_DXT5_RGBA,       \/\/ 8 bpp$/;"	e	enum:__anon25
+PIXELFORMAT_COMPRESSED_ETC1_RGB	./headers/raylib.h	/^    PIXELFORMAT_COMPRESSED_ETC1_RGB,        \/\/ 4 bpp$/;"	e	enum:__anon25
+PIXELFORMAT_COMPRESSED_ETC2_EAC_RGBA	./headers/raylib.h	/^    PIXELFORMAT_COMPRESSED_ETC2_EAC_RGBA,   \/\/ 8 bpp$/;"	e	enum:__anon25
+PIXELFORMAT_COMPRESSED_ETC2_RGB	./headers/raylib.h	/^    PIXELFORMAT_COMPRESSED_ETC2_RGB,        \/\/ 4 bpp$/;"	e	enum:__anon25
+PIXELFORMAT_COMPRESSED_PVRT_RGB	./headers/raylib.h	/^    PIXELFORMAT_COMPRESSED_PVRT_RGB,        \/\/ 4 bpp$/;"	e	enum:__anon25
+PIXELFORMAT_COMPRESSED_PVRT_RGBA	./headers/raylib.h	/^    PIXELFORMAT_COMPRESSED_PVRT_RGBA,       \/\/ 4 bpp$/;"	e	enum:__anon25
+PIXELFORMAT_UNCOMPRESSED_GRAYSCALE	./headers/raylib.h	/^    PIXELFORMAT_UNCOMPRESSED_GRAYSCALE = 1, \/\/ 8 bit per pixel (no alpha)$/;"	e	enum:__anon25
+PIXELFORMAT_UNCOMPRESSED_GRAY_ALPHA	./headers/raylib.h	/^    PIXELFORMAT_UNCOMPRESSED_GRAY_ALPHA,    \/\/ 8*2 bpp (2 channels)$/;"	e	enum:__anon25
+PIXELFORMAT_UNCOMPRESSED_R16	./headers/raylib.h	/^    PIXELFORMAT_UNCOMPRESSED_R16,           \/\/ 16 bpp (1 channel - half float)$/;"	e	enum:__anon25
+PIXELFORMAT_UNCOMPRESSED_R16G16B16	./headers/raylib.h	/^    PIXELFORMAT_UNCOMPRESSED_R16G16B16,     \/\/ 16*3 bpp (3 channels - half float)$/;"	e	enum:__anon25
+PIXELFORMAT_UNCOMPRESSED_R16G16B16A16	./headers/raylib.h	/^    PIXELFORMAT_UNCOMPRESSED_R16G16B16A16,  \/\/ 16*4 bpp (4 channels - half float)$/;"	e	enum:__anon25
+PIXELFORMAT_UNCOMPRESSED_R32	./headers/raylib.h	/^    PIXELFORMAT_UNCOMPRESSED_R32,           \/\/ 32 bpp (1 channel - float)$/;"	e	enum:__anon25
+PIXELFORMAT_UNCOMPRESSED_R32G32B32	./headers/raylib.h	/^    PIXELFORMAT_UNCOMPRESSED_R32G32B32,     \/\/ 32*3 bpp (3 channels - float)$/;"	e	enum:__anon25
+PIXELFORMAT_UNCOMPRESSED_R32G32B32A32	./headers/raylib.h	/^    PIXELFORMAT_UNCOMPRESSED_R32G32B32A32,  \/\/ 32*4 bpp (4 channels - float)$/;"	e	enum:__anon25
+PIXELFORMAT_UNCOMPRESSED_R4G4B4A4	./headers/raylib.h	/^    PIXELFORMAT_UNCOMPRESSED_R4G4B4A4,      \/\/ 16 bpp (4 bit alpha)$/;"	e	enum:__anon25
+PIXELFORMAT_UNCOMPRESSED_R5G5B5A1	./headers/raylib.h	/^    PIXELFORMAT_UNCOMPRESSED_R5G5B5A1,      \/\/ 16 bpp (1 bit alpha)$/;"	e	enum:__anon25
+PIXELFORMAT_UNCOMPRESSED_R5G6B5	./headers/raylib.h	/^    PIXELFORMAT_UNCOMPRESSED_R5G6B5,        \/\/ 16 bpp$/;"	e	enum:__anon25
+PIXELFORMAT_UNCOMPRESSED_R8G8B8	./headers/raylib.h	/^    PIXELFORMAT_UNCOMPRESSED_R8G8B8,        \/\/ 24 bpp$/;"	e	enum:__anon25
+PIXELFORMAT_UNCOMPRESSED_R8G8B8A8	./headers/raylib.h	/^    PIXELFORMAT_UNCOMPRESSED_R8G8B8A8,      \/\/ 32 bpp$/;"	e	enum:__anon25
+PURPLE	./headers/raylib.h	184;"	d
+PixelFormat	./headers/raylib.h	/^} PixelFormat;$/;"	t	typeref:enum:__anon25
+Plug	./examples/grid_plug.h	/^} Plug;$/;"	t	typeref:struct:__anon43
+Plug	./examples/mg_test_plug.h	/^} Plug;$/;"	t	typeref:struct:__anon44
+Quaternion	./headers/raylib.h	/^typedef Vector4 Quaternion;$/;"	t
+Quaternion	./headers/raymath.h	/^typedef Vector4 Quaternion;$/;"	t
+QuaternionAdd	./headers/raymath.h	/^RMAPI Quaternion QuaternionAdd(Quaternion q1, Quaternion q2)$/;"	f
+QuaternionAddValue	./headers/raymath.h	/^RMAPI Quaternion QuaternionAddValue(Quaternion q, float add)$/;"	f
+QuaternionCubicHermiteSpline	./headers/raymath.h	/^RMAPI Quaternion QuaternionCubicHermiteSpline(Quaternion q1, Quaternion outTangent1, Quaternion q2, Quaternion inTangent2, float t)$/;"	f
+QuaternionDivide	./headers/raymath.h	/^RMAPI Quaternion QuaternionDivide(Quaternion q1, Quaternion q2)$/;"	f
+QuaternionEquals	./headers/raymath.h	/^RMAPI int QuaternionEquals(Quaternion p, Quaternion q)$/;"	f
+QuaternionFromAxisAngle	./headers/raymath.h	/^RMAPI Quaternion QuaternionFromAxisAngle(Vector3 axis, float angle)$/;"	f
+QuaternionFromEuler	./headers/raymath.h	/^RMAPI Quaternion QuaternionFromEuler(float pitch, float yaw, float roll)$/;"	f
+QuaternionFromMatrix	./headers/raymath.h	/^RMAPI Quaternion QuaternionFromMatrix(Matrix mat)$/;"	f
+QuaternionFromVector3ToVector3	./headers/raymath.h	/^RMAPI Quaternion QuaternionFromVector3ToVector3(Vector3 from, Vector3 to)$/;"	f
+QuaternionIdentity	./headers/raymath.h	/^RMAPI Quaternion QuaternionIdentity(void)$/;"	f
+QuaternionInvert	./headers/raymath.h	/^RMAPI Quaternion QuaternionInvert(Quaternion q)$/;"	f
+QuaternionLength	./headers/raymath.h	/^RMAPI float QuaternionLength(Quaternion q)$/;"	f
+QuaternionLerp	./headers/raymath.h	/^RMAPI Quaternion QuaternionLerp(Quaternion q1, Quaternion q2, float amount)$/;"	f
+QuaternionMultiply	./headers/raymath.h	/^RMAPI Quaternion QuaternionMultiply(Quaternion q1, Quaternion q2)$/;"	f
+QuaternionNlerp	./headers/raymath.h	/^RMAPI Quaternion QuaternionNlerp(Quaternion q1, Quaternion q2, float amount)$/;"	f
+QuaternionNormalize	./headers/raymath.h	/^RMAPI Quaternion QuaternionNormalize(Quaternion q)$/;"	f
+QuaternionScale	./headers/raymath.h	/^RMAPI Quaternion QuaternionScale(Quaternion q, float mul)$/;"	f
+QuaternionSlerp	./headers/raymath.h	/^RMAPI Quaternion QuaternionSlerp(Quaternion q1, Quaternion q2, float amount)$/;"	f
+QuaternionSubtract	./headers/raymath.h	/^RMAPI Quaternion QuaternionSubtract(Quaternion q1, Quaternion q2)$/;"	f
+QuaternionSubtractValue	./headers/raymath.h	/^RMAPI Quaternion QuaternionSubtractValue(Quaternion q, float sub)$/;"	f
+QuaternionToAxisAngle	./headers/raymath.h	/^RMAPI void QuaternionToAxisAngle(Quaternion q, Vector3 *outAxis, float *outAngle)$/;"	f
+QuaternionToEuler	./headers/raymath.h	/^RMAPI Vector3 QuaternionToEuler(Quaternion q)$/;"	f
+QuaternionToMatrix	./headers/raymath.h	/^RMAPI Matrix QuaternionToMatrix(Quaternion q)$/;"	f
+QuaternionTransform	./headers/raymath.h	/^RMAPI Quaternion QuaternionTransform(Quaternion q, Matrix mat)$/;"	f
+RAD2DEG	./headers/raylib.h	121;"	d
+RAD2DEG	./headers/raymath.h	97;"	d
+RAD2DEG	./headers/rlgl.h	902;"	d
+RAYLIB_H	./headers/raylib.h	80;"	d
+RAYLIB_VERSION	./headers/raylib.h	87;"	d
+RAYLIB_VERSION_MAJOR	./headers/raylib.h	84;"	d
+RAYLIB_VERSION_MINOR	./headers/raylib.h	85;"	d
+RAYLIB_VERSION_PATCH	./headers/raylib.h	86;"	d
+RAYMATH_H	./headers/raymath.h	53;"	d
+RAYWHITE	./headers/raylib.h	195;"	d
+RED	./headers/raylib.h	176;"	d
+RLAPI	./headers/raylib.h	103;"	d
+RLAPI	./headers/raylib.h	108;"	d
+RLAPI	./headers/raylib.h	97;"	d
+RLAPI	./headers/raylib.h	99;"	d
+RLAPI	./headers/rlgl.h	119;"	d
+RLAPI	./headers/rlgl.h	121;"	d
+RLAPI	./headers/rlgl.h	123;"	d
+RLAPI	./headers/rlgl.h	128;"	d
+RLGL	./headers/rlgl.h	/^static rlglData RLGL = { 0 };$/;"	v
+RLGL_H	./headers/rlgl.h	111;"	d
+RLGL_RENDER_TEXTURES_HINT	./headers/rlgl.h	195;"	d
+RLGL_VERSION	./headers/rlgl.h	113;"	d
+RL_ATTACHMENT_COLOR_CHANNEL0	./headers/rlgl.h	/^    RL_ATTACHMENT_COLOR_CHANNEL0 = 0,       \/\/ Framebuffer attachment type: color 0$/;"	e	enum:__anon9
+RL_ATTACHMENT_COLOR_CHANNEL1	./headers/rlgl.h	/^    RL_ATTACHMENT_COLOR_CHANNEL1 = 1,       \/\/ Framebuffer attachment type: color 1$/;"	e	enum:__anon9
+RL_ATTACHMENT_COLOR_CHANNEL2	./headers/rlgl.h	/^    RL_ATTACHMENT_COLOR_CHANNEL2 = 2,       \/\/ Framebuffer attachment type: color 2$/;"	e	enum:__anon9
+RL_ATTACHMENT_COLOR_CHANNEL3	./headers/rlgl.h	/^    RL_ATTACHMENT_COLOR_CHANNEL3 = 3,       \/\/ Framebuffer attachment type: color 3$/;"	e	enum:__anon9
+RL_ATTACHMENT_COLOR_CHANNEL4	./headers/rlgl.h	/^    RL_ATTACHMENT_COLOR_CHANNEL4 = 4,       \/\/ Framebuffer attachment type: color 4$/;"	e	enum:__anon9
+RL_ATTACHMENT_COLOR_CHANNEL5	./headers/rlgl.h	/^    RL_ATTACHMENT_COLOR_CHANNEL5 = 5,       \/\/ Framebuffer attachment type: color 5$/;"	e	enum:__anon9
+RL_ATTACHMENT_COLOR_CHANNEL6	./headers/rlgl.h	/^    RL_ATTACHMENT_COLOR_CHANNEL6 = 6,       \/\/ Framebuffer attachment type: color 6$/;"	e	enum:__anon9
+RL_ATTACHMENT_COLOR_CHANNEL7	./headers/rlgl.h	/^    RL_ATTACHMENT_COLOR_CHANNEL7 = 7,       \/\/ Framebuffer attachment type: color 7$/;"	e	enum:__anon9
+RL_ATTACHMENT_CUBEMAP_NEGATIVE_X	./headers/rlgl.h	/^    RL_ATTACHMENT_CUBEMAP_NEGATIVE_X = 1,   \/\/ Framebuffer texture attachment type: cubemap, -X side$/;"	e	enum:__anon10
+RL_ATTACHMENT_CUBEMAP_NEGATIVE_Y	./headers/rlgl.h	/^    RL_ATTACHMENT_CUBEMAP_NEGATIVE_Y = 3,   \/\/ Framebuffer texture attachment type: cubemap, -Y side$/;"	e	enum:__anon10
+RL_ATTACHMENT_CUBEMAP_NEGATIVE_Z	./headers/rlgl.h	/^    RL_ATTACHMENT_CUBEMAP_NEGATIVE_Z = 5,   \/\/ Framebuffer texture attachment type: cubemap, -Z side$/;"	e	enum:__anon10
+RL_ATTACHMENT_CUBEMAP_POSITIVE_X	./headers/rlgl.h	/^    RL_ATTACHMENT_CUBEMAP_POSITIVE_X = 0,   \/\/ Framebuffer texture attachment type: cubemap, +X side$/;"	e	enum:__anon10
+RL_ATTACHMENT_CUBEMAP_POSITIVE_Y	./headers/rlgl.h	/^    RL_ATTACHMENT_CUBEMAP_POSITIVE_Y = 2,   \/\/ Framebuffer texture attachment type: cubemap, +Y side$/;"	e	enum:__anon10
+RL_ATTACHMENT_CUBEMAP_POSITIVE_Z	./headers/rlgl.h	/^    RL_ATTACHMENT_CUBEMAP_POSITIVE_Z = 4,   \/\/ Framebuffer texture attachment type: cubemap, +Z side$/;"	e	enum:__anon10
+RL_ATTACHMENT_DEPTH	./headers/rlgl.h	/^    RL_ATTACHMENT_DEPTH = 100,              \/\/ Framebuffer attachment type: depth$/;"	e	enum:__anon9
+RL_ATTACHMENT_RENDERBUFFER	./headers/rlgl.h	/^    RL_ATTACHMENT_RENDERBUFFER = 200,       \/\/ Framebuffer texture attachment type: renderbuffer$/;"	e	enum:__anon10
+RL_ATTACHMENT_STENCIL	./headers/rlgl.h	/^    RL_ATTACHMENT_STENCIL = 200,            \/\/ Framebuffer attachment type: stencil$/;"	e	enum:__anon9
+RL_ATTACHMENT_TEXTURE2D	./headers/rlgl.h	/^    RL_ATTACHMENT_TEXTURE2D = 100,          \/\/ Framebuffer texture attachment type: texture2d$/;"	e	enum:__anon10
+RL_BLEND_ADDITIVE	./headers/rlgl.h	/^    RL_BLEND_ADDITIVE,                  \/\/ Blend textures adding colors$/;"	e	enum:__anon5
+RL_BLEND_ADD_COLORS	./headers/rlgl.h	/^    RL_BLEND_ADD_COLORS,                \/\/ Blend textures adding colors (alternative)$/;"	e	enum:__anon5
+RL_BLEND_ALPHA	./headers/rlgl.h	/^    RL_BLEND_ALPHA = 0,                 \/\/ Blend textures considering alpha (default)$/;"	e	enum:__anon5
+RL_BLEND_ALPHA_PREMULTIPLY	./headers/rlgl.h	/^    RL_BLEND_ALPHA_PREMULTIPLY,         \/\/ Blend premultiplied textures considering alpha$/;"	e	enum:__anon5
+RL_BLEND_COLOR	./headers/rlgl.h	323;"	d
+RL_BLEND_CUSTOM	./headers/rlgl.h	/^    RL_BLEND_CUSTOM,                    \/\/ Blend textures using custom src\/dst factors (use rlSetBlendFactors())$/;"	e	enum:__anon5
+RL_BLEND_CUSTOM_SEPARATE	./headers/rlgl.h	/^    RL_BLEND_CUSTOM_SEPARATE            \/\/ Blend textures using custom src\/dst factors (use rlSetBlendFactorsSeparate())$/;"	e	enum:__anon5
+RL_BLEND_DST_ALPHA	./headers/rlgl.h	321;"	d
+RL_BLEND_DST_RGB	./headers/rlgl.h	319;"	d
+RL_BLEND_EQUATION	./headers/rlgl.h	316;"	d
+RL_BLEND_EQUATION_ALPHA	./headers/rlgl.h	318;"	d
+RL_BLEND_EQUATION_RGB	./headers/rlgl.h	317;"	d
+RL_BLEND_MULTIPLIED	./headers/rlgl.h	/^    RL_BLEND_MULTIPLIED,                \/\/ Blend textures multiplying colors$/;"	e	enum:__anon5
+RL_BLEND_SRC_ALPHA	./headers/rlgl.h	322;"	d
+RL_BLEND_SRC_RGB	./headers/rlgl.h	320;"	d
+RL_BLEND_SUBTRACT_COLORS	./headers/rlgl.h	/^    RL_BLEND_SUBTRACT_COLORS,           \/\/ Blend textures subtracting colors (alternative)$/;"	e	enum:__anon5
+RL_BOOL_TYPE	./headers/raylib.h	205;"	d
+RL_CALLOC	./headers/raylib.h	130;"	d
+RL_CALLOC	./headers/rlgl.h	142;"	d
+RL_COLOR_TYPE	./headers/raylib.h	159;"	d
+RL_COMPUTE_SHADER	./headers/rlgl.h	291;"	d
+RL_CONSTANT_ALPHA	./headers/rlgl.h	307;"	d
+RL_CONSTANT_COLOR	./headers/rlgl.h	305;"	d
+RL_CULL_DISTANCE_FAR	./headers/rlgl.h	240;"	d
+RL_CULL_DISTANCE_NEAR	./headers/rlgl.h	237;"	d
+RL_CULL_FACE_BACK	./headers/rlgl.h	/^    RL_CULL_FACE_BACK$/;"	e	enum:__anon11
+RL_CULL_FACE_FRONT	./headers/rlgl.h	/^    RL_CULL_FACE_FRONT = 0,$/;"	e	enum:__anon11
+RL_DEFAULT_BATCH_BUFFERS	./headers/rlgl.h	216;"	d
+RL_DEFAULT_BATCH_BUFFER_ELEMENTS	./headers/rlgl.h	206;"	d
+RL_DEFAULT_BATCH_BUFFER_ELEMENTS	./headers/rlgl.h	212;"	d
+RL_DEFAULT_BATCH_DRAWCALLS	./headers/rlgl.h	219;"	d
+RL_DEFAULT_BATCH_MAX_TEXTURE_UNITS	./headers/rlgl.h	222;"	d
+RL_DEFAULT_SHADER_ATTRIB_LOCATION_BONEIDS	./headers/rlgl.h	353;"	d
+RL_DEFAULT_SHADER_ATTRIB_LOCATION_BONEWEIGHTS	./headers/rlgl.h	356;"	d
+RL_DEFAULT_SHADER_ATTRIB_LOCATION_COLOR	./headers/rlgl.h	339;"	d
+RL_DEFAULT_SHADER_ATTRIB_LOCATION_INDICES	./headers/rlgl.h	348;"	d
+RL_DEFAULT_SHADER_ATTRIB_LOCATION_NORMAL	./headers/rlgl.h	336;"	d
+RL_DEFAULT_SHADER_ATTRIB_LOCATION_POSITION	./headers/rlgl.h	330;"	d
+RL_DEFAULT_SHADER_ATTRIB_LOCATION_TANGENT	./headers/rlgl.h	342;"	d
+RL_DEFAULT_SHADER_ATTRIB_LOCATION_TEXCOORD	./headers/rlgl.h	333;"	d
+RL_DEFAULT_SHADER_ATTRIB_LOCATION_TEXCOORD2	./headers/rlgl.h	345;"	d
+RL_DEFAULT_SHADER_ATTRIB_NAME_BONEIDS	./headers/rlgl.h	997;"	d
+RL_DEFAULT_SHADER_ATTRIB_NAME_BONEWEIGHTS	./headers/rlgl.h	1000;"	d
+RL_DEFAULT_SHADER_ATTRIB_NAME_COLOR	./headers/rlgl.h	988;"	d
+RL_DEFAULT_SHADER_ATTRIB_NAME_NORMAL	./headers/rlgl.h	985;"	d
+RL_DEFAULT_SHADER_ATTRIB_NAME_POSITION	./headers/rlgl.h	979;"	d
+RL_DEFAULT_SHADER_ATTRIB_NAME_TANGENT	./headers/rlgl.h	991;"	d
+RL_DEFAULT_SHADER_ATTRIB_NAME_TEXCOORD	./headers/rlgl.h	982;"	d
+RL_DEFAULT_SHADER_ATTRIB_NAME_TEXCOORD2	./headers/rlgl.h	994;"	d
+RL_DEFAULT_SHADER_SAMPLER2D_NAME_TEXTURE0	./headers/rlgl.h	1025;"	d
+RL_DEFAULT_SHADER_SAMPLER2D_NAME_TEXTURE1	./headers/rlgl.h	1028;"	d
+RL_DEFAULT_SHADER_SAMPLER2D_NAME_TEXTURE2	./headers/rlgl.h	1031;"	d
+RL_DEFAULT_SHADER_UNIFORM_NAME_BONE_MATRICES	./headers/rlgl.h	1022;"	d
+RL_DEFAULT_SHADER_UNIFORM_NAME_COLOR	./headers/rlgl.h	1019;"	d
+RL_DEFAULT_SHADER_UNIFORM_NAME_MODEL	./headers/rlgl.h	1013;"	d
+RL_DEFAULT_SHADER_UNIFORM_NAME_MVP	./headers/rlgl.h	1004;"	d
+RL_DEFAULT_SHADER_UNIFORM_NAME_NORMAL	./headers/rlgl.h	1016;"	d
+RL_DEFAULT_SHADER_UNIFORM_NAME_PROJECTION	./headers/rlgl.h	1010;"	d
+RL_DEFAULT_SHADER_UNIFORM_NAME_VIEW	./headers/rlgl.h	1007;"	d
+RL_DRAW_FRAMEBUFFER	./headers/rlgl.h	326;"	d
+RL_DST_ALPHA	./headers/rlgl.h	300;"	d
+RL_DST_COLOR	./headers/rlgl.h	302;"	d
+RL_DYNAMIC_COPY	./headers/rlgl.h	286;"	d
+RL_DYNAMIC_DRAW	./headers/rlgl.h	284;"	d
+RL_DYNAMIC_READ	./headers/rlgl.h	285;"	d
+RL_FLOAT	./headers/rlgl.h	275;"	d
+RL_FRAGMENT_SHADER	./headers/rlgl.h	289;"	d
+RL_FREE	./headers/raylib.h	136;"	d
+RL_FREE	./headers/rlgl.h	148;"	d
+RL_FUNC_ADD	./headers/rlgl.h	311;"	d
+RL_FUNC_REVERSE_SUBTRACT	./headers/rlgl.h	315;"	d
+RL_FUNC_SUBTRACT	./headers/rlgl.h	314;"	d
+RL_LINES	./headers/rlgl.h	269;"	d
+RL_LOG_ALL	./headers/rlgl.h	/^    RL_LOG_ALL = 0,             \/\/ Display all logs$/;"	e	enum:__anon2
+RL_LOG_DEBUG	./headers/rlgl.h	/^    RL_LOG_DEBUG,               \/\/ Debug logging, used for internal debugging, it should be disabled on release builds$/;"	e	enum:__anon2
+RL_LOG_ERROR	./headers/rlgl.h	/^    RL_LOG_ERROR,               \/\/ Error logging, used on unrecoverable failures$/;"	e	enum:__anon2
+RL_LOG_FATAL	./headers/rlgl.h	/^    RL_LOG_FATAL,               \/\/ Fatal logging, used to abort program: exit(EXIT_FAILURE)$/;"	e	enum:__anon2
+RL_LOG_INFO	./headers/rlgl.h	/^    RL_LOG_INFO,                \/\/ Info logging, used for program execution info$/;"	e	enum:__anon2
+RL_LOG_NONE	./headers/rlgl.h	/^    RL_LOG_NONE                 \/\/ Disable logging$/;"	e	enum:__anon2
+RL_LOG_TRACE	./headers/rlgl.h	/^    RL_LOG_TRACE,               \/\/ Trace logging, intended for internal use only$/;"	e	enum:__anon2
+RL_LOG_WARNING	./headers/rlgl.h	/^    RL_LOG_WARNING,             \/\/ Warning logging, used on recoverable failures$/;"	e	enum:__anon2
+RL_MALLOC	./headers/raylib.h	127;"	d
+RL_MALLOC	./headers/rlgl.h	139;"	d
+RL_MATRIX_TYPE	./headers/raylib.h	165;"	d
+RL_MATRIX_TYPE	./headers/raymath.h	157;"	d
+RL_MATRIX_TYPE	./headers/rlgl.h	378;"	d
+RL_MAX	./headers/rlgl.h	313;"	d
+RL_MAX_MATRIX_STACK_SIZE	./headers/rlgl.h	227;"	d
+RL_MAX_SHADER_LOCATIONS	./headers/rlgl.h	232;"	d
+RL_MIN	./headers/rlgl.h	312;"	d
+RL_MODELVIEW	./headers/rlgl.h	264;"	d
+RL_ONE	./headers/rlgl.h	295;"	d
+RL_ONE_MINUS_CONSTANT_ALPHA	./headers/rlgl.h	308;"	d
+RL_ONE_MINUS_CONSTANT_COLOR	./headers/rlgl.h	306;"	d
+RL_ONE_MINUS_DST_ALPHA	./headers/rlgl.h	301;"	d
+RL_ONE_MINUS_DST_COLOR	./headers/rlgl.h	303;"	d
+RL_ONE_MINUS_SRC_ALPHA	./headers/rlgl.h	299;"	d
+RL_ONE_MINUS_SRC_COLOR	./headers/rlgl.h	297;"	d
+RL_OPENGL_11	./headers/rlgl.h	/^    RL_OPENGL_11 = 1,           \/\/ OpenGL 1.1$/;"	e	enum:__anon1
+RL_OPENGL_21	./headers/rlgl.h	/^    RL_OPENGL_21,               \/\/ OpenGL 2.1 (GLSL 120)$/;"	e	enum:__anon1
+RL_OPENGL_33	./headers/rlgl.h	/^    RL_OPENGL_33,               \/\/ OpenGL 3.3 (GLSL 330)$/;"	e	enum:__anon1
+RL_OPENGL_43	./headers/rlgl.h	/^    RL_OPENGL_43,               \/\/ OpenGL 4.3 (using GLSL 330)$/;"	e	enum:__anon1
+RL_OPENGL_ES_20	./headers/rlgl.h	/^    RL_OPENGL_ES_20,            \/\/ OpenGL ES 2.0 (GLSL 100)$/;"	e	enum:__anon1
+RL_OPENGL_ES_30	./headers/rlgl.h	/^    RL_OPENGL_ES_30             \/\/ OpenGL ES 3.0 (GLSL 300 es)$/;"	e	enum:__anon1
+RL_PIXELFORMAT_COMPRESSED_ASTC_4x4_RGBA	./headers/rlgl.h	/^    RL_PIXELFORMAT_COMPRESSED_ASTC_4x4_RGBA,       \/\/ 8 bpp$/;"	e	enum:__anon3
+RL_PIXELFORMAT_COMPRESSED_ASTC_8x8_RGBA	./headers/rlgl.h	/^    RL_PIXELFORMAT_COMPRESSED_ASTC_8x8_RGBA        \/\/ 2 bpp$/;"	e	enum:__anon3
+RL_PIXELFORMAT_COMPRESSED_DXT1_RGB	./headers/rlgl.h	/^    RL_PIXELFORMAT_COMPRESSED_DXT1_RGB,            \/\/ 4 bpp (no alpha)$/;"	e	enum:__anon3
+RL_PIXELFORMAT_COMPRESSED_DXT1_RGBA	./headers/rlgl.h	/^    RL_PIXELFORMAT_COMPRESSED_DXT1_RGBA,           \/\/ 4 bpp (1 bit alpha)$/;"	e	enum:__anon3
+RL_PIXELFORMAT_COMPRESSED_DXT3_RGBA	./headers/rlgl.h	/^    RL_PIXELFORMAT_COMPRESSED_DXT3_RGBA,           \/\/ 8 bpp$/;"	e	enum:__anon3
+RL_PIXELFORMAT_COMPRESSED_DXT5_RGBA	./headers/rlgl.h	/^    RL_PIXELFORMAT_COMPRESSED_DXT5_RGBA,           \/\/ 8 bpp$/;"	e	enum:__anon3
+RL_PIXELFORMAT_COMPRESSED_ETC1_RGB	./headers/rlgl.h	/^    RL_PIXELFORMAT_COMPRESSED_ETC1_RGB,            \/\/ 4 bpp$/;"	e	enum:__anon3
+RL_PIXELFORMAT_COMPRESSED_ETC2_EAC_RGBA	./headers/rlgl.h	/^    RL_PIXELFORMAT_COMPRESSED_ETC2_EAC_RGBA,       \/\/ 8 bpp$/;"	e	enum:__anon3
+RL_PIXELFORMAT_COMPRESSED_ETC2_RGB	./headers/rlgl.h	/^    RL_PIXELFORMAT_COMPRESSED_ETC2_RGB,            \/\/ 4 bpp$/;"	e	enum:__anon3
+RL_PIXELFORMAT_COMPRESSED_PVRT_RGB	./headers/rlgl.h	/^    RL_PIXELFORMAT_COMPRESSED_PVRT_RGB,            \/\/ 4 bpp$/;"	e	enum:__anon3
+RL_PIXELFORMAT_COMPRESSED_PVRT_RGBA	./headers/rlgl.h	/^    RL_PIXELFORMAT_COMPRESSED_PVRT_RGBA,           \/\/ 4 bpp$/;"	e	enum:__anon3
+RL_PIXELFORMAT_UNCOMPRESSED_GRAYSCALE	./headers/rlgl.h	/^    RL_PIXELFORMAT_UNCOMPRESSED_GRAYSCALE = 1,     \/\/ 8 bit per pixel (no alpha)$/;"	e	enum:__anon3
+RL_PIXELFORMAT_UNCOMPRESSED_GRAY_ALPHA	./headers/rlgl.h	/^    RL_PIXELFORMAT_UNCOMPRESSED_GRAY_ALPHA,        \/\/ 8*2 bpp (2 channels)$/;"	e	enum:__anon3
+RL_PIXELFORMAT_UNCOMPRESSED_R16	./headers/rlgl.h	/^    RL_PIXELFORMAT_UNCOMPRESSED_R16,               \/\/ 16 bpp (1 channel - half float)$/;"	e	enum:__anon3
+RL_PIXELFORMAT_UNCOMPRESSED_R16G16B16	./headers/rlgl.h	/^    RL_PIXELFORMAT_UNCOMPRESSED_R16G16B16,         \/\/ 16*3 bpp (3 channels - half float)$/;"	e	enum:__anon3
+RL_PIXELFORMAT_UNCOMPRESSED_R16G16B16A16	./headers/rlgl.h	/^    RL_PIXELFORMAT_UNCOMPRESSED_R16G16B16A16,      \/\/ 16*4 bpp (4 channels - half float)$/;"	e	enum:__anon3
+RL_PIXELFORMAT_UNCOMPRESSED_R32	./headers/rlgl.h	/^    RL_PIXELFORMAT_UNCOMPRESSED_R32,               \/\/ 32 bpp (1 channel - float)$/;"	e	enum:__anon3
+RL_PIXELFORMAT_UNCOMPRESSED_R32G32B32	./headers/rlgl.h	/^    RL_PIXELFORMAT_UNCOMPRESSED_R32G32B32,         \/\/ 32*3 bpp (3 channels - float)$/;"	e	enum:__anon3
+RL_PIXELFORMAT_UNCOMPRESSED_R32G32B32A32	./headers/rlgl.h	/^    RL_PIXELFORMAT_UNCOMPRESSED_R32G32B32A32,      \/\/ 32*4 bpp (4 channels - float)$/;"	e	enum:__anon3
+RL_PIXELFORMAT_UNCOMPRESSED_R4G4B4A4	./headers/rlgl.h	/^    RL_PIXELFORMAT_UNCOMPRESSED_R4G4B4A4,          \/\/ 16 bpp (4 bit alpha)$/;"	e	enum:__anon3
+RL_PIXELFORMAT_UNCOMPRESSED_R5G5B5A1	./headers/rlgl.h	/^    RL_PIXELFORMAT_UNCOMPRESSED_R5G5B5A1,          \/\/ 16 bpp (1 bit alpha)$/;"	e	enum:__anon3
+RL_PIXELFORMAT_UNCOMPRESSED_R5G6B5	./headers/rlgl.h	/^    RL_PIXELFORMAT_UNCOMPRESSED_R5G6B5,            \/\/ 16 bpp$/;"	e	enum:__anon3
+RL_PIXELFORMAT_UNCOMPRESSED_R8G8B8	./headers/rlgl.h	/^    RL_PIXELFORMAT_UNCOMPRESSED_R8G8B8,            \/\/ 24 bpp$/;"	e	enum:__anon3
+RL_PIXELFORMAT_UNCOMPRESSED_R8G8B8A8	./headers/rlgl.h	/^    RL_PIXELFORMAT_UNCOMPRESSED_R8G8B8A8,          \/\/ 32 bpp$/;"	e	enum:__anon3
+RL_PROJECTION	./headers/rlgl.h	265;"	d
+RL_QUADS	./headers/rlgl.h	271;"	d
+RL_QUATERNION_TYPE	./headers/raylib.h	164;"	d
+RL_QUATERNION_TYPE	./headers/raymath.h	146;"	d
+RL_READ_FRAMEBUFFER	./headers/rlgl.h	325;"	d
+RL_REALLOC	./headers/raylib.h	133;"	d
+RL_REALLOC	./headers/rlgl.h	145;"	d
+RL_RECTANGLE_TYPE	./headers/raylib.h	160;"	d
+RL_SHADER_ATTRIB_FLOAT	./headers/rlgl.h	/^    RL_SHADER_ATTRIB_FLOAT = 0,         \/\/ Shader attribute type: float$/;"	e	enum:__anon8
+RL_SHADER_ATTRIB_VEC2	./headers/rlgl.h	/^    RL_SHADER_ATTRIB_VEC2,              \/\/ Shader attribute type: vec2 (2 float)$/;"	e	enum:__anon8
+RL_SHADER_ATTRIB_VEC3	./headers/rlgl.h	/^    RL_SHADER_ATTRIB_VEC3,              \/\/ Shader attribute type: vec3 (3 float)$/;"	e	enum:__anon8
+RL_SHADER_ATTRIB_VEC4	./headers/rlgl.h	/^    RL_SHADER_ATTRIB_VEC4               \/\/ Shader attribute type: vec4 (4 float)$/;"	e	enum:__anon8
+RL_SHADER_LOC_COLOR_AMBIENT	./headers/rlgl.h	/^    RL_SHADER_LOC_COLOR_AMBIENT,        \/\/ Shader location: vector uniform: ambient color$/;"	e	enum:__anon6
+RL_SHADER_LOC_COLOR_DIFFUSE	./headers/rlgl.h	/^    RL_SHADER_LOC_COLOR_DIFFUSE,        \/\/ Shader location: vector uniform: diffuse color$/;"	e	enum:__anon6
+RL_SHADER_LOC_COLOR_SPECULAR	./headers/rlgl.h	/^    RL_SHADER_LOC_COLOR_SPECULAR,       \/\/ Shader location: vector uniform: specular color$/;"	e	enum:__anon6
+RL_SHADER_LOC_MAP_ALBEDO	./headers/rlgl.h	/^    RL_SHADER_LOC_MAP_ALBEDO,           \/\/ Shader location: sampler2d texture: albedo (same as: RL_SHADER_LOC_MAP_DIFFUSE)$/;"	e	enum:__anon6
+RL_SHADER_LOC_MAP_BRDF	./headers/rlgl.h	/^    RL_SHADER_LOC_MAP_BRDF              \/\/ Shader location: sampler2d texture: brdf$/;"	e	enum:__anon6
+RL_SHADER_LOC_MAP_CUBEMAP	./headers/rlgl.h	/^    RL_SHADER_LOC_MAP_CUBEMAP,          \/\/ Shader location: samplerCube texture: cubemap$/;"	e	enum:__anon6
+RL_SHADER_LOC_MAP_DIFFUSE	./headers/rlgl.h	532;"	d
+RL_SHADER_LOC_MAP_EMISSION	./headers/rlgl.h	/^    RL_SHADER_LOC_MAP_EMISSION,         \/\/ Shader location: sampler2d texture: emission$/;"	e	enum:__anon6
+RL_SHADER_LOC_MAP_HEIGHT	./headers/rlgl.h	/^    RL_SHADER_LOC_MAP_HEIGHT,           \/\/ Shader location: sampler2d texture: height$/;"	e	enum:__anon6
+RL_SHADER_LOC_MAP_IRRADIANCE	./headers/rlgl.h	/^    RL_SHADER_LOC_MAP_IRRADIANCE,       \/\/ Shader location: samplerCube texture: irradiance$/;"	e	enum:__anon6
+RL_SHADER_LOC_MAP_METALNESS	./headers/rlgl.h	/^    RL_SHADER_LOC_MAP_METALNESS,        \/\/ Shader location: sampler2d texture: metalness (same as: RL_SHADER_LOC_MAP_SPECULAR)$/;"	e	enum:__anon6
+RL_SHADER_LOC_MAP_NORMAL	./headers/rlgl.h	/^    RL_SHADER_LOC_MAP_NORMAL,           \/\/ Shader location: sampler2d texture: normal$/;"	e	enum:__anon6
+RL_SHADER_LOC_MAP_OCCLUSION	./headers/rlgl.h	/^    RL_SHADER_LOC_MAP_OCCLUSION,        \/\/ Shader location: sampler2d texture: occlusion$/;"	e	enum:__anon6
+RL_SHADER_LOC_MAP_PREFILTER	./headers/rlgl.h	/^    RL_SHADER_LOC_MAP_PREFILTER,        \/\/ Shader location: samplerCube texture: prefilter$/;"	e	enum:__anon6
+RL_SHADER_LOC_MAP_ROUGHNESS	./headers/rlgl.h	/^    RL_SHADER_LOC_MAP_ROUGHNESS,        \/\/ Shader location: sampler2d texture: roughness$/;"	e	enum:__anon6
+RL_SHADER_LOC_MAP_SPECULAR	./headers/rlgl.h	533;"	d
+RL_SHADER_LOC_MATRIX_MODEL	./headers/rlgl.h	/^    RL_SHADER_LOC_MATRIX_MODEL,         \/\/ Shader location: matrix uniform: model (transform)$/;"	e	enum:__anon6
+RL_SHADER_LOC_MATRIX_MVP	./headers/rlgl.h	/^    RL_SHADER_LOC_MATRIX_MVP,           \/\/ Shader location: matrix uniform: model-view-projection$/;"	e	enum:__anon6
+RL_SHADER_LOC_MATRIX_NORMAL	./headers/rlgl.h	/^    RL_SHADER_LOC_MATRIX_NORMAL,        \/\/ Shader location: matrix uniform: normal$/;"	e	enum:__anon6
+RL_SHADER_LOC_MATRIX_PROJECTION	./headers/rlgl.h	/^    RL_SHADER_LOC_MATRIX_PROJECTION,    \/\/ Shader location: matrix uniform: projection$/;"	e	enum:__anon6
+RL_SHADER_LOC_MATRIX_VIEW	./headers/rlgl.h	/^    RL_SHADER_LOC_MATRIX_VIEW,          \/\/ Shader location: matrix uniform: view (camera transform)$/;"	e	enum:__anon6
+RL_SHADER_LOC_VECTOR_VIEW	./headers/rlgl.h	/^    RL_SHADER_LOC_VECTOR_VIEW,          \/\/ Shader location: vector uniform: view$/;"	e	enum:__anon6
+RL_SHADER_LOC_VERTEX_COLOR	./headers/rlgl.h	/^    RL_SHADER_LOC_VERTEX_COLOR,         \/\/ Shader location: vertex attribute: color$/;"	e	enum:__anon6
+RL_SHADER_LOC_VERTEX_NORMAL	./headers/rlgl.h	/^    RL_SHADER_LOC_VERTEX_NORMAL,        \/\/ Shader location: vertex attribute: normal$/;"	e	enum:__anon6
+RL_SHADER_LOC_VERTEX_POSITION	./headers/rlgl.h	/^    RL_SHADER_LOC_VERTEX_POSITION = 0,  \/\/ Shader location: vertex attribute: position$/;"	e	enum:__anon6
+RL_SHADER_LOC_VERTEX_TANGENT	./headers/rlgl.h	/^    RL_SHADER_LOC_VERTEX_TANGENT,       \/\/ Shader location: vertex attribute: tangent$/;"	e	enum:__anon6
+RL_SHADER_LOC_VERTEX_TEXCOORD01	./headers/rlgl.h	/^    RL_SHADER_LOC_VERTEX_TEXCOORD01,    \/\/ Shader location: vertex attribute: texcoord01$/;"	e	enum:__anon6
+RL_SHADER_LOC_VERTEX_TEXCOORD02	./headers/rlgl.h	/^    RL_SHADER_LOC_VERTEX_TEXCOORD02,    \/\/ Shader location: vertex attribute: texcoord02$/;"	e	enum:__anon6
+RL_SHADER_UNIFORM_FLOAT	./headers/rlgl.h	/^    RL_SHADER_UNIFORM_FLOAT = 0,        \/\/ Shader uniform type: float$/;"	e	enum:__anon7
+RL_SHADER_UNIFORM_INT	./headers/rlgl.h	/^    RL_SHADER_UNIFORM_INT,              \/\/ Shader uniform type: int$/;"	e	enum:__anon7
+RL_SHADER_UNIFORM_IVEC2	./headers/rlgl.h	/^    RL_SHADER_UNIFORM_IVEC2,            \/\/ Shader uniform type: ivec2 (2 int)$/;"	e	enum:__anon7
+RL_SHADER_UNIFORM_IVEC3	./headers/rlgl.h	/^    RL_SHADER_UNIFORM_IVEC3,            \/\/ Shader uniform type: ivec3 (3 int)$/;"	e	enum:__anon7
+RL_SHADER_UNIFORM_IVEC4	./headers/rlgl.h	/^    RL_SHADER_UNIFORM_IVEC4,            \/\/ Shader uniform type: ivec4 (4 int)$/;"	e	enum:__anon7
+RL_SHADER_UNIFORM_SAMPLER2D	./headers/rlgl.h	/^    RL_SHADER_UNIFORM_SAMPLER2D         \/\/ Shader uniform type: sampler2d$/;"	e	enum:__anon7
+RL_SHADER_UNIFORM_UINT	./headers/rlgl.h	/^    RL_SHADER_UNIFORM_UINT,             \/\/ Shader uniform type: unsigned int$/;"	e	enum:__anon7
+RL_SHADER_UNIFORM_UIVEC2	./headers/rlgl.h	/^    RL_SHADER_UNIFORM_UIVEC2,           \/\/ Shader uniform type: uivec2 (2 unsigned int)$/;"	e	enum:__anon7
+RL_SHADER_UNIFORM_UIVEC3	./headers/rlgl.h	/^    RL_SHADER_UNIFORM_UIVEC3,           \/\/ Shader uniform type: uivec3 (3 unsigned int)$/;"	e	enum:__anon7
+RL_SHADER_UNIFORM_UIVEC4	./headers/rlgl.h	/^    RL_SHADER_UNIFORM_UIVEC4,           \/\/ Shader uniform type: uivec4 (4 unsigned int)$/;"	e	enum:__anon7
+RL_SHADER_UNIFORM_VEC2	./headers/rlgl.h	/^    RL_SHADER_UNIFORM_VEC2,             \/\/ Shader uniform type: vec2 (2 float)$/;"	e	enum:__anon7
+RL_SHADER_UNIFORM_VEC3	./headers/rlgl.h	/^    RL_SHADER_UNIFORM_VEC3,             \/\/ Shader uniform type: vec3 (3 float)$/;"	e	enum:__anon7
+RL_SHADER_UNIFORM_VEC4	./headers/rlgl.h	/^    RL_SHADER_UNIFORM_VEC4,             \/\/ Shader uniform type: vec4 (4 float)$/;"	e	enum:__anon7
+RL_SRC_ALPHA	./headers/rlgl.h	298;"	d
+RL_SRC_ALPHA_SATURATE	./headers/rlgl.h	304;"	d
+RL_SRC_COLOR	./headers/rlgl.h	296;"	d
+RL_STATIC_COPY	./headers/rlgl.h	283;"	d
+RL_STATIC_DRAW	./headers/rlgl.h	281;"	d
+RL_STATIC_READ	./headers/rlgl.h	282;"	d
+RL_STREAM_COPY	./headers/rlgl.h	280;"	d
+RL_STREAM_DRAW	./headers/rlgl.h	278;"	d
+RL_STREAM_READ	./headers/rlgl.h	279;"	d
+RL_TEXTURE	./headers/rlgl.h	266;"	d
+RL_TEXTURE_FILTER_ANISOTROPIC	./headers/rlgl.h	255;"	d
+RL_TEXTURE_FILTER_ANISOTROPIC_16X	./headers/rlgl.h	/^    RL_TEXTURE_FILTER_ANISOTROPIC_16X,  \/\/ Anisotropic filtering 16x$/;"	e	enum:__anon4
+RL_TEXTURE_FILTER_ANISOTROPIC_4X	./headers/rlgl.h	/^    RL_TEXTURE_FILTER_ANISOTROPIC_4X,   \/\/ Anisotropic filtering 4x$/;"	e	enum:__anon4
+RL_TEXTURE_FILTER_ANISOTROPIC_8X	./headers/rlgl.h	/^    RL_TEXTURE_FILTER_ANISOTROPIC_8X,   \/\/ Anisotropic filtering 8x$/;"	e	enum:__anon4
+RL_TEXTURE_FILTER_BILINEAR	./headers/rlgl.h	/^    RL_TEXTURE_FILTER_BILINEAR,         \/\/ Linear filtering$/;"	e	enum:__anon4
+RL_TEXTURE_FILTER_LINEAR	./headers/rlgl.h	250;"	d
+RL_TEXTURE_FILTER_LINEAR_MIP_NEAREST	./headers/rlgl.h	253;"	d
+RL_TEXTURE_FILTER_MIP_LINEAR	./headers/rlgl.h	254;"	d
+RL_TEXTURE_FILTER_MIP_NEAREST	./headers/rlgl.h	251;"	d
+RL_TEXTURE_FILTER_NEAREST	./headers/rlgl.h	249;"	d
+RL_TEXTURE_FILTER_NEAREST_MIP_LINEAR	./headers/rlgl.h	252;"	d
+RL_TEXTURE_FILTER_POINT	./headers/rlgl.h	/^    RL_TEXTURE_FILTER_POINT = 0,        \/\/ No filter, just pixel approximation$/;"	e	enum:__anon4
+RL_TEXTURE_FILTER_TRILINEAR	./headers/rlgl.h	/^    RL_TEXTURE_FILTER_TRILINEAR,        \/\/ Trilinear filtering (linear with mipmaps)$/;"	e	enum:__anon4
+RL_TEXTURE_MAG_FILTER	./headers/rlgl.h	246;"	d
+RL_TEXTURE_MIN_FILTER	./headers/rlgl.h	247;"	d
+RL_TEXTURE_MIPMAP_BIAS_RATIO	./headers/rlgl.h	256;"	d
+RL_TEXTURE_WRAP_CLAMP	./headers/rlgl.h	259;"	d
+RL_TEXTURE_WRAP_MIRROR_CLAMP	./headers/rlgl.h	261;"	d
+RL_TEXTURE_WRAP_MIRROR_REPEAT	./headers/rlgl.h	260;"	d
+RL_TEXTURE_WRAP_REPEAT	./headers/rlgl.h	258;"	d
+RL_TEXTURE_WRAP_S	./headers/rlgl.h	244;"	d
+RL_TEXTURE_WRAP_T	./headers/rlgl.h	245;"	d
+RL_TRIANGLES	./headers/rlgl.h	270;"	d
+RL_UNSIGNED_BYTE	./headers/rlgl.h	274;"	d
+RL_VECTOR2_TYPE	./headers/raylib.h	161;"	d
+RL_VECTOR2_TYPE	./headers/raymath.h	119;"	d
+RL_VECTOR3_TYPE	./headers/raylib.h	162;"	d
+RL_VECTOR3_TYPE	./headers/raymath.h	129;"	d
+RL_VECTOR4_TYPE	./headers/raylib.h	163;"	d
+RL_VECTOR4_TYPE	./headers/raymath.h	140;"	d
+RL_VERTEX_SHADER	./headers/rlgl.h	290;"	d
+RL_ZERO	./headers/rlgl.h	294;"	d
+RMAPI	./headers/raymath.h	62;"	d
+RMAPI	./headers/raymath.h	64;"	d
+RMAPI	./headers/raymath.h	66;"	d
+RMAPI	./headers/raymath.h	68;"	d
+RMAPI	./headers/raymath.h	71;"	d
+RMAPI	./headers/raymath.h	74;"	d
+RMAPI	./headers/raymath.h	76;"	d
+Ray	./headers/raylib.h	/^typedef struct Ray {$/;"	s
+Ray	./headers/raylib.h	/^} Ray;$/;"	t	typeref:struct:Ray
+RayCollision	./headers/raylib.h	/^typedef struct RayCollision {$/;"	s
+RayCollision	./headers/raylib.h	/^} RayCollision;$/;"	t	typeref:struct:RayCollision
+Rectangle	./headers/raylib.h	/^typedef struct Rectangle {$/;"	s
+Rectangle	./headers/raylib.h	/^} Rectangle;$/;"	t	typeref:struct:Rectangle
+Remap	./headers/raymath.h	/^RMAPI float Remap(float value, float inputStart, float inputEnd, float outputStart, float outputEnd)$/;"	f
+RenderTexture	./headers/raylib.h	/^typedef struct RenderTexture {$/;"	s
+RenderTexture	./headers/raylib.h	/^} RenderTexture;$/;"	t	typeref:struct:RenderTexture
+RenderTexture2D	./headers/raylib.h	/^typedef RenderTexture RenderTexture2D;$/;"	t
+SCREEN_HEIGHT	./examples/grid_plug.h	9;"	d
+SCREEN_WIDTH	./examples/grid_plug.h	8;"	d
+SHADER_ATTRIB_FLOAT	./headers/raylib.h	/^    SHADER_ATTRIB_FLOAT = 0,        \/\/ Shader attribute type: float$/;"	e	enum:__anon24
+SHADER_ATTRIB_VEC2	./headers/raylib.h	/^    SHADER_ATTRIB_VEC2,             \/\/ Shader attribute type: vec2 (2 float)$/;"	e	enum:__anon24
+SHADER_ATTRIB_VEC3	./headers/raylib.h	/^    SHADER_ATTRIB_VEC3,             \/\/ Shader attribute type: vec3 (3 float)$/;"	e	enum:__anon24
+SHADER_ATTRIB_VEC4	./headers/raylib.h	/^    SHADER_ATTRIB_VEC4              \/\/ Shader attribute type: vec4 (4 float)$/;"	e	enum:__anon24
+SHADER_LOC_BONE_MATRICES	./headers/raylib.h	/^    SHADER_LOC_BONE_MATRICES        \/\/ Shader location: array of matrices uniform: boneMatrices$/;"	e	enum:__anon22
+SHADER_LOC_COLOR_AMBIENT	./headers/raylib.h	/^    SHADER_LOC_COLOR_AMBIENT,       \/\/ Shader location: vector uniform: ambient color$/;"	e	enum:__anon22
+SHADER_LOC_COLOR_DIFFUSE	./headers/raylib.h	/^    SHADER_LOC_COLOR_DIFFUSE,       \/\/ Shader location: vector uniform: diffuse color$/;"	e	enum:__anon22
+SHADER_LOC_COLOR_SPECULAR	./headers/raylib.h	/^    SHADER_LOC_COLOR_SPECULAR,      \/\/ Shader location: vector uniform: specular color$/;"	e	enum:__anon22
+SHADER_LOC_MAP_ALBEDO	./headers/raylib.h	/^    SHADER_LOC_MAP_ALBEDO,          \/\/ Shader location: sampler2d texture: albedo (same as: SHADER_LOC_MAP_DIFFUSE)$/;"	e	enum:__anon22
+SHADER_LOC_MAP_BRDF	./headers/raylib.h	/^    SHADER_LOC_MAP_BRDF,            \/\/ Shader location: sampler2d texture: brdf$/;"	e	enum:__anon22
+SHADER_LOC_MAP_CUBEMAP	./headers/raylib.h	/^    SHADER_LOC_MAP_CUBEMAP,         \/\/ Shader location: samplerCube texture: cubemap$/;"	e	enum:__anon22
+SHADER_LOC_MAP_DIFFUSE	./headers/raylib.h	801;"	d
+SHADER_LOC_MAP_EMISSION	./headers/raylib.h	/^    SHADER_LOC_MAP_EMISSION,        \/\/ Shader location: sampler2d texture: emission$/;"	e	enum:__anon22
+SHADER_LOC_MAP_HEIGHT	./headers/raylib.h	/^    SHADER_LOC_MAP_HEIGHT,          \/\/ Shader location: sampler2d texture: height$/;"	e	enum:__anon22
+SHADER_LOC_MAP_IRRADIANCE	./headers/raylib.h	/^    SHADER_LOC_MAP_IRRADIANCE,      \/\/ Shader location: samplerCube texture: irradiance$/;"	e	enum:__anon22
+SHADER_LOC_MAP_METALNESS	./headers/raylib.h	/^    SHADER_LOC_MAP_METALNESS,       \/\/ Shader location: sampler2d texture: metalness (same as: SHADER_LOC_MAP_SPECULAR)$/;"	e	enum:__anon22
+SHADER_LOC_MAP_NORMAL	./headers/raylib.h	/^    SHADER_LOC_MAP_NORMAL,          \/\/ Shader location: sampler2d texture: normal$/;"	e	enum:__anon22
+SHADER_LOC_MAP_OCCLUSION	./headers/raylib.h	/^    SHADER_LOC_MAP_OCCLUSION,       \/\/ Shader location: sampler2d texture: occlusion$/;"	e	enum:__anon22
+SHADER_LOC_MAP_PREFILTER	./headers/raylib.h	/^    SHADER_LOC_MAP_PREFILTER,       \/\/ Shader location: samplerCube texture: prefilter$/;"	e	enum:__anon22
+SHADER_LOC_MAP_ROUGHNESS	./headers/raylib.h	/^    SHADER_LOC_MAP_ROUGHNESS,       \/\/ Shader location: sampler2d texture: roughness$/;"	e	enum:__anon22
+SHADER_LOC_MAP_SPECULAR	./headers/raylib.h	802;"	d
+SHADER_LOC_MATRIX_MODEL	./headers/raylib.h	/^    SHADER_LOC_MATRIX_MODEL,        \/\/ Shader location: matrix uniform: model (transform)$/;"	e	enum:__anon22
+SHADER_LOC_MATRIX_MVP	./headers/raylib.h	/^    SHADER_LOC_MATRIX_MVP,          \/\/ Shader location: matrix uniform: model-view-projection$/;"	e	enum:__anon22
+SHADER_LOC_MATRIX_NORMAL	./headers/raylib.h	/^    SHADER_LOC_MATRIX_NORMAL,       \/\/ Shader location: matrix uniform: normal$/;"	e	enum:__anon22
+SHADER_LOC_MATRIX_PROJECTION	./headers/raylib.h	/^    SHADER_LOC_MATRIX_PROJECTION,   \/\/ Shader location: matrix uniform: projection$/;"	e	enum:__anon22
+SHADER_LOC_MATRIX_VIEW	./headers/raylib.h	/^    SHADER_LOC_MATRIX_VIEW,         \/\/ Shader location: matrix uniform: view (camera transform)$/;"	e	enum:__anon22
+SHADER_LOC_VECTOR_VIEW	./headers/raylib.h	/^    SHADER_LOC_VECTOR_VIEW,         \/\/ Shader location: vector uniform: view$/;"	e	enum:__anon22
+SHADER_LOC_VERTEX_BONEIDS	./headers/raylib.h	/^    SHADER_LOC_VERTEX_BONEIDS,      \/\/ Shader location: vertex attribute: boneIds$/;"	e	enum:__anon22
+SHADER_LOC_VERTEX_BONEWEIGHTS	./headers/raylib.h	/^    SHADER_LOC_VERTEX_BONEWEIGHTS,  \/\/ Shader location: vertex attribute: boneWeights$/;"	e	enum:__anon22
+SHADER_LOC_VERTEX_COLOR	./headers/raylib.h	/^    SHADER_LOC_VERTEX_COLOR,        \/\/ Shader location: vertex attribute: color$/;"	e	enum:__anon22
+SHADER_LOC_VERTEX_NORMAL	./headers/raylib.h	/^    SHADER_LOC_VERTEX_NORMAL,       \/\/ Shader location: vertex attribute: normal$/;"	e	enum:__anon22
+SHADER_LOC_VERTEX_POSITION	./headers/raylib.h	/^    SHADER_LOC_VERTEX_POSITION = 0, \/\/ Shader location: vertex attribute: position$/;"	e	enum:__anon22
+SHADER_LOC_VERTEX_TANGENT	./headers/raylib.h	/^    SHADER_LOC_VERTEX_TANGENT,      \/\/ Shader location: vertex attribute: tangent$/;"	e	enum:__anon22
+SHADER_LOC_VERTEX_TEXCOORD01	./headers/raylib.h	/^    SHADER_LOC_VERTEX_TEXCOORD01,   \/\/ Shader location: vertex attribute: texcoord01$/;"	e	enum:__anon22
+SHADER_LOC_VERTEX_TEXCOORD02	./headers/raylib.h	/^    SHADER_LOC_VERTEX_TEXCOORD02,   \/\/ Shader location: vertex attribute: texcoord02$/;"	e	enum:__anon22
+SHADER_UNIFORM_FLOAT	./headers/raylib.h	/^    SHADER_UNIFORM_FLOAT = 0,       \/\/ Shader uniform type: float$/;"	e	enum:__anon23
+SHADER_UNIFORM_INT	./headers/raylib.h	/^    SHADER_UNIFORM_INT,             \/\/ Shader uniform type: int$/;"	e	enum:__anon23
+SHADER_UNIFORM_IVEC2	./headers/raylib.h	/^    SHADER_UNIFORM_IVEC2,           \/\/ Shader uniform type: ivec2 (2 int)$/;"	e	enum:__anon23
+SHADER_UNIFORM_IVEC3	./headers/raylib.h	/^    SHADER_UNIFORM_IVEC3,           \/\/ Shader uniform type: ivec3 (3 int)$/;"	e	enum:__anon23
+SHADER_UNIFORM_IVEC4	./headers/raylib.h	/^    SHADER_UNIFORM_IVEC4,           \/\/ Shader uniform type: ivec4 (4 int)$/;"	e	enum:__anon23
+SHADER_UNIFORM_SAMPLER2D	./headers/raylib.h	/^    SHADER_UNIFORM_SAMPLER2D        \/\/ Shader uniform type: sampler2d$/;"	e	enum:__anon23
+SHADER_UNIFORM_VEC2	./headers/raylib.h	/^    SHADER_UNIFORM_VEC2,            \/\/ Shader uniform type: vec2 (2 float)$/;"	e	enum:__anon23
+SHADER_UNIFORM_VEC3	./headers/raylib.h	/^    SHADER_UNIFORM_VEC3,            \/\/ Shader uniform type: vec3 (3 float)$/;"	e	enum:__anon23
+SHADER_UNIFORM_VEC4	./headers/raylib.h	/^    SHADER_UNIFORM_VEC4,            \/\/ Shader uniform type: vec4 (4 float)$/;"	e	enum:__anon23
+SKYBLUE	./headers/raylib.h	181;"	d
+SaveFileDataCallback	./headers/raylib.h	/^typedef bool (*SaveFileDataCallback)(const char *fileName, void *data, int dataSize);   \/\/ FileIO: Save binary data$/;"	t
+SaveFileTextCallback	./headers/raylib.h	/^typedef bool (*SaveFileTextCallback)(const char *fileName, char *text); \/\/ FileIO: Save text data$/;"	t
+Shader	./headers/raylib.h	/^typedef struct Shader {$/;"	s
+Shader	./headers/raylib.h	/^} Shader;$/;"	t	typeref:struct:Shader
+ShaderAttributeDataType	./headers/raylib.h	/^} ShaderAttributeDataType;$/;"	t	typeref:enum:__anon24
+ShaderLocationIndex	./headers/raylib.h	/^} ShaderLocationIndex;$/;"	t	typeref:enum:__anon22
+ShaderUniformDataType	./headers/raylib.h	/^} ShaderUniformDataType;$/;"	t	typeref:enum:__anon23
+Sound	./headers/raylib.h	/^typedef struct Sound {$/;"	s
+Sound	./headers/raylib.h	/^} Sound;$/;"	t	typeref:struct:Sound
+State	./headers/rlgl.h	/^    } State;            \/\/ Renderer state$/;"	m	struct:rlglData	typeref:struct:rlglData::__anon12
+TEXTURE_FILTER_ANISOTROPIC_16X	./headers/raylib.h	/^    TEXTURE_FILTER_ANISOTROPIC_16X,         \/\/ Anisotropic filtering 16x$/;"	e	enum:__anon26
+TEXTURE_FILTER_ANISOTROPIC_4X	./headers/raylib.h	/^    TEXTURE_FILTER_ANISOTROPIC_4X,          \/\/ Anisotropic filtering 4x$/;"	e	enum:__anon26
+TEXTURE_FILTER_ANISOTROPIC_8X	./headers/raylib.h	/^    TEXTURE_FILTER_ANISOTROPIC_8X,          \/\/ Anisotropic filtering 8x$/;"	e	enum:__anon26
+TEXTURE_FILTER_BILINEAR	./headers/raylib.h	/^    TEXTURE_FILTER_BILINEAR,                \/\/ Linear filtering$/;"	e	enum:__anon26
+TEXTURE_FILTER_POINT	./headers/raylib.h	/^    TEXTURE_FILTER_POINT = 0,               \/\/ No filter, just pixel approximation$/;"	e	enum:__anon26
+TEXTURE_FILTER_TRILINEAR	./headers/raylib.h	/^    TEXTURE_FILTER_TRILINEAR,               \/\/ Trilinear filtering (linear with mipmaps)$/;"	e	enum:__anon26
+TEXTURE_WRAP_CLAMP	./headers/raylib.h	/^    TEXTURE_WRAP_CLAMP,                     \/\/ Clamps texture to edge pixel in tiled mode$/;"	e	enum:__anon27
+TEXTURE_WRAP_MIRROR_CLAMP	./headers/raylib.h	/^    TEXTURE_WRAP_MIRROR_CLAMP               \/\/ Mirrors and clamps to border the texture in tiled mode$/;"	e	enum:__anon27
+TEXTURE_WRAP_MIRROR_REPEAT	./headers/raylib.h	/^    TEXTURE_WRAP_MIRROR_REPEAT,             \/\/ Mirrors and repeats the texture in tiled mode$/;"	e	enum:__anon27
+TEXTURE_WRAP_REPEAT	./headers/raylib.h	/^    TEXTURE_WRAP_REPEAT = 0,                \/\/ Repeats texture in tiled mode$/;"	e	enum:__anon27
+TRACELOG	./headers/rlgl.h	133;"	d
+TRACELOGD	./headers/rlgl.h	134;"	d
+Test	./tmp.c	/^} Test;$/;"	t	typeref:struct:__anon42	file:
+Textbox	./src/mygui.h	/^} Textbox;$/;"	t	typeref:struct:__anon38
+Texture	./headers/raylib.h	/^typedef struct Texture {$/;"	s
+Texture	./headers/raylib.h	/^} Texture;$/;"	t	typeref:struct:Texture
+Texture2D	./headers/raylib.h	/^typedef Texture Texture2D;$/;"	t
+TextureCubemap	./headers/raylib.h	/^typedef Texture TextureCubemap;$/;"	t
+TextureFilter	./headers/raylib.h	/^} TextureFilter;$/;"	t	typeref:enum:__anon26
+TextureWrap	./headers/raylib.h	/^} TextureWrap;$/;"	t	typeref:enum:__anon27
+TraceLogCallback	./headers/raylib.h	/^typedef void (*TraceLogCallback)(int logLevel, const char *text, va_list args);  \/\/ Logging: Redirect trace log messages$/;"	t
+TraceLogLevel	./headers/raylib.h	/^} TraceLogLevel;$/;"	t	typeref:enum:__anon15
+Transform	./headers/raylib.h	/^typedef struct Transform {$/;"	s
+Transform	./headers/raylib.h	/^} Transform;$/;"	t	typeref:struct:Transform
+UICOMMOM	./src/mygui.h	/^    UICOMMOM;$/;"	m	struct:__anon36
+UICOMMOM	./src/mygui.h	/^    UICOMMOM;$/;"	m	struct:__anon37
+UICOMMOM	./src/mygui.h	/^    UICOMMOM;$/;"	m	struct:__anon38
+UICOMMOM	./src/mygui.h	/^    UICOMMOM;$/;"	m	struct:__anon39
+UICOMMOM	./src/mygui.h	/^    UICOMMOM;$/;"	m	struct:__anon40
+UICOMMOM	./src/mygui.h	22;"	d
+VIOLET	./headers/raylib.h	185;"	d
+Vector2	./headers/raylib.h	/^typedef struct Vector2 {$/;"	s
+Vector2	./headers/raylib.h	/^} Vector2;$/;"	t	typeref:struct:Vector2
+Vector2	./headers/raymath.h	/^typedef struct Vector2 {$/;"	s
+Vector2	./headers/raymath.h	/^} Vector2;$/;"	t	typeref:struct:Vector2
+Vector2Add	./headers/raymath.h	/^RMAPI Vector2 Vector2Add(Vector2 v1, Vector2 v2)$/;"	f
+Vector2AddValue	./headers/raymath.h	/^RMAPI Vector2 Vector2AddValue(Vector2 v, float add)$/;"	f
+Vector2Angle	./headers/raymath.h	/^RMAPI float Vector2Angle(Vector2 v1, Vector2 v2)$/;"	f
+Vector2Clamp	./headers/raymath.h	/^RMAPI Vector2 Vector2Clamp(Vector2 v, Vector2 min, Vector2 max)$/;"	f
+Vector2ClampValue	./headers/raymath.h	/^RMAPI Vector2 Vector2ClampValue(Vector2 v, float min, float max)$/;"	f
+Vector2Distance	./headers/raymath.h	/^RMAPI float Vector2Distance(Vector2 v1, Vector2 v2)$/;"	f
+Vector2DistanceSqr	./headers/raymath.h	/^RMAPI float Vector2DistanceSqr(Vector2 v1, Vector2 v2)$/;"	f
+Vector2Divide	./headers/raymath.h	/^RMAPI Vector2 Vector2Divide(Vector2 v1, Vector2 v2)$/;"	f
+Vector2DotProduct	./headers/raymath.h	/^RMAPI float Vector2DotProduct(Vector2 v1, Vector2 v2)$/;"	f
+Vector2Equals	./headers/raymath.h	/^RMAPI int Vector2Equals(Vector2 p, Vector2 q)$/;"	f
+Vector2Invert	./headers/raymath.h	/^RMAPI Vector2 Vector2Invert(Vector2 v)$/;"	f
+Vector2Length	./headers/raymath.h	/^RMAPI float Vector2Length(Vector2 v)$/;"	f
+Vector2LengthSqr	./headers/raymath.h	/^RMAPI float Vector2LengthSqr(Vector2 v)$/;"	f
+Vector2Lerp	./headers/raymath.h	/^RMAPI Vector2 Vector2Lerp(Vector2 v1, Vector2 v2, float amount)$/;"	f
+Vector2LineAngle	./headers/raymath.h	/^RMAPI float Vector2LineAngle(Vector2 start, Vector2 end)$/;"	f
+Vector2Max	./headers/raymath.h	/^RMAPI Vector2 Vector2Max(Vector2 v1, Vector2 v2)$/;"	f
+Vector2Min	./headers/raymath.h	/^RMAPI Vector2 Vector2Min(Vector2 v1, Vector2 v2)$/;"	f
+Vector2MoveTowards	./headers/raymath.h	/^RMAPI Vector2 Vector2MoveTowards(Vector2 v, Vector2 target, float maxDistance)$/;"	f
+Vector2Multiply	./headers/raymath.h	/^RMAPI Vector2 Vector2Multiply(Vector2 v1, Vector2 v2)$/;"	f
+Vector2Negate	./headers/raymath.h	/^RMAPI Vector2 Vector2Negate(Vector2 v)$/;"	f
+Vector2Normalize	./headers/raymath.h	/^RMAPI Vector2 Vector2Normalize(Vector2 v)$/;"	f
+Vector2One	./headers/raymath.h	/^RMAPI Vector2 Vector2One(void)$/;"	f
+Vector2Reflect	./headers/raymath.h	/^RMAPI Vector2 Vector2Reflect(Vector2 v, Vector2 normal)$/;"	f
+Vector2Refract	./headers/raymath.h	/^RMAPI Vector2 Vector2Refract(Vector2 v, Vector2 n, float r)$/;"	f
+Vector2Rotate	./headers/raymath.h	/^RMAPI Vector2 Vector2Rotate(Vector2 v, float angle)$/;"	f
+Vector2Scale	./headers/raymath.h	/^RMAPI Vector2 Vector2Scale(Vector2 v, float scale)$/;"	f
+Vector2Subtract	./headers/raymath.h	/^RMAPI Vector2 Vector2Subtract(Vector2 v1, Vector2 v2)$/;"	f
+Vector2SubtractValue	./headers/raymath.h	/^RMAPI Vector2 Vector2SubtractValue(Vector2 v, float sub)$/;"	f
+Vector2Transform	./headers/raymath.h	/^RMAPI Vector2 Vector2Transform(Vector2 v, Matrix mat)$/;"	f
+Vector2Zero	./headers/raymath.h	/^RMAPI Vector2 Vector2Zero(void)$/;"	f
+Vector3	./headers/raylib.h	/^typedef struct Vector3 {$/;"	s
+Vector3	./headers/raylib.h	/^} Vector3;$/;"	t	typeref:struct:Vector3
+Vector3	./headers/raymath.h	/^typedef struct Vector3 {$/;"	s
+Vector3	./headers/raymath.h	/^} Vector3;$/;"	t	typeref:struct:Vector3
+Vector3Add	./headers/raymath.h	/^RMAPI Vector3 Vector3Add(Vector3 v1, Vector3 v2)$/;"	f
+Vector3AddValue	./headers/raymath.h	/^RMAPI Vector3 Vector3AddValue(Vector3 v, float add)$/;"	f
+Vector3Angle	./headers/raymath.h	/^RMAPI float Vector3Angle(Vector3 v1, Vector3 v2)$/;"	f
+Vector3Barycenter	./headers/raymath.h	/^RMAPI Vector3 Vector3Barycenter(Vector3 p, Vector3 a, Vector3 b, Vector3 c)$/;"	f
+Vector3Clamp	./headers/raymath.h	/^RMAPI Vector3 Vector3Clamp(Vector3 v, Vector3 min, Vector3 max)$/;"	f
+Vector3ClampValue	./headers/raymath.h	/^RMAPI Vector3 Vector3ClampValue(Vector3 v, float min, float max)$/;"	f
+Vector3CrossProduct	./headers/raymath.h	/^RMAPI Vector3 Vector3CrossProduct(Vector3 v1, Vector3 v2)$/;"	f
+Vector3CubicHermite	./headers/raymath.h	/^RMAPI Vector3 Vector3CubicHermite(Vector3 v1, Vector3 tangent1, Vector3 v2, Vector3 tangent2, float amount)$/;"	f
+Vector3Distance	./headers/raymath.h	/^RMAPI float Vector3Distance(Vector3 v1, Vector3 v2)$/;"	f
+Vector3DistanceSqr	./headers/raymath.h	/^RMAPI float Vector3DistanceSqr(Vector3 v1, Vector3 v2)$/;"	f
+Vector3Divide	./headers/raymath.h	/^RMAPI Vector3 Vector3Divide(Vector3 v1, Vector3 v2)$/;"	f
+Vector3DotProduct	./headers/raymath.h	/^RMAPI float Vector3DotProduct(Vector3 v1, Vector3 v2)$/;"	f
+Vector3Equals	./headers/raymath.h	/^RMAPI int Vector3Equals(Vector3 p, Vector3 q)$/;"	f
+Vector3Invert	./headers/raymath.h	/^RMAPI Vector3 Vector3Invert(Vector3 v)$/;"	f
+Vector3Length	./headers/raymath.h	/^RMAPI float Vector3Length(const Vector3 v)$/;"	f
+Vector3LengthSqr	./headers/raymath.h	/^RMAPI float Vector3LengthSqr(const Vector3 v)$/;"	f
+Vector3Lerp	./headers/raymath.h	/^RMAPI Vector3 Vector3Lerp(Vector3 v1, Vector3 v2, float amount)$/;"	f
+Vector3Max	./headers/raymath.h	/^RMAPI Vector3 Vector3Max(Vector3 v1, Vector3 v2)$/;"	f
+Vector3Min	./headers/raymath.h	/^RMAPI Vector3 Vector3Min(Vector3 v1, Vector3 v2)$/;"	f
+Vector3MoveTowards	./headers/raymath.h	/^RMAPI Vector3 Vector3MoveTowards(Vector3 v, Vector3 target, float maxDistance)$/;"	f
+Vector3Multiply	./headers/raymath.h	/^RMAPI Vector3 Vector3Multiply(Vector3 v1, Vector3 v2)$/;"	f
+Vector3Negate	./headers/raymath.h	/^RMAPI Vector3 Vector3Negate(Vector3 v)$/;"	f
+Vector3Normalize	./headers/raymath.h	/^RMAPI Vector3 Vector3Normalize(Vector3 v)$/;"	f
+Vector3One	./headers/raymath.h	/^RMAPI Vector3 Vector3One(void)$/;"	f
+Vector3OrthoNormalize	./headers/raymath.h	/^RMAPI void Vector3OrthoNormalize(Vector3 *v1, Vector3 *v2)$/;"	f
+Vector3Perpendicular	./headers/raymath.h	/^RMAPI Vector3 Vector3Perpendicular(Vector3 v)$/;"	f
+Vector3Project	./headers/raymath.h	/^RMAPI Vector3 Vector3Project(Vector3 v1, Vector3 v2)$/;"	f
+Vector3Reflect	./headers/raymath.h	/^RMAPI Vector3 Vector3Reflect(Vector3 v, Vector3 normal)$/;"	f
+Vector3Refract	./headers/raymath.h	/^RMAPI Vector3 Vector3Refract(Vector3 v, Vector3 n, float r)$/;"	f
+Vector3Reject	./headers/raymath.h	/^RMAPI Vector3 Vector3Reject(Vector3 v1, Vector3 v2)$/;"	f
+Vector3RotateByAxisAngle	./headers/raymath.h	/^RMAPI Vector3 Vector3RotateByAxisAngle(Vector3 v, Vector3 axis, float angle)$/;"	f
+Vector3RotateByQuaternion	./headers/raymath.h	/^RMAPI Vector3 Vector3RotateByQuaternion(Vector3 v, Quaternion q)$/;"	f
+Vector3Scale	./headers/raymath.h	/^RMAPI Vector3 Vector3Scale(Vector3 v, float scalar)$/;"	f
+Vector3Subtract	./headers/raymath.h	/^RMAPI Vector3 Vector3Subtract(Vector3 v1, Vector3 v2)$/;"	f
+Vector3SubtractValue	./headers/raymath.h	/^RMAPI Vector3 Vector3SubtractValue(Vector3 v, float sub)$/;"	f
+Vector3ToFloat	./headers/raymath.h	107;"	d
+Vector3ToFloatV	./headers/raymath.h	/^RMAPI float3 Vector3ToFloatV(Vector3 v)$/;"	f
+Vector3Transform	./headers/raymath.h	/^RMAPI Vector3 Vector3Transform(Vector3 v, Matrix mat)$/;"	f
+Vector3Unproject	./headers/raymath.h	/^RMAPI Vector3 Vector3Unproject(Vector3 source, Matrix projection, Matrix view)$/;"	f
+Vector3Zero	./headers/raymath.h	/^RMAPI Vector3 Vector3Zero(void)$/;"	f
+Vector4	./headers/raylib.h	/^typedef struct Vector4 {$/;"	s
+Vector4	./headers/raylib.h	/^} Vector4;$/;"	t	typeref:struct:Vector4
+Vector4	./headers/raymath.h	/^typedef struct Vector4 {$/;"	s
+Vector4	./headers/raymath.h	/^} Vector4;$/;"	t	typeref:struct:Vector4
+Vector4Add	./headers/raymath.h	/^RMAPI Vector4 Vector4Add(Vector4 v1, Vector4 v2)$/;"	f
+Vector4AddValue	./headers/raymath.h	/^RMAPI Vector4 Vector4AddValue(Vector4 v, float add)$/;"	f
+Vector4Distance	./headers/raymath.h	/^RMAPI float Vector4Distance(Vector4 v1, Vector4 v2)$/;"	f
+Vector4DistanceSqr	./headers/raymath.h	/^RMAPI float Vector4DistanceSqr(Vector4 v1, Vector4 v2)$/;"	f
+Vector4Divide	./headers/raymath.h	/^RMAPI Vector4 Vector4Divide(Vector4 v1, Vector4 v2)$/;"	f
+Vector4DotProduct	./headers/raymath.h	/^RMAPI float Vector4DotProduct(Vector4 v1, Vector4 v2)$/;"	f
+Vector4Equals	./headers/raymath.h	/^RMAPI int Vector4Equals(Vector4 p, Vector4 q)$/;"	f
+Vector4Invert	./headers/raymath.h	/^RMAPI Vector4 Vector4Invert(Vector4 v)$/;"	f
+Vector4Length	./headers/raymath.h	/^RMAPI float Vector4Length(Vector4 v)$/;"	f
+Vector4LengthSqr	./headers/raymath.h	/^RMAPI float Vector4LengthSqr(Vector4 v)$/;"	f
+Vector4Lerp	./headers/raymath.h	/^RMAPI Vector4 Vector4Lerp(Vector4 v1, Vector4 v2, float amount)$/;"	f
+Vector4Max	./headers/raymath.h	/^RMAPI Vector4 Vector4Max(Vector4 v1, Vector4 v2)$/;"	f
+Vector4Min	./headers/raymath.h	/^RMAPI Vector4 Vector4Min(Vector4 v1, Vector4 v2)$/;"	f
+Vector4MoveTowards	./headers/raymath.h	/^RMAPI Vector4 Vector4MoveTowards(Vector4 v, Vector4 target, float maxDistance)$/;"	f
+Vector4Multiply	./headers/raymath.h	/^RMAPI Vector4 Vector4Multiply(Vector4 v1, Vector4 v2)$/;"	f
+Vector4Negate	./headers/raymath.h	/^RMAPI Vector4 Vector4Negate(Vector4 v)$/;"	f
+Vector4Normalize	./headers/raymath.h	/^RMAPI Vector4 Vector4Normalize(Vector4 v)$/;"	f
+Vector4One	./headers/raymath.h	/^RMAPI Vector4 Vector4One(void)$/;"	f
+Vector4Scale	./headers/raymath.h	/^RMAPI Vector4 Vector4Scale(Vector4 v, float scale)$/;"	f
+Vector4Subtract	./headers/raymath.h	/^RMAPI Vector4 Vector4Subtract(Vector4 v1, Vector4 v2)$/;"	f
+Vector4SubtractValue	./headers/raymath.h	/^RMAPI Vector4 Vector4SubtractValue(Vector4 v, float add)$/;"	f
+Vector4Zero	./headers/raymath.h	/^RMAPI Vector4 Vector4Zero(void)$/;"	f
+VrDeviceInfo	./headers/raylib.h	/^typedef struct VrDeviceInfo {$/;"	s
+VrDeviceInfo	./headers/raylib.h	/^} VrDeviceInfo;$/;"	t	typeref:struct:VrDeviceInfo
+VrStereoConfig	./headers/raylib.h	/^typedef struct VrStereoConfig {$/;"	s
+VrStereoConfig	./headers/raylib.h	/^} VrStereoConfig;$/;"	t	typeref:struct:VrStereoConfig
+WHITE	./headers/raylib.h	191;"	d
+WINGDIAPI	./headers/rlgl.h	847;"	d
+Wave	./headers/raylib.h	/^typedef struct Wave {$/;"	s
+Wave	./headers/raylib.h	/^} Wave;$/;"	t	typeref:struct:Wave
+Wrap	./headers/raymath.h	/^RMAPI float Wrap(float value, float min, float max)$/;"	f
+YELLOW	./headers/raylib.h	172;"	d
+__add_str_to_list	./headers/cstr.h	/^void __add_str_to_list(char** list, int i, int beg, int idx, char* tmp) {$/;"	f
+__declspec	./headers/raylib.h	94;"	d
+a	./headers/raylib.h	/^    unsigned char a;        \/\/ Color alpha value$/;"	m	struct:Color
+active	./src/mygui.h	/^    bool active;$/;"	m	struct:__anon37
+active	./src/mygui.h	/^    bool active;$/;"	m	struct:__anon38
+activeTextureId	./headers/rlgl.h	/^        unsigned int activeTextureId[RL_DEFAULT_BATCH_MAX_TEXTURE_UNITS];    \/\/ Active texture ids to be enabled on batch drawing (0 active by default)$/;"	m	struct:rlglData::__anon12
+advanceX	./headers/raylib.h	/^    int advanceX;           \/\/ Character advance position X$/;"	m	struct:GlyphInfo
+animNormals	./headers/raylib.h	/^    float *animNormals;     \/\/ Animated normals (after bones transformations)$/;"	m	struct:Mesh
+animVertices	./headers/raylib.h	/^    float *animVertices;    \/\/ Animated vertex positions (after bones transformations)$/;"	m	struct:Mesh
+b	./headers/raylib.h	/^    unsigned char b;        \/\/ Color blue value$/;"	m	struct:Color
+bar	./tmp.c	/^    Bar bar;$/;"	m	struct:__anon42	file:
+baseSize	./headers/raylib.h	/^    int baseSize;           \/\/ Base size (default chars height)$/;"	m	struct:Font
+bindPose	./headers/raylib.h	/^    Transform *bindPose;    \/\/ Bones base transformation (pose)$/;"	m	struct:Model
+boneCount	./headers/raylib.h	/^    int boneCount;          \/\/ Number of bones$/;"	m	struct:Mesh
+boneCount	./headers/raylib.h	/^    int boneCount;          \/\/ Number of bones$/;"	m	struct:Model
+boneCount	./headers/raylib.h	/^    int boneCount;          \/\/ Number of bones$/;"	m	struct:ModelAnimation
+boneIds	./headers/raylib.h	/^    unsigned char *boneIds; \/\/ Vertex bone ids, max 255 bone ids, up to 4 bones influence by vertex (skinning) (shader-location = 6)$/;"	m	struct:Mesh
+boneMatrices	./headers/raylib.h	/^    Matrix *boneMatrices;   \/\/ Bones animated transformation matrices$/;"	m	struct:Mesh
+boneWeights	./headers/raylib.h	/^    float *boneWeights;     \/\/ Vertex bone weight, up to 4 bones influence by vertex (skinning) (shader-location = 7)$/;"	m	struct:Mesh
+bones	./headers/raylib.h	/^    BoneInfo *bones;        \/\/ Bones information (skeleton)$/;"	m	struct:Model
+bones	./headers/raylib.h	/^    BoneInfo *bones;        \/\/ Bones information (skeleton)$/;"	m	struct:ModelAnimation
+bool	./headers/raylib.h	/^    typedef enum bool { false = 0, true = !false } bool;$/;"	g
+bool	./headers/raylib.h	/^    typedef enum bool { false = 0, true = !false } bool;$/;"	t	typeref:enum:bool
+bool	./headers/rlgl.h	/^typedef enum bool { false = 0, true = !false } bool;$/;"	g
+bool	./headers/rlgl.h	/^typedef enum bool { false = 0, true = !false } bool;$/;"	t	typeref:enum:bool
+bottom	./headers/raylib.h	/^    int bottom;             \/\/ Bottom border offset$/;"	m	struct:NPatchInfo
+btnApply	./examples/grid_plug.h	/^    Button btnApply;$/;"	m	struct:__anon43
+buffer	./headers/raylib.h	/^    rAudioBuffer *buffer;       \/\/ Pointer to internal data used by the audio system$/;"	m	struct:AudioStream
+bufferCount	./headers/rlgl.h	/^    int bufferCount;            \/\/ Number of vertex buffers (multi-buffering support)$/;"	m	struct:rlRenderBatch
+capacity	./headers/raylib.h	/^    unsigned int capacity;          \/\/ Events max entries (MAX_AUTOMATION_EVENTS)$/;"	m	struct:AutomationEventList
+capacity	./headers/raylib.h	/^    unsigned int capacity;          \/\/ Filepaths max entries$/;"	m	struct:FilePathList
+cell_size	./examples/grid_plug.h	/^    int cell_size;$/;"	m	struct:__anon43
+channels	./headers/raylib.h	/^    unsigned int channels;      \/\/ Number of channels (1-mono, 2-stereo, ...)$/;"	m	struct:AudioStream
+channels	./headers/raylib.h	/^    unsigned int channels;      \/\/ Number of channels (1-mono, 2-stereo, ...)$/;"	m	struct:Wave
+checked	./src/mygui.h	/^    bool checked;$/;"	m	struct:__anon40
+chkGridCoords	./examples/grid_plug.h	/^    Checkbox chkGridCoords;$/;"	m	struct:__anon43
+chkMouseCoords	./examples/grid_plug.h	/^    Checkbox chkMouseCoords;$/;"	m	struct:__anon43
+chromaAbCorrection	./headers/raylib.h	/^    float chromaAbCorrection[4];    \/\/ Chromatic aberration correction parameters$/;"	m	struct:VrDeviceInfo
+color	./headers/raylib.h	/^    Color color;            \/\/ Material map color$/;"	m	struct:MaterialMap
+colora	./headers/rlgl.h	/^        unsigned char colorr, colorg, colorb, colora;   \/\/ Current active color (added on glVertex*())$/;"	m	struct:rlglData::__anon12
+colorb	./headers/rlgl.h	/^        unsigned char colorr, colorg, colorb, colora;   \/\/ Current active color (added on glVertex*())$/;"	m	struct:rlglData::__anon12
+colorg	./headers/rlgl.h	/^        unsigned char colorr, colorg, colorb, colora;   \/\/ Current active color (added on glVertex*())$/;"	m	struct:rlglData::__anon12
+colorr	./headers/rlgl.h	/^        unsigned char colorr, colorg, colorb, colora;   \/\/ Current active color (added on glVertex*())$/;"	m	struct:rlglData::__anon12
+colors	./headers/raylib.h	/^    unsigned char *colors;      \/\/ Vertex colors (RGBA - 4 components per vertex) (shader-location = 3)$/;"	m	struct:Mesh
+colors	./headers/rlgl.h	/^    unsigned char *colors;      \/\/ Vertex colors (RGBA - 4 components per vertex) (shader-location = 3)$/;"	m	struct:rlVertexBuffer
+computeShader	./headers/rlgl.h	/^        bool computeShader;                 \/\/ Compute shaders support (GL_ARB_compute_shader)$/;"	m	struct:rlglData::__anon13
+count	./headers/raylib.h	/^    unsigned int count;             \/\/ Events entries count$/;"	m	struct:AutomationEventList
+count	./headers/raylib.h	/^    unsigned int count;             \/\/ Filepaths entries count$/;"	m	struct:FilePathList
+cstr_split	./headers/cstr.h	/^CstrList cstr_split(const char* str, const char sep) {$/;"	f
+cstrlist_free	./headers/cstr.h	/^void cstrlist_free(CstrList list) {$/;"	f
+ctxData	./headers/raylib.h	/^    void *ctxData;              \/\/ Audio context data, depends on type$/;"	m	struct:Music
+ctxType	./headers/raylib.h	/^    int ctxType;                \/\/ Type of music context (audio filetype)$/;"	m	struct:Music
+currentBatch	./headers/rlgl.h	/^    rlRenderBatch *currentBatch;            \/\/ Current render batch$/;"	m	struct:rlglData
+currentBlendMode	./headers/rlgl.h	/^        int currentBlendMode;               \/\/ Blending mode active$/;"	m	struct:rlglData::__anon12
+currentBuffer	./headers/rlgl.h	/^    int currentBuffer;          \/\/ Current buffer tracking in case of multi-buffering$/;"	m	struct:rlRenderBatch
+currentDepth	./headers/rlgl.h	/^    float currentDepth;         \/\/ Current depth value for next draw$/;"	m	struct:rlRenderBatch
+currentMatrix	./headers/rlgl.h	/^        Matrix *currentMatrix;              \/\/ Current matrix pointer$/;"	m	struct:rlglData::__anon12
+currentMatrixMode	./headers/rlgl.h	/^        int currentMatrixMode;              \/\/ Current matrix mode$/;"	m	struct:rlglData::__anon12
+currentShaderId	./headers/rlgl.h	/^        unsigned int currentShaderId;       \/\/ Current shader id to be used on rendering (by default, defaultShaderId)$/;"	m	struct:rlglData::__anon12
+currentShaderLocs	./headers/rlgl.h	/^        int *currentShaderLocs;             \/\/ Current shader locations pointer to be used on rendering (by default, defaultShaderLocs)$/;"	m	struct:rlglData::__anon12
+data	./headers/raylib.h	/^    void *data;                 \/\/ Buffer data pointer$/;"	m	struct:Wave
+data	./headers/raylib.h	/^    void *data;             \/\/ Image raw data$/;"	m	struct:Image
+dd	./examples/mg_test_plug.h	/^    Dropdown dd;$/;"	m	struct:__anon44
+ddOptions	./examples/grid_plug.h	/^    Dropdown ddOptions;$/;"	m	struct:__anon43
+debugMenu	./examples/grid_plug.h	/^    Container debugMenu;$/;"	m	struct:__anon43
+defaultBatch	./headers/rlgl.h	/^    rlRenderBatch defaultBatch;             \/\/ Default internal render batch$/;"	m	struct:rlglData
+defaultFShaderId	./headers/rlgl.h	/^        unsigned int defaultFShaderId;      \/\/ Default fragment shader id (used by default shader program)$/;"	m	struct:rlglData::__anon12
+defaultShaderId	./headers/rlgl.h	/^        unsigned int defaultShaderId;       \/\/ Default shader program id, supports vertex color and diffuse texture$/;"	m	struct:rlglData::__anon12
+defaultShaderLocs	./headers/rlgl.h	/^        int *defaultShaderLocs;             \/\/ Default shader locations pointer to be used on rendering$/;"	m	struct:rlglData::__anon12
+defaultTextureId	./headers/rlgl.h	/^        unsigned int defaultTextureId;      \/\/ Default texture used on shapes\/poly drawing (required by shader)$/;"	m	struct:rlglData::__anon12
+defaultVShaderId	./headers/rlgl.h	/^        unsigned int defaultVShaderId;      \/\/ Default vertex shader id (used by default shader program)$/;"	m	struct:rlglData::__anon12
+depth	./headers/raylib.h	/^    Texture depth;          \/\/ Depth buffer attachment texture$/;"	m	struct:RenderTexture
+direction	./headers/raylib.h	/^    Vector3 direction;      \/\/ Ray direction (normalized)$/;"	m	struct:Ray
+distance	./headers/raylib.h	/^    float distance;         \/\/ Distance to the nearest hit$/;"	m	struct:RayCollision
+drawCounter	./headers/rlgl.h	/^    int drawCounter;            \/\/ Draw calls counter$/;"	m	struct:rlRenderBatch
+drawGrid	./examples/grid_plug.c	/^void drawGrid(int rows, int cols, Plug plug) {$/;"	f
+drawGridCoords	./examples/grid_plug.c	/^void drawGridCoords(Plug plug) {$/;"	f
+drawMouseCoords	./examples/grid_plug.c	/^void drawMouseCoords() {$/;"	f
+draws	./headers/rlgl.h	/^    rlDrawCall *draws;          \/\/ Draw calls array, depends on textureId$/;"	m	struct:rlRenderBatch
+elementCount	./headers/rlgl.h	/^    int elementCount;           \/\/ Number of elements in the buffer (QUADS)$/;"	m	struct:rlVertexBuffer
+events	./headers/raylib.h	/^    AutomationEvent *events;        \/\/ Events entries$/;"	m	struct:AutomationEventList
+extra_chars	./src/mygui.h	/^    int extra_chars;$/;"	m	struct:__anon38
+eyeToScreenDistance	./headers/raylib.h	/^    float eyeToScreenDistance;      \/\/ Distance between eye and display in meters$/;"	m	struct:VrDeviceInfo
+false	./headers/raylib.h	/^    typedef enum bool { false = 0, true = !false } bool;$/;"	e	enum:bool
+false	./headers/rlgl.h	/^typedef enum bool { false = 0, true = !false } bool;$/;"	e	enum:bool
+float16	./headers/raymath.h	/^typedef struct float16 {$/;"	s
+float16	./headers/raymath.h	/^} float16;$/;"	t	typeref:struct:float16
+float3	./headers/raymath.h	/^typedef struct float3 {$/;"	s
+float3	./headers/raymath.h	/^} float3;$/;"	t	typeref:struct:float3
+foo	./tmp.c	/^    int foo;$/;"	m	struct:__anon42	file:
+format	./headers/raylib.h	/^    int format;             \/\/ Data format (PixelFormat type)$/;"	m	struct:Image
+format	./headers/raylib.h	/^    int format;             \/\/ Data format (PixelFormat type)$/;"	m	struct:Texture
+fovy	./headers/raylib.h	/^    float fovy;             \/\/ Camera field-of-view aperture in Y (degrees) in perspective, used as near plane width in orthographic$/;"	m	struct:Camera3D
+frame	./headers/raylib.h	/^    unsigned int frame;             \/\/ Event frame$/;"	m	struct:AutomationEvent
+frameCount	./headers/raylib.h	/^    int frameCount;         \/\/ Number of animation frames$/;"	m	struct:ModelAnimation
+frameCount	./headers/raylib.h	/^    unsigned int frameCount;    \/\/ Total number of frames (considering channels)$/;"	m	struct:Music
+frameCount	./headers/raylib.h	/^    unsigned int frameCount;    \/\/ Total number of frames (considering channels)$/;"	m	struct:Sound
+frameCount	./headers/raylib.h	/^    unsigned int frameCount;    \/\/ Total number of frames (considering channels)$/;"	m	struct:Wave
+framePoses	./headers/raylib.h	/^    Transform **framePoses; \/\/ Poses array by frame$/;"	m	struct:ModelAnimation
+framebufferHeight	./headers/rlgl.h	/^        int framebufferHeight;              \/\/ Current framebuffer height$/;"	m	struct:rlglData::__anon12
+framebufferWidth	./headers/rlgl.h	/^        int framebufferWidth;               \/\/ Current framebuffer width$/;"	m	struct:rlglData::__anon12
+g	./headers/raylib.h	/^    unsigned char g;        \/\/ Color green value$/;"	m	struct:Color
+glBindVertexArray	./headers/rlgl.h	/^static PFNGLBINDVERTEXARRAYOESPROC glBindVertexArray = NULL;$/;"	v
+glBlendDestFactorAlpha	./headers/rlgl.h	/^        int glBlendDestFactorAlpha;         \/\/ Blending destination alpha factor$/;"	m	struct:rlglData::__anon12
+glBlendDestFactorRGB	./headers/rlgl.h	/^        int glBlendDestFactorRGB;           \/\/ Blending destination RGB factor$/;"	m	struct:rlglData::__anon12
+glBlendDstFactor	./headers/rlgl.h	/^        int glBlendDstFactor;               \/\/ Blending destination factor$/;"	m	struct:rlglData::__anon12
+glBlendEquation	./headers/rlgl.h	/^        int glBlendEquation;                \/\/ Blending equation$/;"	m	struct:rlglData::__anon12
+glBlendEquationAlpha	./headers/rlgl.h	/^        int glBlendEquationAlpha;           \/\/ Blending equation for alpha$/;"	m	struct:rlglData::__anon12
+glBlendEquationRGB	./headers/rlgl.h	/^        int glBlendEquationRGB;             \/\/ Blending equation for RGB$/;"	m	struct:rlglData::__anon12
+glBlendSrcFactor	./headers/rlgl.h	/^        int glBlendSrcFactor;               \/\/ Blending source factor$/;"	m	struct:rlglData::__anon12
+glBlendSrcFactorAlpha	./headers/rlgl.h	/^        int glBlendSrcFactorAlpha;          \/\/ Blending source alpha factor$/;"	m	struct:rlglData::__anon12
+glBlendSrcFactorRGB	./headers/rlgl.h	/^        int glBlendSrcFactorRGB;            \/\/ Blending source RGB factor$/;"	m	struct:rlglData::__anon12
+glClearDepth	./headers/rlgl.h	970;"	d
+glCustomBlendModeModified	./headers/rlgl.h	/^        bool glCustomBlendModeModified;     \/\/ Custom blending factor and equation modification status$/;"	m	struct:rlglData::__anon12
+glDeleteVertexArrays	./headers/rlgl.h	/^static PFNGLDELETEVERTEXARRAYSOESPROC glDeleteVertexArrays = NULL;$/;"	v
+glDrawArraysInstanced	./headers/rlgl.h	/^static PFNGLDRAWARRAYSINSTANCEDEXTPROC glDrawArraysInstanced = NULL;$/;"	v
+glDrawElementsInstanced	./headers/rlgl.h	/^static PFNGLDRAWELEMENTSINSTANCEDEXTPROC glDrawElementsInstanced = NULL;$/;"	v
+glGenVertexArrays	./headers/rlgl.h	/^static PFNGLGENVERTEXARRAYSOESPROC glGenVertexArrays = NULL;$/;"	v
+glVertexAttribDivisor	./headers/rlgl.h	/^static PFNGLVERTEXATTRIBDIVISOREXTPROC glVertexAttribDivisor = NULL;$/;"	v
+glyphCount	./headers/raylib.h	/^    int glyphCount;         \/\/ Number of glyph characters$/;"	m	struct:Font
+glyphPadding	./headers/raylib.h	/^    int glyphPadding;       \/\/ Padding around the glyph characters$/;"	m	struct:Font
+glyphs	./headers/raylib.h	/^    GlyphInfo *glyphs;      \/\/ Glyphs info data$/;"	m	struct:Font
+gridPos	./examples/grid_plug.h	/^    Vector2 gridPos;$/;"	m	struct:__anon43
+gridQty	./examples/grid_plug.h	/^    Vector2 gridQty;$/;"	m	struct:__anon43
+gridToScreen	./examples/grid_plug.c	/^Vector2 gridToScreen(int x, int y, Plug plug) {$/;"	f
+hResolution	./headers/raylib.h	/^    int hResolution;                \/\/ Horizontal resolution in pixels$/;"	m	struct:VrDeviceInfo
+hScreenSize	./headers/raylib.h	/^    float hScreenSize;              \/\/ Horizontal size in meters$/;"	m	struct:VrDeviceInfo
+handle	./examples/grid.c	/^void* handle;       \/\/ opaque pointer to handle hot reload$/;"	v
+height	./headers/raylib.h	/^    float height;           \/\/ Rectangle height$/;"	m	struct:Rectangle
+height	./headers/raylib.h	/^    int height;             \/\/ Image base height$/;"	m	struct:Image
+height	./headers/raylib.h	/^    int height;             \/\/ Texture base height$/;"	m	struct:Texture
+hit	./headers/raylib.h	/^    bool hit;               \/\/ Did the ray hit something?$/;"	m	struct:RayCollision
+id	./headers/raylib.h	/^    unsigned int id;        \/\/ OpenGL framebuffer object id$/;"	m	struct:RenderTexture
+id	./headers/raylib.h	/^    unsigned int id;        \/\/ OpenGL texture id$/;"	m	struct:Texture
+id	./headers/raylib.h	/^    unsigned int id;        \/\/ Shader program id$/;"	m	struct:Shader
+image	./headers/raylib.h	/^    Image image;            \/\/ Character image data$/;"	m	struct:GlyphInfo
+indices	./headers/raylib.h	/^    unsigned short *indices;    \/\/ Vertex indices (in case vertex data comes indexed)$/;"	m	struct:Mesh
+indices	./headers/rlgl.h	/^    unsigned int *indices;      \/\/ Vertex indices (in case vertex data comes indexed) (6 indices per quad)$/;"	m	struct:rlVertexBuffer
+indices	./headers/rlgl.h	/^    unsigned short *indices;    \/\/ Vertex indices (in case vertex data comes indexed) (6 indices per quad)$/;"	m	struct:rlVertexBuffer
+instancing	./headers/rlgl.h	/^        bool instancing;                    \/\/ Instancing supported (GL_ANGLE_instanced_arrays, GL_EXT_draw_instanced + GL_EXT_instanced_arrays)$/;"	m	struct:rlglData::__anon13
+interpupillaryDistance	./headers/raylib.h	/^    float interpupillaryDistance;   \/\/ IPD (distance between pupils) in meters$/;"	m	struct:VrDeviceInfo
+is_hovered	./src/mygui.h	/^bool is_hovered(Vector2 thing_pos, Vector2 thing_size) {$/;"	f
+items	./headers/cstr.h	/^    char** items;$/;"	m	struct:__anon35
+items	./src/mygui.h	/^    CstrList items;$/;"	m	struct:__anon37
+layout	./headers/raylib.h	/^    int layout;             \/\/ Layout of the n-patch: 3x3, 1x3 or 3x1$/;"	m	struct:NPatchInfo
+left	./headers/raylib.h	/^    int left;               \/\/ Left border offset$/;"	m	struct:NPatchInfo
+leftLensCenter	./headers/raylib.h	/^    float leftLensCenter[2];        \/\/ VR left lens center$/;"	m	struct:VrStereoConfig
+leftScreenCenter	./headers/raylib.h	/^    float leftScreenCenter[2];      \/\/ VR left screen center$/;"	m	struct:VrStereoConfig
+len	./headers/cstr.h	/^    int len;$/;"	m	struct:__anon35
+lensDistortionValues	./headers/raylib.h	/^    float lensDistortionValues[4];  \/\/ Lens distortion constant parameters$/;"	m	struct:VrDeviceInfo
+lensSeparationDistance	./headers/raylib.h	/^    float lensSeparationDistance;   \/\/ Lens separation distance in meters$/;"	m	struct:VrDeviceInfo
+load_plug	./examples/grid.c	/^void load_plug() {$/;"	f
+locs	./headers/raylib.h	/^    int *locs;              \/\/ Shader locations array (RL_MAX_SHADER_LOCATIONS)$/;"	m	struct:Shader
+looping	./headers/raylib.h	/^    bool looping;               \/\/ Music looping enable$/;"	m	struct:Music
+m0	./headers/raylib.h	/^    float m0, m4, m8, m12;  \/\/ Matrix first row (4 components)$/;"	m	struct:Matrix
+m0	./headers/raymath.h	/^    float m0, m4, m8, m12;      \/\/ Matrix first row (4 components)$/;"	m	struct:Matrix
+m0	./headers/rlgl.h	/^    float m0, m4, m8, m12;      \/\/ Matrix first row (4 components)$/;"	m	struct:Matrix
+m1	./headers/raylib.h	/^    float m1, m5, m9, m13;  \/\/ Matrix second row (4 components)$/;"	m	struct:Matrix
+m1	./headers/raymath.h	/^    float m1, m5, m9, m13;      \/\/ Matrix second row (4 components)$/;"	m	struct:Matrix
+m1	./headers/rlgl.h	/^    float m1, m5, m9, m13;      \/\/ Matrix second row (4 components)$/;"	m	struct:Matrix
+m10	./headers/raylib.h	/^    float m2, m6, m10, m14; \/\/ Matrix third row (4 components)$/;"	m	struct:Matrix
+m10	./headers/raymath.h	/^    float m2, m6, m10, m14;     \/\/ Matrix third row (4 components)$/;"	m	struct:Matrix
+m10	./headers/rlgl.h	/^    float m2, m6, m10, m14;     \/\/ Matrix third row (4 components)$/;"	m	struct:Matrix
+m11	./headers/raylib.h	/^    float m3, m7, m11, m15; \/\/ Matrix fourth row (4 components)$/;"	m	struct:Matrix
+m11	./headers/raymath.h	/^    float m3, m7, m11, m15;     \/\/ Matrix fourth row (4 components)$/;"	m	struct:Matrix
+m11	./headers/rlgl.h	/^    float m3, m7, m11, m15;     \/\/ Matrix fourth row (4 components)$/;"	m	struct:Matrix
+m12	./headers/raylib.h	/^    float m0, m4, m8, m12;  \/\/ Matrix first row (4 components)$/;"	m	struct:Matrix
+m12	./headers/raymath.h	/^    float m0, m4, m8, m12;      \/\/ Matrix first row (4 components)$/;"	m	struct:Matrix
+m12	./headers/rlgl.h	/^    float m0, m4, m8, m12;      \/\/ Matrix first row (4 components)$/;"	m	struct:Matrix
+m13	./headers/raylib.h	/^    float m1, m5, m9, m13;  \/\/ Matrix second row (4 components)$/;"	m	struct:Matrix
+m13	./headers/raymath.h	/^    float m1, m5, m9, m13;      \/\/ Matrix second row (4 components)$/;"	m	struct:Matrix
+m13	./headers/rlgl.h	/^    float m1, m5, m9, m13;      \/\/ Matrix second row (4 components)$/;"	m	struct:Matrix
+m14	./headers/raylib.h	/^    float m2, m6, m10, m14; \/\/ Matrix third row (4 components)$/;"	m	struct:Matrix
+m14	./headers/raymath.h	/^    float m2, m6, m10, m14;     \/\/ Matrix third row (4 components)$/;"	m	struct:Matrix
+m14	./headers/rlgl.h	/^    float m2, m6, m10, m14;     \/\/ Matrix third row (4 components)$/;"	m	struct:Matrix
+m15	./headers/raylib.h	/^    float m3, m7, m11, m15; \/\/ Matrix fourth row (4 components)$/;"	m	struct:Matrix
+m15	./headers/raymath.h	/^    float m3, m7, m11, m15;     \/\/ Matrix fourth row (4 components)$/;"	m	struct:Matrix
+m15	./headers/rlgl.h	/^    float m3, m7, m11, m15;     \/\/ Matrix fourth row (4 components)$/;"	m	struct:Matrix
+m2	./headers/raylib.h	/^    float m2, m6, m10, m14; \/\/ Matrix third row (4 components)$/;"	m	struct:Matrix
+m2	./headers/raymath.h	/^    float m2, m6, m10, m14;     \/\/ Matrix third row (4 components)$/;"	m	struct:Matrix
+m2	./headers/rlgl.h	/^    float m2, m6, m10, m14;     \/\/ Matrix third row (4 components)$/;"	m	struct:Matrix
+m3	./headers/raylib.h	/^    float m3, m7, m11, m15; \/\/ Matrix fourth row (4 components)$/;"	m	struct:Matrix
+m3	./headers/raymath.h	/^    float m3, m7, m11, m15;     \/\/ Matrix fourth row (4 components)$/;"	m	struct:Matrix
+m3	./headers/rlgl.h	/^    float m3, m7, m11, m15;     \/\/ Matrix fourth row (4 components)$/;"	m	struct:Matrix
+m4	./headers/raylib.h	/^    float m0, m4, m8, m12;  \/\/ Matrix first row (4 components)$/;"	m	struct:Matrix
+m4	./headers/raymath.h	/^    float m0, m4, m8, m12;      \/\/ Matrix first row (4 components)$/;"	m	struct:Matrix
+m4	./headers/rlgl.h	/^    float m0, m4, m8, m12;      \/\/ Matrix first row (4 components)$/;"	m	struct:Matrix
+m5	./headers/raylib.h	/^    float m1, m5, m9, m13;  \/\/ Matrix second row (4 components)$/;"	m	struct:Matrix
+m5	./headers/raymath.h	/^    float m1, m5, m9, m13;      \/\/ Matrix second row (4 components)$/;"	m	struct:Matrix
+m5	./headers/rlgl.h	/^    float m1, m5, m9, m13;      \/\/ Matrix second row (4 components)$/;"	m	struct:Matrix
+m6	./headers/raylib.h	/^    float m2, m6, m10, m14; \/\/ Matrix third row (4 components)$/;"	m	struct:Matrix
+m6	./headers/raymath.h	/^    float m2, m6, m10, m14;     \/\/ Matrix third row (4 components)$/;"	m	struct:Matrix
+m6	./headers/rlgl.h	/^    float m2, m6, m10, m14;     \/\/ Matrix third row (4 components)$/;"	m	struct:Matrix
+m7	./headers/raylib.h	/^    float m3, m7, m11, m15; \/\/ Matrix fourth row (4 components)$/;"	m	struct:Matrix
+m7	./headers/raymath.h	/^    float m3, m7, m11, m15;     \/\/ Matrix fourth row (4 components)$/;"	m	struct:Matrix
+m7	./headers/rlgl.h	/^    float m3, m7, m11, m15;     \/\/ Matrix fourth row (4 components)$/;"	m	struct:Matrix
+m8	./headers/raylib.h	/^    float m0, m4, m8, m12;  \/\/ Matrix first row (4 components)$/;"	m	struct:Matrix
+m8	./headers/raymath.h	/^    float m0, m4, m8, m12;      \/\/ Matrix first row (4 components)$/;"	m	struct:Matrix
+m8	./headers/rlgl.h	/^    float m0, m4, m8, m12;      \/\/ Matrix first row (4 components)$/;"	m	struct:Matrix
+m9	./headers/raylib.h	/^    float m1, m5, m9, m13;  \/\/ Matrix second row (4 components)$/;"	m	struct:Matrix
+m9	./headers/raymath.h	/^    float m1, m5, m9, m13;      \/\/ Matrix second row (4 components)$/;"	m	struct:Matrix
+m9	./headers/rlgl.h	/^    float m1, m5, m9, m13;      \/\/ Matrix second row (4 components)$/;"	m	struct:Matrix
+main	./examples/grid.c	/^int main() {$/;"	f
+main	./examples/mg_test.c	/^int main() {$/;"	f
+main	./tmp.c	/^int main() {$/;"	f
+maps	./headers/raylib.h	/^    MaterialMap *maps;      \/\/ Material maps array (MAX_MATERIAL_MAPS)$/;"	m	struct:Material
+materialCount	./headers/raylib.h	/^    int materialCount;      \/\/ Number of materials$/;"	m	struct:Model
+materials	./headers/raylib.h	/^    Material *materials;    \/\/ Materials array$/;"	m	struct:Model
+max	./headers/raylib.h	/^    Vector3 max;            \/\/ Maximum vertex box-corner$/;"	m	struct:BoundingBox
+maxAnisotropyLevel	./headers/rlgl.h	/^        float maxAnisotropyLevel;           \/\/ Maximum anisotropy level supported (minimum is 2.0f)$/;"	m	struct:rlglData::__anon13
+maxDepthBits	./headers/rlgl.h	/^        int maxDepthBits;                   \/\/ Maximum bits for depth component$/;"	m	struct:rlglData::__anon13
+meshCount	./headers/raylib.h	/^    int meshCount;          \/\/ Number of meshes$/;"	m	struct:Model
+meshMaterial	./headers/raylib.h	/^    int *meshMaterial;      \/\/ Mesh material number$/;"	m	struct:Model
+meshes	./headers/raylib.h	/^    Mesh *meshes;           \/\/ Meshes array$/;"	m	struct:Model
+mg_button	./src/mygui.h	/^bool mg_button(Button* btn) {$/;"	f
+mg_checkbox	./src/mygui.h	/^void mg_checkbox(Checkbox* chk, const char* text) {$/;"	f
+mg_container	./src/mygui.h	/^void mg_container(Container* cc, const char* title) {$/;"	f
+mg_dropdown	./src/mygui.h	/^void mg_dropdown(Dropdown* dd) {$/;"	f
+mg_textbox	./src/mygui.h	/^void mg_textbox(Textbox* tb) {$/;"	f
+min	./headers/raylib.h	/^    Vector3 min;            \/\/ Minimum vertex box-corner$/;"	m	struct:BoundingBox
+mipmaps	./headers/raylib.h	/^    int mipmaps;            \/\/ Mipmap levels, 1 by default$/;"	m	struct:Image
+mipmaps	./headers/raylib.h	/^    int mipmaps;            \/\/ Mipmap levels, 1 by default$/;"	m	struct:Texture
+mode	./headers/rlgl.h	/^    int mode;                   \/\/ Drawing mode: LINES, TRIANGLES, QUADS$/;"	m	struct:rlDrawCall
+modelview	./headers/rlgl.h	/^        Matrix modelview;                   \/\/ Default modelview matrix$/;"	m	struct:rlglData::__anon12
+name	./headers/raylib.h	/^    char name[32];          \/\/ Animation name$/;"	m	struct:ModelAnimation
+name	./headers/raylib.h	/^    char name[32];          \/\/ Bone name$/;"	m	struct:BoneInfo
+normal	./headers/raylib.h	/^    Vector3 normal;         \/\/ Surface normal of hit$/;"	m	struct:RayCollision
+normals	./headers/raylib.h	/^    float *normals;         \/\/ Vertex normals (XYZ - 3 components per vertex) (shader-location = 2)$/;"	m	struct:Mesh
+normals	./headers/rlgl.h	/^    float *normals;             \/\/ Vertex normal (XYZ - 3 components per vertex) (shader-location = 2)$/;"	m	struct:rlVertexBuffer
+normalx	./headers/rlgl.h	/^        float normalx, normaly, normalz;    \/\/ Current active normal (added on glVertex*())$/;"	m	struct:rlglData::__anon12
+normaly	./headers/rlgl.h	/^        float normalx, normaly, normalz;    \/\/ Current active normal (added on glVertex*())$/;"	m	struct:rlglData::__anon12
+normalz	./headers/rlgl.h	/^        float normalx, normaly, normalz;    \/\/ Current active normal (added on glVertex*())$/;"	m	struct:rlglData::__anon12
+offset	./headers/raylib.h	/^    Vector2 offset;         \/\/ Camera offset (displacement from target)$/;"	m	struct:Camera2D
+offsetX	./headers/raylib.h	/^    int offsetX;            \/\/ Character offset X when drawing$/;"	m	struct:GlyphInfo
+offsetY	./headers/raylib.h	/^    int offsetY;            \/\/ Character offset Y when drawing$/;"	m	struct:GlyphInfo
+other	./tmp.c	/^    int other;$/;"	m	struct:__anon41	file:
+padding	./src/mygui.h	/^    Vector2 padding;$/;"	m	struct:__anon40
+params	./headers/raylib.h	/^    float params[4];        \/\/ Material generic parameters (if required)$/;"	m	struct:Material
+params	./headers/raylib.h	/^    int params[4];                  \/\/ Event parameters (if required)$/;"	m	struct:AutomationEvent
+parent	./headers/raylib.h	/^    int parent;             \/\/ Bone parent$/;"	m	struct:BoneInfo
+paths	./headers/raylib.h	/^    char **paths;                   \/\/ Filepaths entries$/;"	m	struct:FilePathList
+plug	./examples/grid.c	/^Plug plug = {0};    \/\/ state of the application$/;"	v
+plug_end	./examples/mg_test.c	/^plug_end_t plug_end = NULL; $/;"	v
+plug_end	./examples/mg_test_plug.c	/^void plug_end(Plug* plug) {$/;"	f
+plug_end_t	./examples/mg_test_plug.h	/^typedef void (*plug_end_t)(Plug* plug );$/;"	t
+plug_init	./examples/grid.c	/^plug_init_t plug_init = NULL;$/;"	v
+plug_init	./examples/grid_plug.c	/^void plug_init(Plug* plug) {$/;"	f
+plug_init	./examples/mg_test.c	/^plug_init_t plug_init = NULL; $/;"	v
+plug_init	./examples/mg_test_plug.c	/^void plug_init(Plug* plug) {$/;"	f
+plug_init_t	./examples/grid_plug.h	/^typedef void (*plug_init_t)(Plug* plug);$/;"	t
+plug_init_t	./examples/mg_test_plug.h	/^typedef void (*plug_init_t)(Plug* plug);$/;"	t
+plug_load	./examples/mg_test.c	/^void plug_load() {$/;"	f
+plug_update	./examples/grid.c	/^plug_update_t plug_update = NULL;$/;"	v
+plug_update	./examples/grid_plug.c	/^void plug_update(Plug* plug) {$/;"	f
+plug_update	./examples/mg_test.c	/^plug_update_t plug_update = NULL; $/;"	v
+plug_update	./examples/mg_test_plug.c	/^void plug_update(Plug* plug) {$/;"	f
+plug_update_t	./examples/grid_plug.h	/^typedef void (*plug_update_t)(Plug* plug);$/;"	t
+plug_update_t	./examples/mg_test_plug.h	/^typedef void (*plug_update_t)(Plug* plug );$/;"	t
+point	./headers/raylib.h	/^    Vector3 point;          \/\/ Point of the nearest hit$/;"	m	struct:RayCollision
+position	./headers/raylib.h	/^    Vector3 position;       \/\/ Camera position$/;"	m	struct:Camera3D
+position	./headers/raylib.h	/^    Vector3 position;       \/\/ Ray position (origin)$/;"	m	struct:Ray
+processor	./headers/raylib.h	/^    rAudioProcessor *processor; \/\/ Pointer to internal data processor, useful for audio effects$/;"	m	struct:AudioStream
+projection	./headers/raylib.h	/^    Matrix projection[2];           \/\/ VR projection matrices (per eye)$/;"	m	struct:VrStereoConfig
+projection	./headers/raylib.h	/^    int projection;         \/\/ Camera projection: CAMERA_PERSPECTIVE or CAMERA_ORTHOGRAPHIC$/;"	m	struct:Camera3D
+projection	./headers/rlgl.h	/^        Matrix projection;                  \/\/ Default projection matrix$/;"	m	struct:rlglData::__anon12
+projectionStereo	./headers/rlgl.h	/^        Matrix projectionStereo[2];         \/\/ VR stereo rendering eyes projection matrices$/;"	m	struct:rlglData::__anon12
+r	./headers/raylib.h	/^    unsigned char r;        \/\/ Color red value$/;"	m	struct:Color
+rAudioBuffer	./headers/raylib.h	/^typedef struct rAudioBuffer rAudioBuffer;$/;"	t	typeref:struct:rAudioBuffer
+rAudioProcessor	./headers/raylib.h	/^typedef struct rAudioProcessor rAudioProcessor;$/;"	t	typeref:struct:rAudioProcessor
+recs	./headers/raylib.h	/^    Rectangle *recs;        \/\/ Rectangles in texture for the glyphs$/;"	m	struct:Font
+right	./headers/raylib.h	/^    int right;              \/\/ Right border offset$/;"	m	struct:NPatchInfo
+rightLensCenter	./headers/raylib.h	/^    float rightLensCenter[2];       \/\/ VR right lens center$/;"	m	struct:VrStereoConfig
+rightScreenCenter	./headers/raylib.h	/^    float rightScreenCenter[2];     \/\/ VR right screen center$/;"	m	struct:VrStereoConfig
+rlActiveDrawBuffers	./headers/rlgl.h	/^void rlActiveDrawBuffers(int count)$/;"	f
+rlActiveTextureSlot	./headers/rlgl.h	/^void rlActiveTextureSlot(int slot)$/;"	f
+rlBegin	./headers/rlgl.h	/^void rlBegin(int mode)$/;"	f
+rlBindFramebuffer	./headers/rlgl.h	/^void rlBindFramebuffer(unsigned int target, unsigned int framebuffer)$/;"	f
+rlBindImageTexture	./headers/rlgl.h	/^void rlBindImageTexture(unsigned int id, unsigned int index, int format, bool readonly)$/;"	f
+rlBindShaderBuffer	./headers/rlgl.h	/^void rlBindShaderBuffer(unsigned int id, unsigned int index)$/;"	f
+rlBlendMode	./headers/rlgl.h	/^} rlBlendMode;$/;"	t	typeref:enum:__anon5
+rlBlitFramebuffer	./headers/rlgl.h	/^void rlBlitFramebuffer(int srcX, int srcY, int srcWidth, int srcHeight, int dstX, int dstY, int dstWidth, int dstHeight, int bufferMask)$/;"	f
+rlCheckErrors	./headers/rlgl.h	/^void rlCheckErrors(void)$/;"	f
+rlCheckRenderBatchLimit	./headers/rlgl.h	/^bool rlCheckRenderBatchLimit(int vCount)$/;"	f
+rlClearColor	./headers/rlgl.h	/^void rlClearColor(unsigned char r, unsigned char g, unsigned char b, unsigned char a)$/;"	f
+rlClearScreenBuffers	./headers/rlgl.h	/^void rlClearScreenBuffers(void)$/;"	f
+rlColor3f	./headers/rlgl.h	/^void rlColor3f(float x, float y, float z) { glColor3f(x, y, z); }$/;"	f
+rlColor3f	./headers/rlgl.h	/^void rlColor3f(float x, float y, float z)$/;"	f
+rlColor4f	./headers/rlgl.h	/^void rlColor4f(float r, float g, float b, float a)$/;"	f
+rlColor4f	./headers/rlgl.h	/^void rlColor4f(float x, float y, float z, float w) { glColor4f(x, y, z, w); }$/;"	f
+rlColor4ub	./headers/rlgl.h	/^void rlColor4ub(unsigned char r, unsigned char g, unsigned char b, unsigned char a) { glColor4ub(r, g, b, a); }$/;"	f
+rlColor4ub	./headers/rlgl.h	/^void rlColor4ub(unsigned char x, unsigned char y, unsigned char z, unsigned char w)$/;"	f
+rlColorMask	./headers/rlgl.h	/^void rlColorMask(bool r, bool g, bool b, bool a) { glColorMask(r, g, b, a); }$/;"	f
+rlCompileShader	./headers/rlgl.h	/^unsigned int rlCompileShader(const char *shaderCode, int type)$/;"	f
+rlComputeShaderDispatch	./headers/rlgl.h	/^void rlComputeShaderDispatch(unsigned int groupX, unsigned int groupY, unsigned int groupZ)$/;"	f
+rlCopyShaderBuffer	./headers/rlgl.h	/^void rlCopyShaderBuffer(unsigned int destId, unsigned int srcId, unsigned int destOffset, unsigned int srcOffset, unsigned int count)$/;"	f
+rlCubemapParameters	./headers/rlgl.h	/^void rlCubemapParameters(unsigned int id, int param, int value)$/;"	f
+rlCullDistanceFar	./headers/rlgl.h	/^static double rlCullDistanceFar = RL_CULL_DISTANCE_FAR;$/;"	v
+rlCullDistanceNear	./headers/rlgl.h	/^static double rlCullDistanceNear = RL_CULL_DISTANCE_NEAR;$/;"	v
+rlCullMode	./headers/rlgl.h	/^} rlCullMode;$/;"	t	typeref:enum:__anon11
+rlDebugMessageCallback	./headers/rlgl.h	/^static void GLAPIENTRY rlDebugMessageCallback(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar *message, const void *userParam)$/;"	f
+rlDisableBackfaceCulling	./headers/rlgl.h	/^void rlDisableBackfaceCulling(void) { glDisable(GL_CULL_FACE); }$/;"	f
+rlDisableColorBlend	./headers/rlgl.h	/^void rlDisableColorBlend(void) { glDisable(GL_BLEND); }$/;"	f
+rlDisableDepthMask	./headers/rlgl.h	/^void rlDisableDepthMask(void) { glDepthMask(GL_FALSE); }$/;"	f
+rlDisableDepthTest	./headers/rlgl.h	/^void rlDisableDepthTest(void) { glDisable(GL_DEPTH_TEST); }$/;"	f
+rlDisableFramebuffer	./headers/rlgl.h	/^void rlDisableFramebuffer(void)$/;"	f
+rlDisableScissorTest	./headers/rlgl.h	/^void rlDisableScissorTest(void) { glDisable(GL_SCISSOR_TEST); }$/;"	f
+rlDisableShader	./headers/rlgl.h	/^void rlDisableShader(void)$/;"	f
+rlDisableSmoothLines	./headers/rlgl.h	/^void rlDisableSmoothLines(void)$/;"	f
+rlDisableStatePointer	./headers/rlgl.h	/^void rlDisableStatePointer(int vertexAttribType)$/;"	f
+rlDisableStereoRender	./headers/rlgl.h	/^void rlDisableStereoRender(void)$/;"	f
+rlDisableTexture	./headers/rlgl.h	/^void rlDisableTexture(void)$/;"	f
+rlDisableTextureCubemap	./headers/rlgl.h	/^void rlDisableTextureCubemap(void)$/;"	f
+rlDisableVertexArray	./headers/rlgl.h	/^void rlDisableVertexArray(void)$/;"	f
+rlDisableVertexAttribute	./headers/rlgl.h	/^void rlDisableVertexAttribute(unsigned int index)$/;"	f
+rlDisableVertexBuffer	./headers/rlgl.h	/^void rlDisableVertexBuffer(void)$/;"	f
+rlDisableVertexBufferElement	./headers/rlgl.h	/^void rlDisableVertexBufferElement(void)$/;"	f
+rlDisableWireMode	./headers/rlgl.h	/^void rlDisableWireMode(void)$/;"	f
+rlDrawCall	./headers/rlgl.h	/^typedef struct rlDrawCall {$/;"	s
+rlDrawCall	./headers/rlgl.h	/^} rlDrawCall;$/;"	t	typeref:struct:rlDrawCall
+rlDrawRenderBatch	./headers/rlgl.h	/^void rlDrawRenderBatch(rlRenderBatch *batch)$/;"	f
+rlDrawRenderBatchActive	./headers/rlgl.h	/^void rlDrawRenderBatchActive(void)$/;"	f
+rlDrawVertexArray	./headers/rlgl.h	/^void rlDrawVertexArray(int offset, int count)$/;"	f
+rlDrawVertexArrayElements	./headers/rlgl.h	/^void rlDrawVertexArrayElements(int offset, int count, const void *buffer)$/;"	f
+rlDrawVertexArrayElementsInstanced	./headers/rlgl.h	/^void rlDrawVertexArrayElementsInstanced(int offset, int count, const void *buffer, int instances)$/;"	f
+rlDrawVertexArrayInstanced	./headers/rlgl.h	/^void rlDrawVertexArrayInstanced(int offset, int count, int instances)$/;"	f
+rlEnableBackfaceCulling	./headers/rlgl.h	/^void rlEnableBackfaceCulling(void) { glEnable(GL_CULL_FACE); }$/;"	f
+rlEnableColorBlend	./headers/rlgl.h	/^void rlEnableColorBlend(void) { glEnable(GL_BLEND); }$/;"	f
+rlEnableDepthMask	./headers/rlgl.h	/^void rlEnableDepthMask(void) { glDepthMask(GL_TRUE); }$/;"	f
+rlEnableDepthTest	./headers/rlgl.h	/^void rlEnableDepthTest(void) { glEnable(GL_DEPTH_TEST); }$/;"	f
+rlEnableFramebuffer	./headers/rlgl.h	/^void rlEnableFramebuffer(unsigned int id)$/;"	f
+rlEnablePointMode	./headers/rlgl.h	/^void rlEnablePointMode(void)$/;"	f
+rlEnableScissorTest	./headers/rlgl.h	/^void rlEnableScissorTest(void) { glEnable(GL_SCISSOR_TEST); }$/;"	f
+rlEnableShader	./headers/rlgl.h	/^void rlEnableShader(unsigned int id)$/;"	f
+rlEnableSmoothLines	./headers/rlgl.h	/^void rlEnableSmoothLines(void)$/;"	f
+rlEnableStatePointer	./headers/rlgl.h	/^void rlEnableStatePointer(int vertexAttribType, void *buffer)$/;"	f
+rlEnableStereoRender	./headers/rlgl.h	/^void rlEnableStereoRender(void)$/;"	f
+rlEnableTexture	./headers/rlgl.h	/^void rlEnableTexture(unsigned int id)$/;"	f
+rlEnableTextureCubemap	./headers/rlgl.h	/^void rlEnableTextureCubemap(unsigned int id)$/;"	f
+rlEnableVertexArray	./headers/rlgl.h	/^bool rlEnableVertexArray(unsigned int vaoId)$/;"	f
+rlEnableVertexAttribute	./headers/rlgl.h	/^void rlEnableVertexAttribute(unsigned int index)$/;"	f
+rlEnableVertexBuffer	./headers/rlgl.h	/^void rlEnableVertexBuffer(unsigned int id)$/;"	f
+rlEnableVertexBufferElement	./headers/rlgl.h	/^void rlEnableVertexBufferElement(unsigned int id)$/;"	f
+rlEnableWireMode	./headers/rlgl.h	/^void rlEnableWireMode(void)$/;"	f
+rlEnd	./headers/rlgl.h	/^void rlEnd(void) { glEnd(); }$/;"	f
+rlEnd	./headers/rlgl.h	/^void rlEnd(void)$/;"	f
+rlFramebufferAttach	./headers/rlgl.h	/^void rlFramebufferAttach(unsigned int fboId, unsigned int texId, int attachType, int texType, int mipLevel)$/;"	f
+rlFramebufferAttachTextureType	./headers/rlgl.h	/^} rlFramebufferAttachTextureType;$/;"	t	typeref:enum:__anon10
+rlFramebufferAttachType	./headers/rlgl.h	/^} rlFramebufferAttachType;$/;"	t	typeref:enum:__anon9
+rlFramebufferComplete	./headers/rlgl.h	/^bool rlFramebufferComplete(unsigned int id)$/;"	f
+rlFrustum	./headers/rlgl.h	/^void rlFrustum(double left, double right, double bottom, double top, double znear, double zfar)$/;"	f
+rlGenTextureMipmaps	./headers/rlgl.h	/^void rlGenTextureMipmaps(unsigned int id, int width, int height, int format, int *mipmaps)$/;"	f
+rlGetActiveFramebuffer	./headers/rlgl.h	/^unsigned int rlGetActiveFramebuffer(void)$/;"	f
+rlGetCompressedFormatName	./headers/rlgl.h	/^static const char *rlGetCompressedFormatName(int format)$/;"	f
+rlGetCullDistanceFar	./headers/rlgl.h	/^double rlGetCullDistanceFar(void)$/;"	f
+rlGetCullDistanceNear	./headers/rlgl.h	/^double rlGetCullDistanceNear(void)$/;"	f
+rlGetFramebufferHeight	./headers/rlgl.h	/^int rlGetFramebufferHeight(void)$/;"	f
+rlGetFramebufferWidth	./headers/rlgl.h	/^int rlGetFramebufferWidth(void)$/;"	f
+rlGetGlTextureFormats	./headers/rlgl.h	/^void rlGetGlTextureFormats(int format, unsigned int *glInternalFormat, unsigned int *glFormat, unsigned int *glType)$/;"	f
+rlGetLineWidth	./headers/rlgl.h	/^float rlGetLineWidth(void)$/;"	f
+rlGetLocationAttrib	./headers/rlgl.h	/^int rlGetLocationAttrib(unsigned int shaderId, const char *attribName)$/;"	f
+rlGetLocationUniform	./headers/rlgl.h	/^int rlGetLocationUniform(unsigned int shaderId, const char *uniformName)$/;"	f
+rlGetMatrixModelview	./headers/rlgl.h	/^Matrix rlGetMatrixModelview(void)$/;"	f
+rlGetMatrixProjection	./headers/rlgl.h	/^Matrix rlGetMatrixProjection(void)$/;"	f
+rlGetMatrixProjectionStereo	./headers/rlgl.h	/^Matrix rlGetMatrixProjectionStereo(int eye)$/;"	f
+rlGetMatrixTransform	./headers/rlgl.h	/^Matrix rlGetMatrixTransform(void)$/;"	f
+rlGetMatrixViewOffsetStereo	./headers/rlgl.h	/^Matrix rlGetMatrixViewOffsetStereo(int eye)$/;"	f
+rlGetPixelDataSize	./headers/rlgl.h	/^static int rlGetPixelDataSize(int width, int height, int format)$/;"	f
+rlGetPixelFormatName	./headers/rlgl.h	/^const char *rlGetPixelFormatName(unsigned int format)$/;"	f
+rlGetShaderBufferSize	./headers/rlgl.h	/^unsigned int rlGetShaderBufferSize(unsigned int id)$/;"	f
+rlGetShaderIdDefault	./headers/rlgl.h	/^unsigned int rlGetShaderIdDefault(void)$/;"	f
+rlGetShaderLocsDefault	./headers/rlgl.h	/^int *rlGetShaderLocsDefault(void)$/;"	f
+rlGetTextureIdDefault	./headers/rlgl.h	/^unsigned int rlGetTextureIdDefault(void)$/;"	f
+rlGetVersion	./headers/rlgl.h	/^int rlGetVersion(void)$/;"	f
+rlGlVersion	./headers/rlgl.h	/^} rlGlVersion;$/;"	t	typeref:enum:__anon1
+rlIsStereoRenderEnabled	./headers/rlgl.h	/^bool rlIsStereoRenderEnabled(void)$/;"	f
+rlLoadComputeShaderProgram	./headers/rlgl.h	/^unsigned int rlLoadComputeShaderProgram(unsigned int shaderId)$/;"	f
+rlLoadDrawCube	./headers/rlgl.h	/^void rlLoadDrawCube(void)$/;"	f
+rlLoadDrawQuad	./headers/rlgl.h	/^void rlLoadDrawQuad(void)$/;"	f
+rlLoadExtensions	./headers/rlgl.h	/^void rlLoadExtensions(void *loader)$/;"	f
+rlLoadFramebuffer	./headers/rlgl.h	/^unsigned int rlLoadFramebuffer(void)$/;"	f
+rlLoadIdentity	./headers/rlgl.h	/^void rlLoadIdentity(void) { glLoadIdentity(); }$/;"	f
+rlLoadIdentity	./headers/rlgl.h	/^void rlLoadIdentity(void)$/;"	f
+rlLoadRenderBatch	./headers/rlgl.h	/^rlRenderBatch rlLoadRenderBatch(int numBuffers, int bufferElements)$/;"	f
+rlLoadShaderBuffer	./headers/rlgl.h	/^unsigned int rlLoadShaderBuffer(unsigned int size, const void *data, int usageHint)$/;"	f
+rlLoadShaderCode	./headers/rlgl.h	/^unsigned int rlLoadShaderCode(const char *vsCode, const char *fsCode)$/;"	f
+rlLoadShaderDefault	./headers/rlgl.h	/^static void rlLoadShaderDefault(void)$/;"	f
+rlLoadShaderProgram	./headers/rlgl.h	/^unsigned int rlLoadShaderProgram(unsigned int vShaderId, unsigned int fShaderId)$/;"	f
+rlLoadTexture	./headers/rlgl.h	/^unsigned int rlLoadTexture(const void *data, int width, int height, int format, int mipmapCount)$/;"	f
+rlLoadTextureCubemap	./headers/rlgl.h	/^unsigned int rlLoadTextureCubemap(const void *data, int size, int format)$/;"	f
+rlLoadTextureDepth	./headers/rlgl.h	/^unsigned int rlLoadTextureDepth(int width, int height, bool useRenderBuffer)$/;"	f
+rlLoadVertexArray	./headers/rlgl.h	/^unsigned int rlLoadVertexArray(void)$/;"	f
+rlLoadVertexBuffer	./headers/rlgl.h	/^unsigned int rlLoadVertexBuffer(const void *buffer, int size, bool dynamic)$/;"	f
+rlLoadVertexBufferElement	./headers/rlgl.h	/^unsigned int rlLoadVertexBufferElement(const void *buffer, int size, bool dynamic)$/;"	f
+rlMatrixIdentity	./headers/rlgl.h	/^static Matrix rlMatrixIdentity(void)$/;"	f
+rlMatrixInvert	./headers/rlgl.h	/^static Matrix rlMatrixInvert(Matrix mat)$/;"	f
+rlMatrixMode	./headers/rlgl.h	/^void rlMatrixMode(int mode)$/;"	f
+rlMatrixMultiply	./headers/rlgl.h	/^static Matrix rlMatrixMultiply(Matrix left, Matrix right)$/;"	f
+rlMatrixToFloat	./headers/rlgl.h	1155;"	d
+rlMatrixToFloatV	./headers/rlgl.h	/^static rl_float16 rlMatrixToFloatV(Matrix mat)$/;"	f
+rlMatrixTranspose	./headers/rlgl.h	/^static Matrix rlMatrixTranspose(Matrix mat)$/;"	f
+rlMultMatrixf	./headers/rlgl.h	/^void rlMultMatrixf(const float *matf) { glMultMatrixf(matf); }$/;"	f
+rlMultMatrixf	./headers/rlgl.h	/^void rlMultMatrixf(const float *matf)$/;"	f
+rlNormal3f	./headers/rlgl.h	/^void rlNormal3f(float x, float y, float z) { glNormal3f(x, y, z); }$/;"	f
+rlNormal3f	./headers/rlgl.h	/^void rlNormal3f(float x, float y, float z)$/;"	f
+rlOrtho	./headers/rlgl.h	/^void rlOrtho(double left, double right, double bottom, double top, double znear, double zfar)$/;"	f
+rlPixelFormat	./headers/rlgl.h	/^} rlPixelFormat;$/;"	t	typeref:enum:__anon3
+rlPopMatrix	./headers/rlgl.h	/^void rlPopMatrix(void) { glPopMatrix(); }$/;"	f
+rlPopMatrix	./headers/rlgl.h	/^void rlPopMatrix(void)$/;"	f
+rlPushMatrix	./headers/rlgl.h	/^void rlPushMatrix(void) { glPushMatrix(); }$/;"	f
+rlPushMatrix	./headers/rlgl.h	/^void rlPushMatrix(void)$/;"	f
+rlReadScreenPixels	./headers/rlgl.h	/^unsigned char *rlReadScreenPixels(int width, int height)$/;"	f
+rlReadShaderBuffer	./headers/rlgl.h	/^void rlReadShaderBuffer(unsigned int id, void *dest, unsigned int count, unsigned int offset)$/;"	f
+rlReadTexturePixels	./headers/rlgl.h	/^void *rlReadTexturePixels(unsigned int id, int width, int height, int format)$/;"	f
+rlRenderBatch	./headers/rlgl.h	/^typedef struct rlRenderBatch {$/;"	s
+rlRenderBatch	./headers/rlgl.h	/^} rlRenderBatch;$/;"	t	typeref:struct:rlRenderBatch
+rlRotatef	./headers/rlgl.h	/^void rlRotatef(float angle, float x, float y, float z) { glRotatef(angle, x, y, z); }$/;"	f
+rlRotatef	./headers/rlgl.h	/^void rlRotatef(float angle, float x, float y, float z)$/;"	f
+rlScalef	./headers/rlgl.h	/^void rlScalef(float x, float y, float z) { glScalef(x, y, z); }$/;"	f
+rlScalef	./headers/rlgl.h	/^void rlScalef(float x, float y, float z)$/;"	f
+rlScissor	./headers/rlgl.h	/^void rlScissor(int x, int y, int width, int height) { glScissor(x, y, width, height); }$/;"	f
+rlSetBlendFactors	./headers/rlgl.h	/^void rlSetBlendFactors(int glSrcFactor, int glDstFactor, int glEquation)$/;"	f
+rlSetBlendFactorsSeparate	./headers/rlgl.h	/^void rlSetBlendFactorsSeparate(int glSrcRGB, int glDstRGB, int glSrcAlpha, int glDstAlpha, int glEqRGB, int glEqAlpha)$/;"	f
+rlSetBlendMode	./headers/rlgl.h	/^void rlSetBlendMode(int mode)$/;"	f
+rlSetClipPlanes	./headers/rlgl.h	/^void rlSetClipPlanes(double nearPlane, double farPlane)$/;"	f
+rlSetCullFace	./headers/rlgl.h	/^void rlSetCullFace(int mode)$/;"	f
+rlSetFramebufferHeight	./headers/rlgl.h	/^void rlSetFramebufferHeight(int height)$/;"	f
+rlSetFramebufferWidth	./headers/rlgl.h	/^void rlSetFramebufferWidth(int width)$/;"	f
+rlSetLineWidth	./headers/rlgl.h	/^void rlSetLineWidth(float width) { glLineWidth(width); }$/;"	f
+rlSetMatrixModelview	./headers/rlgl.h	/^void rlSetMatrixModelview(Matrix view)$/;"	f
+rlSetMatrixProjection	./headers/rlgl.h	/^void rlSetMatrixProjection(Matrix projection)$/;"	f
+rlSetMatrixProjectionStereo	./headers/rlgl.h	/^void rlSetMatrixProjectionStereo(Matrix right, Matrix left)$/;"	f
+rlSetMatrixViewOffsetStereo	./headers/rlgl.h	/^void rlSetMatrixViewOffsetStereo(Matrix right, Matrix left)$/;"	f
+rlSetRenderBatchActive	./headers/rlgl.h	/^void rlSetRenderBatchActive(rlRenderBatch *batch)$/;"	f
+rlSetShader	./headers/rlgl.h	/^void rlSetShader(unsigned int id, int *locs)$/;"	f
+rlSetTexture	./headers/rlgl.h	/^void rlSetTexture(unsigned int id)$/;"	f
+rlSetUniform	./headers/rlgl.h	/^void rlSetUniform(int locIndex, const void *value, int uniformType, int count)$/;"	f
+rlSetUniformMatrices	./headers/rlgl.h	/^void rlSetUniformMatrices(int locIndex, const Matrix *matrices, int count)$/;"	f
+rlSetUniformMatrix	./headers/rlgl.h	/^void rlSetUniformMatrix(int locIndex, Matrix mat)$/;"	f
+rlSetUniformSampler	./headers/rlgl.h	/^void rlSetUniformSampler(int locIndex, unsigned int textureId)$/;"	f
+rlSetVertexAttribute	./headers/rlgl.h	/^void rlSetVertexAttribute(unsigned int index, int compSize, int type, bool normalized, int stride, int offset)$/;"	f
+rlSetVertexAttributeDefault	./headers/rlgl.h	/^void rlSetVertexAttributeDefault(int locIndex, const void *value, int attribType, int count)$/;"	f
+rlSetVertexAttributeDivisor	./headers/rlgl.h	/^void rlSetVertexAttributeDivisor(unsigned int index, int divisor)$/;"	f
+rlShaderAttributeDataType	./headers/rlgl.h	/^} rlShaderAttributeDataType;$/;"	t	typeref:enum:__anon8
+rlShaderLocationIndex	./headers/rlgl.h	/^} rlShaderLocationIndex;$/;"	t	typeref:enum:__anon6
+rlShaderUniformDataType	./headers/rlgl.h	/^} rlShaderUniformDataType;$/;"	t	typeref:enum:__anon7
+rlTexCoord2f	./headers/rlgl.h	/^void rlTexCoord2f(float x, float y) { glTexCoord2f(x, y); }$/;"	f
+rlTexCoord2f	./headers/rlgl.h	/^void rlTexCoord2f(float x, float y)$/;"	f
+rlTextureFilter	./headers/rlgl.h	/^} rlTextureFilter;$/;"	t	typeref:enum:__anon4
+rlTextureParameters	./headers/rlgl.h	/^void rlTextureParameters(unsigned int id, int param, int value)$/;"	f
+rlTraceLogLevel	./headers/rlgl.h	/^} rlTraceLogLevel;$/;"	t	typeref:enum:__anon2
+rlTranslatef	./headers/rlgl.h	/^void rlTranslatef(float x, float y, float z) { glTranslatef(x, y, z); }$/;"	f
+rlTranslatef	./headers/rlgl.h	/^void rlTranslatef(float x, float y, float z)$/;"	f
+rlUnloadFramebuffer	./headers/rlgl.h	/^void rlUnloadFramebuffer(unsigned int id)$/;"	f
+rlUnloadRenderBatch	./headers/rlgl.h	/^void rlUnloadRenderBatch(rlRenderBatch batch)$/;"	f
+rlUnloadShaderBuffer	./headers/rlgl.h	/^void rlUnloadShaderBuffer(unsigned int ssboId)$/;"	f
+rlUnloadShaderDefault	./headers/rlgl.h	/^static void rlUnloadShaderDefault(void)$/;"	f
+rlUnloadShaderProgram	./headers/rlgl.h	/^void rlUnloadShaderProgram(unsigned int id)$/;"	f
+rlUnloadTexture	./headers/rlgl.h	/^void rlUnloadTexture(unsigned int id)$/;"	f
+rlUnloadVertexArray	./headers/rlgl.h	/^void rlUnloadVertexArray(unsigned int vaoId)$/;"	f
+rlUnloadVertexBuffer	./headers/rlgl.h	/^void rlUnloadVertexBuffer(unsigned int vboId)$/;"	f
+rlUpdateShaderBuffer	./headers/rlgl.h	/^void rlUpdateShaderBuffer(unsigned int id, const void *data, unsigned int dataSize, unsigned int offset)$/;"	f
+rlUpdateTexture	./headers/rlgl.h	/^void rlUpdateTexture(unsigned int id, int offsetX, int offsetY, int width, int height, int format, const void *data)$/;"	f
+rlUpdateVertexBuffer	./headers/rlgl.h	/^void rlUpdateVertexBuffer(unsigned int id, const void *data, int dataSize, int offset)$/;"	f
+rlUpdateVertexBufferElements	./headers/rlgl.h	/^void rlUpdateVertexBufferElements(unsigned int id, const void *data, int dataSize, int offset)$/;"	f
+rlVertex2f	./headers/rlgl.h	/^void rlVertex2f(float x, float y) { glVertex2f(x, y); }$/;"	f
+rlVertex2f	./headers/rlgl.h	/^void rlVertex2f(float x, float y)$/;"	f
+rlVertex2i	./headers/rlgl.h	/^void rlVertex2i(int x, int y) { glVertex2i(x, y); }$/;"	f
+rlVertex2i	./headers/rlgl.h	/^void rlVertex2i(int x, int y)$/;"	f
+rlVertex3f	./headers/rlgl.h	/^void rlVertex3f(float x, float y, float z) { glVertex3f(x, y, z); }$/;"	f
+rlVertex3f	./headers/rlgl.h	/^void rlVertex3f(float x, float y, float z)$/;"	f
+rlVertexBuffer	./headers/rlgl.h	/^typedef struct rlVertexBuffer {$/;"	s
+rlVertexBuffer	./headers/rlgl.h	/^} rlVertexBuffer;$/;"	t	typeref:struct:rlVertexBuffer
+rlViewport	./headers/rlgl.h	/^void rlViewport(int x, int y, int width, int height)$/;"	f
+rl_float16	./headers/rlgl.h	/^typedef struct rl_float16 {$/;"	s
+rl_float16	./headers/rlgl.h	/^} rl_float16;$/;"	t	typeref:struct:rl_float16
+rlglClose	./headers/rlgl.h	/^void rlglClose(void)$/;"	f
+rlglData	./headers/rlgl.h	/^typedef struct rlglData {$/;"	s
+rlglData	./headers/rlgl.h	/^} rlglData;$/;"	t	typeref:struct:rlglData
+rlglInit	./headers/rlgl.h	/^void rlglInit(int width, int height)$/;"	f
+rlglLoadProc	./headers/rlgl.h	/^typedef void *(*rlglLoadProc)(const char *name);   \/\/ OpenGL extension functions loader signature (same as GLADloadproc)$/;"	t
+rotation	./headers/raylib.h	/^    Quaternion rotation;    \/\/ Rotation$/;"	m	struct:Transform
+rotation	./headers/raylib.h	/^    float rotation;         \/\/ Camera rotation in degrees$/;"	m	struct:Camera2D
+sampleRate	./headers/raylib.h	/^    unsigned int sampleRate;    \/\/ Frequency (samples per second)$/;"	m	struct:AudioStream
+sampleRate	./headers/raylib.h	/^    unsigned int sampleRate;    \/\/ Frequency (samples per second)$/;"	m	struct:Wave
+sampleSize	./headers/raylib.h	/^    unsigned int sampleSize;    \/\/ Bit depth (bits per sample): 8, 16, 32 (24 not supported)$/;"	m	struct:AudioStream
+sampleSize	./headers/raylib.h	/^    unsigned int sampleSize;    \/\/ Bit depth (bits per sample): 8, 16, 32 (24 not supported)$/;"	m	struct:Wave
+scale	./headers/raylib.h	/^    Vector3 scale;          \/\/ Scale$/;"	m	struct:Transform
+scale	./headers/raylib.h	/^    float scale[2];                 \/\/ VR distortion scale$/;"	m	struct:VrStereoConfig
+scaleIn	./headers/raylib.h	/^    float scaleIn[2];               \/\/ VR distortion scale in$/;"	m	struct:VrStereoConfig
+screenToGrid	./examples/grid_plug.c	/^IVector2 screenToGrid(float screenX, float screenY, Plug plug) {$/;"	f
+selected_index	./src/mygui.h	/^    int selected_index;$/;"	m	struct:__anon37
+selected_item	./src/mygui.h	/^    bool selected_item; $/;"	m	struct:__anon37
+selected_text	./src/mygui.h	/^    char* selected_text;$/;"	m	struct:__anon37
+shader	./headers/raylib.h	/^    Shader shader;          \/\/ Material shader$/;"	m	struct:Material
+source	./headers/raylib.h	/^    Rectangle source;       \/\/ Texture source rectangle$/;"	m	struct:NPatchInfo
+ssbo	./headers/rlgl.h	/^        bool ssbo;                          \/\/ Shader storage buffer object support (GL_ARB_shader_storage_buffer_object)$/;"	m	struct:rlglData::__anon13
+stack	./headers/rlgl.h	/^        Matrix stack[RL_MAX_MATRIX_STACK_SIZE];\/\/ Matrix stack for push\/pop$/;"	m	struct:rlglData::__anon12
+stackCounter	./headers/rlgl.h	/^        int stackCounter;                   \/\/ Matrix stack counter$/;"	m	struct:rlglData::__anon12
+stereoRender	./headers/rlgl.h	/^        bool stereoRender;                  \/\/ Stereo rendering flag$/;"	m	struct:rlglData::__anon12
+stream	./headers/raylib.h	/^    AudioStream stream;         \/\/ Audio stream$/;"	m	struct:Music
+stream	./headers/raylib.h	/^    AudioStream stream;         \/\/ Audio stream$/;"	m	struct:Sound
+tangents	./headers/raylib.h	/^    float *tangents;        \/\/ Vertex tangents (XYZW - 4 components per vertex) (shader-location = 4)$/;"	m	struct:Mesh
+target	./headers/raylib.h	/^    Vector2 target;         \/\/ Camera target (rotation and zoom origin)$/;"	m	struct:Camera2D
+target	./headers/raylib.h	/^    Vector3 target;         \/\/ Camera target it looks-at$/;"	m	struct:Camera3D
+tb	./examples/mg_test_plug.h	/^    Textbox tb;$/;"	m	struct:__anon44
+test	./tmp.c	/^    void* test;$/;"	m	struct:__anon41	file:
+texAnisoFilter	./headers/rlgl.h	/^        bool texAnisoFilter;                \/\/ Anisotropic texture filtering support (GL_EXT_texture_filter_anisotropic)$/;"	m	struct:rlglData::__anon13
+texCompASTC	./headers/rlgl.h	/^        bool texCompASTC;                   \/\/ ASTC texture compression support (GL_KHR_texture_compression_astc_hdr, GL_KHR_texture_compression_astc_ldr)$/;"	m	struct:rlglData::__anon13
+texCompDXT	./headers/rlgl.h	/^        bool texCompDXT;                    \/\/ DDS texture compression support (GL_EXT_texture_compression_s3tc, GL_WEBGL_compressed_texture_s3tc, GL_WEBKIT_WEBGL_compressed_texture_s3tc)$/;"	m	struct:rlglData::__anon13
+texCompETC1	./headers/rlgl.h	/^        bool texCompETC1;                   \/\/ ETC1 texture compression support (GL_OES_compressed_ETC1_RGB8_texture, GL_WEBGL_compressed_texture_etc1)$/;"	m	struct:rlglData::__anon13
+texCompETC2	./headers/rlgl.h	/^        bool texCompETC2;                   \/\/ ETC2\/EAC texture compression support (GL_ARB_ES3_compatibility)$/;"	m	struct:rlglData::__anon13
+texCompPVRT	./headers/rlgl.h	/^        bool texCompPVRT;                   \/\/ PVR texture compression support (GL_IMG_texture_compression_pvrtc)$/;"	m	struct:rlglData::__anon13
+texDepth	./headers/rlgl.h	/^        bool texDepth;                      \/\/ Depth textures supported (GL_ARB_depth_texture, GL_OES_depth_texture)$/;"	m	struct:rlglData::__anon13
+texDepthWebGL	./headers/rlgl.h	/^        bool texDepthWebGL;                 \/\/ Depth textures supported WebGL specific (GL_WEBGL_depth_texture)$/;"	m	struct:rlglData::__anon13
+texFloat16	./headers/rlgl.h	/^        bool texFloat16;                    \/\/ half float textures support (16 bit per channel) (GL_OES_texture_half_float)$/;"	m	struct:rlglData::__anon13
+texFloat32	./headers/rlgl.h	/^        bool texFloat32;                    \/\/ float textures support (32 bit per channel) (GL_OES_texture_float)$/;"	m	struct:rlglData::__anon13
+texMirrorClamp	./headers/rlgl.h	/^        bool texMirrorClamp;                \/\/ Clamp mirror wrap mode supported (GL_EXT_texture_mirror_clamp)$/;"	m	struct:rlglData::__anon13
+texNPOT	./headers/rlgl.h	/^        bool texNPOT;                       \/\/ NPOT textures full support (GL_ARB_texture_non_power_of_two, GL_OES_texture_npot)$/;"	m	struct:rlglData::__anon13
+texcoords	./headers/raylib.h	/^    float *texcoords;       \/\/ Vertex texture coordinates (UV - 2 components per vertex) (shader-location = 1)$/;"	m	struct:Mesh
+texcoords	./headers/rlgl.h	/^    float *texcoords;           \/\/ Vertex texture coordinates (UV - 2 components per vertex) (shader-location = 1)$/;"	m	struct:rlVertexBuffer
+texcoords2	./headers/raylib.h	/^    float *texcoords2;      \/\/ Vertex texture second coordinates (UV - 2 components per vertex) (shader-location = 5)$/;"	m	struct:Mesh
+texcoordx	./headers/rlgl.h	/^        float texcoordx, texcoordy;         \/\/ Current active texture coordinate (added on glVertex*())$/;"	m	struct:rlglData::__anon12
+texcoordy	./headers/rlgl.h	/^        float texcoordx, texcoordy;         \/\/ Current active texture coordinate (added on glVertex*())$/;"	m	struct:rlglData::__anon12
+text	./src/mygui.h	/^    char* text;$/;"	m	struct:__anon36
+text	./src/mygui.h	/^    char* text;$/;"	m	struct:__anon38
+texture	./headers/raylib.h	/^    Texture texture;        \/\/ Color buffer attachment texture$/;"	m	struct:RenderTexture
+texture	./headers/raylib.h	/^    Texture2D texture;      \/\/ Material map texture$/;"	m	struct:MaterialMap
+texture	./headers/raylib.h	/^    Texture2D texture;      \/\/ Texture atlas containing the glyphs$/;"	m	struct:Font
+textureId	./headers/rlgl.h	/^    unsigned int textureId;     \/\/ Texture id to be used on the draw -> Use to create new draw call if changes$/;"	m	struct:rlDrawCall
+top	./headers/raylib.h	/^    int top;                \/\/ Top border offset$/;"	m	struct:NPatchInfo
+transform	./headers/raylib.h	/^    Matrix transform;       \/\/ Local transform matrix$/;"	m	struct:Model
+transform	./headers/rlgl.h	/^        Matrix transform;                   \/\/ Transform matrix to be used with rlTranslate, rlRotate, rlScale$/;"	m	struct:rlglData::__anon12
+transformRequired	./headers/rlgl.h	/^        bool transformRequired;             \/\/ Require transform matrix application to current draw-call vertex (if required)$/;"	m	struct:rlglData::__anon12
+translation	./headers/raylib.h	/^    Vector3 translation;    \/\/ Translation$/;"	m	struct:Transform
+triangleCount	./headers/raylib.h	/^    int triangleCount;      \/\/ Number of triangles stored (indexed or not)$/;"	m	struct:Mesh
+true	./headers/raylib.h	/^    typedef enum bool { false = 0, true = !false } bool;$/;"	e	enum:bool
+true	./headers/rlgl.h	/^typedef enum bool { false = 0, true = !false } bool;$/;"	e	enum:bool
+txtCellSize	./examples/grid_plug.h	/^    Textbox txtCellSize;$/;"	m	struct:__anon43
+type	./headers/raylib.h	/^    unsigned int type;              \/\/ Event type (AutomationEventType)$/;"	m	struct:AutomationEvent
+up	./headers/raylib.h	/^    Vector3 up;             \/\/ Camera up vector (rotation over its axis)$/;"	m	struct:Camera3D
+v	./headers/raymath.h	/^    float v[16];$/;"	m	struct:float16
+v	./headers/raymath.h	/^    float v[3];$/;"	m	struct:float3
+v	./headers/rlgl.h	/^    float v[16];$/;"	m	struct:rl_float16
+vResolution	./headers/raylib.h	/^    int vResolution;                \/\/ Vertical resolution in pixels$/;"	m	struct:VrDeviceInfo
+vScreenSize	./headers/raylib.h	/^    float vScreenSize;              \/\/ Vertical size in meters$/;"	m	struct:VrDeviceInfo
+value	./headers/raylib.h	/^    float value;            \/\/ Material map value$/;"	m	struct:MaterialMap
+value	./headers/raylib.h	/^    int value;              \/\/ Character value (Unicode)$/;"	m	struct:GlyphInfo
+vao	./headers/rlgl.h	/^        bool vao;                           \/\/ VAO support (OpenGL ES2 could not support VAO extension) (GL_ARB_vertex_array_object)$/;"	m	struct:rlglData::__anon13
+vaoId	./headers/raylib.h	/^    unsigned int vaoId;     \/\/ OpenGL Vertex Array Object id$/;"	m	struct:Mesh
+vaoId	./headers/rlgl.h	/^    unsigned int vaoId;         \/\/ OpenGL Vertex Array Object id$/;"	m	struct:rlVertexBuffer
+vboId	./headers/raylib.h	/^    unsigned int *vboId;    \/\/ OpenGL Vertex Buffer Objects id (default vertex data)$/;"	m	struct:Mesh
+vboId	./headers/rlgl.h	/^    unsigned int vboId[5];      \/\/ OpenGL Vertex Buffer Objects id (5 types of vertex data)$/;"	m	struct:rlVertexBuffer
+vertexAlignment	./headers/rlgl.h	/^    int vertexAlignment;        \/\/ Number of vertex required for index alignment (LINES, TRIANGLES)$/;"	m	struct:rlDrawCall
+vertexBuffer	./headers/rlgl.h	/^    rlVertexBuffer *vertexBuffer; \/\/ Dynamic buffer(s) for vertex data$/;"	m	struct:rlRenderBatch
+vertexCount	./headers/raylib.h	/^    int vertexCount;        \/\/ Number of vertices stored in arrays$/;"	m	struct:Mesh
+vertexCount	./headers/rlgl.h	/^    int vertexCount;            \/\/ Number of vertex of the draw$/;"	m	struct:rlDrawCall
+vertexCounter	./headers/rlgl.h	/^        int vertexCounter;                  \/\/ Current active render batch vertex counter (generic, used for all batches)$/;"	m	struct:rlglData::__anon12
+vertices	./headers/raylib.h	/^    float *vertices;        \/\/ Vertex position (XYZ - 3 components per vertex) (shader-location = 0)$/;"	m	struct:Mesh
+vertices	./headers/rlgl.h	/^    float *vertices;            \/\/ Vertex position (XYZ - 3 components per vertex) (shader-location = 0)$/;"	m	struct:rlVertexBuffer
+viewOffset	./headers/raylib.h	/^    Matrix viewOffset[2];           \/\/ VR view offset matrices (per eye)$/;"	m	struct:VrStereoConfig
+viewOffsetStereo	./headers/rlgl.h	/^        Matrix viewOffsetStereo[2];         \/\/ VR stereo rendering eyes view offset matrices$/;"	m	struct:rlglData::__anon12
+visible	./src/mygui.h	/^    bool visible;$/;"	m	struct:__anon39
+w	./headers/raylib.h	/^    float w;                \/\/ Vector w component$/;"	m	struct:Vector4
+w	./headers/raymath.h	/^    float w;$/;"	m	struct:Vector4
+width	./headers/raylib.h	/^    float width;            \/\/ Rectangle width$/;"	m	struct:Rectangle
+width	./headers/raylib.h	/^    int width;              \/\/ Image base width$/;"	m	struct:Image
+width	./headers/raylib.h	/^    int width;              \/\/ Texture base width$/;"	m	struct:Texture
+x	./headers/raylib.h	/^    float x;                \/\/ Rectangle top-left corner position x$/;"	m	struct:Rectangle
+x	./headers/raylib.h	/^    float x;                \/\/ Vector x component$/;"	m	struct:Vector2
+x	./headers/raylib.h	/^    float x;                \/\/ Vector x component$/;"	m	struct:Vector3
+x	./headers/raylib.h	/^    float x;                \/\/ Vector x component$/;"	m	struct:Vector4
+x	./headers/raymath.h	/^    float x;$/;"	m	struct:Vector2
+x	./headers/raymath.h	/^    float x;$/;"	m	struct:Vector3
+x	./headers/raymath.h	/^    float x;$/;"	m	struct:Vector4
+x	./src/mygui.h	/^    int x;$/;"	m	struct:IVector2
+y	./headers/raylib.h	/^    float y;                \/\/ Rectangle top-left corner position y$/;"	m	struct:Rectangle
+y	./headers/raylib.h	/^    float y;                \/\/ Vector y component$/;"	m	struct:Vector2
+y	./headers/raylib.h	/^    float y;                \/\/ Vector y component$/;"	m	struct:Vector3
+y	./headers/raylib.h	/^    float y;                \/\/ Vector y component$/;"	m	struct:Vector4
+y	./headers/raymath.h	/^    float y;$/;"	m	struct:Vector2
+y	./headers/raymath.h	/^    float y;$/;"	m	struct:Vector3
+y	./headers/raymath.h	/^    float y;$/;"	m	struct:Vector4
+y	./src/mygui.h	/^    int y;$/;"	m	struct:IVector2
+z	./headers/raylib.h	/^    float z;                \/\/ Vector z component$/;"	m	struct:Vector3
+z	./headers/raylib.h	/^    float z;                \/\/ Vector z component$/;"	m	struct:Vector4
+z	./headers/raymath.h	/^    float z;$/;"	m	struct:Vector3
+z	./headers/raymath.h	/^    float z;$/;"	m	struct:Vector4
+zoom	./headers/raylib.h	/^    float zoom;             \/\/ Camera zoom (scaling), should be 1.0f by default$/;"	m	struct:Camera2D
