@@ -8,13 +8,21 @@
 #define SCREEN_WIDTH 800
 #define SCREEN_HEIGHT 600
 
-// State to be stored and transefered between reloads.
-// In case any of these structs change, hotreload will not work
-//  and another full compilation needs to be done.
 typedef struct {
-    IVector2 gridQty;
-    Vector2 gridPos;
+    //IVector2 coords;
+    bool active;
+    float temperature;
+} Cell;
+
+typedef struct {
+    Cell* cells;
+    Vector2 pos;
+    IVector2 cells_qty;
     int cell_size;
+} Grid;
+
+typedef struct {
+    Grid grid;
     Container debugMenu;
     Checkbox chkGridCoords;
     Checkbox chkMouseCoords;
