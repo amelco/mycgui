@@ -20,16 +20,22 @@ typedef struct {
     Cell* cells;
     IVector2 cells_qty;
     int cell_size;
+    IVector2 selectedCellCoords;
 } Grid;
 
 typedef struct {
     Grid grid;
+    
     Container debugMenu;
     Checkbox chkGridCoords;
     Checkbox chkMouseCoords;
     Textbox txtCellSize;
     Button btnApply;
-    Dropdown ddOptions;
+
+    Container cellPropsWindow;
+    Textbox txtCellTemperature;
+    Button btnSetTemperature;
+    
 } Plug;
 
 typedef void (*plug_init_t)(Plug* plug);

@@ -239,12 +239,15 @@ void mg_textbox(Textbox* tb) {
         int k = GetKeyPressed();
         int c = GetCharPressed();
         if (k == KEY_ENTER) {
+            TraceLog(LOG_INFO, "%d", k);
             tb->active = false;
         }
         else if (k == KEY_BACKSPACE) {
+            TraceLog(LOG_INFO, "%d", k);
             tb->text[strlen(tb->text)-1] = '\0';
         }
         else if (32 <= c && c <= 126) {
+            TraceLog(LOG_INFO, "%d", c);
             tb->text[strlen(tb->text)] = c;
             tb->text[strlen(tb->text)+1] = '\0';
         }

@@ -24,8 +24,6 @@ int calculateIndexFromCoords(int x, int y, int x_qty) {
 }
 
 void drawGrid(Grid grid) {
-    grid.cells[2].temperature = 100;
-    grid.cells[8].temperature = 100;
     for (int i = 0; i < grid.cells_qty.y; ++i) {
         for (int j = 0; j < grid.cells_qty.x; ++j) {
             float x = grid.pos.x + j*(grid.cell_size - 1);
@@ -38,8 +36,13 @@ void drawGrid(Grid grid) {
     }
 }
 
-Cell getCell(Vector2 mouseCoords, Plug plug) {
+Cell getCell_f(Vector2 mouseCoords, Plug plug) {
     IVector2 gridCoords = screenToGrid(mouseCoords.x, mouseCoords.y, plug);
+    int index = calculateIndexFromCoords(gridCoords.x - 1, gridCoords.y - 1, plug.grid.cells_qty.x);
+    return plug.grid.cells[index];
+}
+
+Cell getCell(IVector2 gridCoords, Plug plug) {
     int index = calculateIndexFromCoords(gridCoords.x - 1, gridCoords.y - 1, plug.grid.cells_qty.x);
     return plug.grid.cells[index];
 }
@@ -89,42 +92,58 @@ void plug_init(Plug* plug) {
     for (int i = 0; i < _rows * _cols; i++) {
         memcpy(&plug->grid.cells[i], &initial_cell, sizeof(Cell));
     }
-
-    plug->debugMenu.visible = true;
-    plug->debugMenu.pos = (Vector2){ 3*SCREEN_WIDTH/4, 20};
-    plug->debugMenu.size = (Vector2){150, 200};
-
-    plug->chkGridCoords.parent = &plug->debugMenu; 
-    plug->chkGridCoords.pos = (Vector2){ 0, 0 };
-    plug->chkGridCoords.padding = (Vector2){ 5, 25 };
-    plug->chkGridCoords.checked = false;
-    plug->chkGridCoords.text_color = BLACK;
-    plug->chkGridCoords.checked = false;
-
-    plug->chkMouseCoords.parent = &plug->debugMenu; 
-    plug->chkMouseCoords.pos = (Vector2){ 0, 0 };
-    plug->chkMouseCoords.padding = (Vector2){ 5, 40 };
-    plug->chkMouseCoords.checked = false;
-    plug->chkMouseCoords.text_color = BLACK;
-    plug->chkMouseCoords.checked = false;
-
-    plug->txtCellSize.parent = &plug->debugMenu;
-    plug->txtCellSize.pos = (Vector2){ 5, 55 };
-    plug->txtCellSize.size = (Vector2){ 50, MG_FONT_SIZE + 4 };
-    plug->txtCellSize.text = malloc(5);
-    plug->txtCellSize.text_color = BLACK;
-    sprintf(plug->txtCellSize.text, "%d", plug->grid.cell_size);
-
-    plug->btnApply.parent = &plug->debugMenu;
-    plug->btnApply.pos = (Vector2){ 60, 55 };
-    plug->btnApply.text = "Apply";
-    plug->btnApply.text_color = BLACK;
     
-    plug->ddOptions.parent = &plug->debugMenu;
-    plug->ddOptions.pos = (Vector2){ 5, 90 };
-    plug->ddOptions.size = (Vector2){ 100, MG_FONT_SIZE + 4 };
-    plug->ddOptions.items = cstr_split("Item 1|Item 2", '|');
-    plug->ddOptions.text_color = BLACK;
+    { // debug Menu & Items
+        plug->debugMenu.visible = true;
+        plug->debugMenu.pos = (Vector2){ 3*SCREEN_WIDTH/4, 20};
+        plug->debugMenu.size = (Vector2){150, 200};
+
+        plug->chkGridCoords.parent = &plug->debugMenu; 
+        plug->chkGridCoords.pos = (Vector2){ 0, 0 };
+        plug->chkGridCoords.padding = (Vector2){ 5, 25 };
+        plug->chkGridCoords.checked = false;
+        plug->chkGridCoords.text_color = BLACK;
+        plug->chkGridCoords.checked = false;
+
+        plug->chkMouseCoords.parent = &plug->debugMenu; 
+        plug->chkMouseCoords.pos = (Vector2){ 0, 0 };
+        plug->chkMouseCoords.padding = (Vector2){ 5, 40 };
+        plug->chkMouseCoords.checked = false;
+        plug->chkMouseCoords.text_color = BLACK;
+        plug->chkMouseCoords.checked = false;
+
+        plug->txtCellSize.parent = &plug->debugMenu;
+        plug->txtCellSize.pos = (Vector2){ 5, 55 };
+        plug->txtCellSize.size = (Vector2){ 50, MG_FONT_SIZE + 4 };
+        plug->txtCellSize.text = malloc(5);
+        plug->txtCellSize.text_color = BLACK;
+        sprintf(plug->txtCellSize.text, "%d", plug->grid.cell_size);
+
+        plug->btnApply.parent = &plug->debugMenu;
+        plug->btnApply.pos = (Vector2){ 60, 55 };
+        plug->btnApply.text = "Apply";
+        plug->btnApply.text_color = BLACK;
+    }
+
+    { // cellPropsWindow & Items
+        plug->cellPropsWindow.visible = true;
+        plug->cellPropsWindow.pos = (Vector2){ SCREEN_WIDTH/2, 3*SCREEN_HEIGHT/5};
+        plug->cellPropsWindow.size = (Vector2){150, 200};
+
+        plug->txtCellTemperature.parent = &plug->cellPropsWindow;
+        plug->txtCellTemperature.pos = (Vector2){ 5, 30 };
+        plug->txtCellTemperature.size = (Vector2){ 50, MG_FONT_SIZE + 4 };
+        plug->txtCellTemperature.text = malloc(10);
+        plug->txtCellTemperature.text_color = BLACK;
+        sprintf(plug->txtCellTemperature.text, "50");
+
+        plug->btnSetTemperature.parent = &plug->cellPropsWindow;
+        plug->btnSetTemperature.pos = (Vector2){ 60, 25 };
+        plug->btnSetTemperature.text = "Set Temp";
+        plug->btnSetTemperature.text_color = BLACK;
+
+    }
+
 }
 
 void plug_update(Plug* plug) {
@@ -134,21 +153,20 @@ void plug_update(Plug* plug) {
     if (plug->chkGridCoords.checked) drawGridCoords(*plug);
 
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && is_hovered(plug->grid.pos, plug->grid.size)) {
-        Cell cell = getCell(GetMousePosition(), *plug);
-        TraceLog(LOG_INFO, "temp:%f\nactive: %d", cell.temperature, cell.active);
+        Vector2 mouse_pos = GetMousePosition();
+        plug->grid.selectedCellCoords = screenToGrid(mouse_pos.x, mouse_pos.y, *plug);
+        Cell cell = getCell(plug->grid.selectedCellCoords, *plug);
+        sprintf(plug->txtCellTemperature.text, "%3.1f", cell.temperature);
+        TraceLog(LOG_INFO, "Got cell info");
     }
 
     // debug menu -----
     if (IsKeyPressed(KEY_M)) plug->debugMenu.visible = !plug->debugMenu.visible;
-
     if (plug->debugMenu.visible) {
         mg_container(&plug->debugMenu, "Debug");
-        
         mg_checkbox(&plug->chkGridCoords, "Show Grid Coords");
         mg_checkbox(&plug->chkMouseCoords, "Show Mouse Coords");
-
         mg_textbox(&plug->txtCellSize);
-        
         if (mg_button(&plug->btnApply)) {
             int cellSize = atoi(plug->txtCellSize.text);
             if (cellSize > 0) {
@@ -157,10 +175,24 @@ void plug_update(Plug* plug) {
                 plug->grid.size.y = plug->grid.pos.y + (plug->grid.cells_qty.y * plug->grid.cell_size);
             }
         };
-
-        mg_dropdown(&plug->ddOptions);
     }
-    // ----------------
+    // -------------------
+ 
+    // cellPropsWindow----
+    if (IsKeyPressed(KEY_C)) plug->cellPropsWindow.visible = !plug->cellPropsWindow.visible;
+    if (plug->cellPropsWindow.visible) {
+        mg_container(&plug->cellPropsWindow, "Cell Props");
+        mg_textbox(&plug->txtCellTemperature);
+        if (mg_button(&plug->btnSetTemperature)) {
+            int cellTemperature = atoi(plug->txtCellTemperature.text);
+            if (cellTemperature > 0) {
+                int index = calculateIndexFromCoords(plug->grid.selectedCellCoords.x - 1, plug->grid.selectedCellCoords.y - 1, plug->grid.cells_qty.x);
+                plug->grid.cells[index].temperature = cellTemperature;
+                TraceLog(LOG_INFO, "Updated cell temperature");
+            }
+        }
+    }
+    // -------------------
 
     if (plug->chkMouseCoords.checked) drawMouseCoords();
 
