@@ -15,8 +15,9 @@ typedef struct {
 } Cell;
 
 typedef struct {
-    Cell* cells;
     Vector2 pos;
+    Vector2 size;
+    Cell* cells;
     IVector2 cells_qty;
     int cell_size;
 } Grid;

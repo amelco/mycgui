@@ -19,20 +19,29 @@ Vector2 gridToScreen(int x, int y, Plug plug) {
     };
 }
 
+int calculateIndexFromCoords(int x, int y, int x_qty) {
+    return (y * x_qty) + x;
+}
+
 void drawGrid(Grid grid) {
-    // TODO: make a function that gets x and y integers coordinates from the cell and outputs its one-dimensional index: (x * grid.cells_qty.x) + y
     grid.cells[2].temperature = 100;
     grid.cells[8].temperature = 100;
     for (int i = 0; i < grid.cells_qty.y; ++i) {
         for (int j = 0; j < grid.cells_qty.x; ++j) {
             float x = grid.pos.x + j*(grid.cell_size - 1);
             float y = grid.pos.y + i*(grid.cell_size - 1);
-            int index = (i * grid.cells_qty.x) + j;
+            int index = calculateIndexFromCoords(j, i, grid.cells_qty.x);
             int red = 255 * grid.cells[index].temperature / 100;
             DrawRectangle(x, y, grid.cell_size, grid.cell_size, (Color){red, 0, 0, 255});
             DrawRectangleLines(x, y, grid.cell_size, grid.cell_size, RED);
         }
     }
+}
+
+Cell getCell(Vector2 mouseCoords, Plug plug) {
+    IVector2 gridCoords = screenToGrid(mouseCoords.x, mouseCoords.y, plug);
+    int index = calculateIndexFromCoords(gridCoords.x - 1, gridCoords.y - 1, plug.grid.cells_qty.x);
+    return plug.grid.cells[index];
 }
 
 void drawMouseCoords() {
@@ -69,6 +78,8 @@ void plug_init(Plug* plug) {
     plug->grid.pos.x = 10;
     plug->grid.pos.y = 20;
     plug->grid.cell_size = 100;
+    plug->grid.size.x = plug->grid.pos.x + (plug->grid.cells_qty.x * plug->grid.cell_size);
+    plug->grid.size.y = plug->grid.pos.y + (plug->grid.cells_qty.y * plug->grid.cell_size);
     int size_bytes = _rows * _cols * sizeof(Cell);
     plug->grid.cells = malloc(size_bytes);
     Cell initial_cell = {
@@ -122,6 +133,11 @@ void plug_update(Plug* plug) {
 
     if (plug->chkGridCoords.checked) drawGridCoords(*plug);
 
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && is_hovered(plug->grid.pos, plug->grid.size)) {
+        Cell cell = getCell(GetMousePosition(), *plug);
+        TraceLog(LOG_INFO, "temp:%f\nactive: %d", cell.temperature, cell.active);
+    }
+
     // debug menu -----
     if (IsKeyPressed(KEY_M)) plug->debugMenu.visible = !plug->debugMenu.visible;
 
@@ -137,6 +153,8 @@ void plug_update(Plug* plug) {
             int cellSize = atoi(plug->txtCellSize.text);
             if (cellSize > 0) {
                 plug->grid.cell_size = cellSize;
+                plug->grid.size.x = plug->grid.pos.x + (plug->grid.cells_qty.x * plug->grid.cell_size);
+                plug->grid.size.y = plug->grid.pos.y + (plug->grid.cells_qty.y * plug->grid.cell_size);
             }
         };
 
