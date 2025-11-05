@@ -47,6 +47,21 @@ Cell getCell(IVector2 gridCoords, Plug plug) {
     return plug.grid.cells[index];
 }
 
+void setCellTemperature(Plug* plug) {
+    char* endptr = NULL;
+    float cellTemperature = strtof(plug->txtCellTemperature.text, &endptr);
+
+    if (cellTemperature == 0 && strcmp(plug->txtCellTemperature.text, endptr) == 0) {
+        // conversion error
+        return;
+    }
+
+    if (cellTemperature > 0) {
+        int index = calculateIndexFromCoords(plug->grid.selectedCellCoords.x - 1, plug->grid.selectedCellCoords.y - 1, plug->grid.cells_qty.x);
+        plug->grid.cells[index].temperature = cellTemperature;
+    }
+}
+
 void drawMouseCoords() {
     const int textHeight = 10;
     Vector2 pos = GetMousePosition();
@@ -152,12 +167,12 @@ void plug_update(Plug* plug) {
 
     if (plug->chkGridCoords.checked) drawGridCoords(*plug);
 
+    // check if a cell is selected
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && is_hovered(plug->grid.pos, plug->grid.size)) {
         Vector2 mouse_pos = GetMousePosition();
         plug->grid.selectedCellCoords = screenToGrid(mouse_pos.x, mouse_pos.y, *plug);
         Cell cell = getCell(plug->grid.selectedCellCoords, *plug);
         sprintf(plug->txtCellTemperature.text, "%3.1f", cell.temperature);
-        TraceLog(LOG_INFO, "Got cell info");
     }
 
     // debug menu -----
@@ -182,14 +197,12 @@ void plug_update(Plug* plug) {
     if (IsKeyPressed(KEY_C)) plug->cellPropsWindow.visible = !plug->cellPropsWindow.visible;
     if (plug->cellPropsWindow.visible) {
         mg_container(&plug->cellPropsWindow, "Cell Props");
-        mg_textbox(&plug->txtCellTemperature);
+        if (mg_textbox(&plug->txtCellTemperature) == KEY_ENTER) {
+            setCellTemperature(plug);
+        }
         if (mg_button(&plug->btnSetTemperature)) {
-            int cellTemperature = atoi(plug->txtCellTemperature.text);
-            if (cellTemperature > 0) {
-                int index = calculateIndexFromCoords(plug->grid.selectedCellCoords.x - 1, plug->grid.selectedCellCoords.y - 1, plug->grid.cells_qty.x);
-                plug->grid.cells[index].temperature = cellTemperature;
-                TraceLog(LOG_INFO, "Updated cell temperature");
-            }
+            setCellTemperature(plug);
+            plug->txtCellTemperature.active = false;
         }
     }
     // -------------------

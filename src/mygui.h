@@ -59,7 +59,7 @@ typedef struct {
 
 bool mg_button(Button* btn);
 void mg_dropdown(Dropdown* dd);
-void mg_textbox(Textbox* tb);
+KeyboardKey mg_textbox(Textbox* tb);
 void mg_container(Container* cc, const char* title);
 void mg_checkbox(Checkbox* chk, const char* text);
 
@@ -208,7 +208,9 @@ void mg_dropdown(Dropdown* dd) {
     }
 }
 
-void mg_textbox(Textbox* tb) {
+KeyboardKey mg_textbox(Textbox* tb) {
+    int k = KEY_NULL;
+
     Vector2 parent_pos = {0};
     if (tb->parent != NULL) {
         Container* cnt = tb->parent;
@@ -236,7 +238,7 @@ void mg_textbox(Textbox* tb) {
         bool blinktime = ((int)(GetTime() * 5) % 2) > 0;
         DrawLine(tbposx + parent_pos.x + txt_size + 5+1, tbposy + parent_pos.y + 2, tbposx + parent_pos.x + txt_size + 5+1, tbposy + parent_pos.y + MG_FONT_SIZE-2, blinktime ? BLACK : MG_BACKGROUND_COLOR);
 
-        int k = GetKeyPressed();
+        k = GetKeyPressed();
         int c = GetCharPressed();
         if (k == KEY_ENTER) {
             TraceLog(LOG_INFO, "%d", k);
@@ -252,6 +254,7 @@ void mg_textbox(Textbox* tb) {
             tb->text[strlen(tb->text)+1] = '\0';
         }
     }
+    return k;
 }
 
 

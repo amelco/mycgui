@@ -9,7 +9,6 @@
 #define SCREEN_HEIGHT 600
 
 typedef struct {
-    //IVector2 coords;
     bool active;
     float temperature;
 } Cell;
