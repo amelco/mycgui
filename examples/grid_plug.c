@@ -107,9 +107,16 @@ void plug_init(Plug* plug) {
     for (int i = 0; i < _rows * _cols; i++) {
         memcpy(&plug->grid.cells[i], &initial_cell, sizeof(Cell));
     }
+
+    plug->btnRunSimulation.pos = (Vector2){ plug->grid.pos.x, plug->grid.pos.y + plug->grid.size.y + 15  };
+    plug->btnRunSimulation.text = "Run Simulation";
+    plug->btnRunSimulation.text_color = BLACK;
+
+    plug->runningSimulation = false;
+
     
     { // debug Menu & Items
-        plug->debugMenu.visible = true;
+        plug->debugMenu.visible = false;
         plug->debugMenu.pos = (Vector2){ 3*SCREEN_WIDTH/4, 20};
         plug->debugMenu.size = (Vector2){150, 200};
 
@@ -141,7 +148,7 @@ void plug_init(Plug* plug) {
     }
 
     { // cellPropsWindow & Items
-        plug->cellPropsWindow.visible = true;
+        plug->cellPropsWindow.visible = false;
         plug->cellPropsWindow.pos = (Vector2){ SCREEN_WIDTH/2, 3*SCREEN_HEIGHT/5};
         plug->cellPropsWindow.size = (Vector2){150, 200};
 
@@ -156,14 +163,26 @@ void plug_init(Plug* plug) {
         plug->btnSetTemperature.pos = (Vector2){ 60, 25 };
         plug->btnSetTemperature.text = "Set Temp";
         plug->btnSetTemperature.text_color = BLACK;
-
     }
 
 }
 
+#define BACKGROUND_COLOR 0x252525FF
 void plug_update(Plug* plug) {
-    ClearBackground(GRAY);
+    ClearBackground(GetColor(BACKGROUND_COLOR));
     drawGrid(plug->grid);
+
+    if (mg_button(&plug->btnRunSimulation)) {
+        plug->runningSimulation = !plug->runningSimulation;
+    }
+
+    if (plug->runningSimulation) {
+        // simulation things here
+        plug->btnRunSimulation.text = "Stop Simulation";
+        DrawText("Running simulation...", 5, 5, 5, RED);
+        goto nextFrame;
+    }
+    plug->btnRunSimulation.text = "Start Simulation";
 
     if (plug->chkGridCoords.checked) drawGridCoords(*plug);
 
@@ -173,6 +192,7 @@ void plug_update(Plug* plug) {
         plug->grid.selectedCellCoords = screenToGrid(mouse_pos.x, mouse_pos.y, *plug);
         Cell cell = getCell(plug->grid.selectedCellCoords, *plug);
         sprintf(plug->txtCellTemperature.text, "%3.1f", cell.temperature);
+        plug->cellPropsWindow.visible = true;
     }
 
     // debug menu -----
@@ -208,7 +228,8 @@ void plug_update(Plug* plug) {
     // -------------------
 
     if (plug->chkMouseCoords.checked) drawMouseCoords();
-
+    
+nextFrame:
     if (IsKeyPressed(KEY_Q)) exit(0);
-
+    
 }

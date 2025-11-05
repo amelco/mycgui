@@ -24,6 +24,8 @@ typedef struct {
 
 typedef struct {
     Grid grid;
+    Button btnRunSimulation;
+    bool runningSimulation;
     
     Container debugMenu;
     Checkbox chkGridCoords;
@@ -34,7 +36,6 @@ typedef struct {
     Container cellPropsWindow;
     Textbox txtCellTemperature;
     Button btnSetTemperature;
-    
 } Plug;
 
 typedef void (*plug_init_t)(Plug* plug);
