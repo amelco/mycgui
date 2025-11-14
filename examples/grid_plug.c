@@ -42,12 +42,12 @@ Cell getCell_f(Vector2 mouseCoords, Plug plug) {
     return plug.grid.cells[index];
 }
 
-Cell getCell(IVector2 gridCoords, Grid grid) {
+Cell *getCell(IVector2 gridCoords, Grid grid) {
     int index = calculateIndexFromGridCoords(gridCoords.x - 1, gridCoords.y - 1, grid);
-    return grid.cells[index];
+    return &grid.cells[index];
 }
 
-void applyCellProps(Plug* plug) {
+void applySelectedCellProps(Plug* plug) {
     char* endptr = NULL;
     float cellTemperature = strtof(plug->txtCellTemperature.text, &endptr);
     int index = calculateIndexFromGridCoords(plug->grid.selectedCellCoords.x - 1, plug->grid.selectedCellCoords.y - 1, plug->grid);
@@ -62,8 +62,6 @@ void applyCellProps(Plug* plug) {
     }
 
     plug->grid.cells[index].active = plug->chkCellActive.checked;
-
-    
 }
 
 void drawMouseCoords() {
@@ -93,7 +91,7 @@ void drawGridCoords(Plug plug) {
 }
 
 void plug_init(Plug* plug) {
-    int _rows = 2;
+    int _rows = 3;
     int _cols = 5;
     plug->grid.cells_qty.x = _cols;
     plug->grid.cells_qty.y = _rows;
@@ -180,21 +178,31 @@ void transferHeat(Grid* grid) {
     // TODO: treat the borders properly
     for (int i = 1; i < grid->cells_qty.y-1; ++i) {
         for (int j = 1; j < grid->cells_qty.x-1; ++j) {
+            // TODO: get rid of this hack
+            i += 1;
+            j += 1;
             IVector2 currIndex    = (IVector2){j    , i    };
             IVector2 upIndex      = (IVector2){j    , i - 1};
             IVector2 downIndex    = (IVector2){j    , i + 1};
             IVector2 leftIndex    = (IVector2){j - 1, i    };
             IVector2 rightIndex   = (IVector2){j + 1, i    };
-            Cell currCell = getCell(currIndex, *grid);
-            Cell upCell = getCell(upIndex, *grid);
-            Cell downCell = getCell(downIndex, *grid);
-            Cell leftCell = getCell(leftIndex, *grid);
-            Cell rightCell = getCell(rightIndex, *grid);
-            (void) currCell;
+            Cell *currCell = getCell(currIndex, *grid);
+            Cell *upCell = getCell(upIndex, *grid);
+            Cell *downCell = getCell(downIndex, *grid);
+            Cell *leftCell = getCell(leftIndex, *grid);
+            Cell *rightCell = getCell(rightIndex, *grid);
+
+            float deltaRight = currCell->temperature - rightCell->temperature;
+            if (deltaRight > 0) {
+                TraceLog(LOG_INFO, "currCell: %d, %d", i, j);
+                TraceLog(LOG_INFO, "  temp:: %f", currCell->temperature);
+                rightCell->temperature += 10;
+                currCell->temperature -= 10;
+            }
+
             (void) upCell;
             (void) downCell;
             (void) leftCell;
-            (void) rightCell;
         }
     }
     
@@ -227,9 +235,9 @@ void plug_update(Plug* plug) {
         plug->cellPropsWindow.visible = true;
         Vector2 mouse_pos = GetMousePosition();
         plug->grid.selectedCellCoords = screenToGrid(mouse_pos.x, mouse_pos.y, plug->grid);
-        Cell cell = getCell(plug->grid.selectedCellCoords, plug->grid);
-        sprintf(plug->txtCellTemperature.text, "%3.1f", cell.temperature);
-        plug->chkCellActive.checked = cell.active;
+        Cell *cell = getCell(plug->grid.selectedCellCoords, plug->grid);
+        sprintf(plug->txtCellTemperature.text, "%3.1f", cell->temperature);
+        plug->chkCellActive.checked = cell->active;
     }
 
     // debug menu -----
@@ -255,13 +263,13 @@ void plug_update(Plug* plug) {
     if (plug->cellPropsWindow.visible) {
         mg_container(&plug->cellPropsWindow, "Cell");
         if (mg_textbox(&plug->txtCellTemperature) == KEY_ENTER) {
-            applyCellProps(plug);
+            applySelectedCellProps(plug);
         }
         if (mg_button(&plug->btnSetTemperature)) {
-            applyCellProps(plug);
+            applySelectedCellProps(plug);
             plug->txtCellTemperature.active = false;
         }
-        if (plug->chkMouseCoords.checked) applyCellProps(plug);
+        if (plug->chkMouseCoords.checked) applySelectedCellProps(plug);
         mg_checkbox(&plug->chkCellActive, "Active");
 
     }
