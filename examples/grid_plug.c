@@ -6,10 +6,10 @@
 #include "grid_plug.h"
 
 
-IVector2 screenToGrid(float screenX, float screenY, Plug plug) {
+IVector2 screenToGrid(float screenX, float screenY, Grid grid) {
     return (IVector2){
-        .x = ceil((screenX - plug.grid.pos.x)/(plug.grid.cell_size - 1)), 
-        .y = ceil((screenY - plug.grid.pos.y)/(plug.grid.cell_size - 1))
+        .x = ceil((screenX - grid.pos.x)/(grid.cell_size - 1)), 
+        .y = ceil((screenY - grid.pos.y)/(grid.cell_size - 1))
     };
 }
 Vector2 gridToScreen(int x, int y, Plug plug) {
@@ -19,8 +19,8 @@ Vector2 gridToScreen(int x, int y, Plug plug) {
     };
 }
 
-int calculateIndexFromCoords(int x, int y, int x_qty) {
-    return (y * x_qty) + x;
+int calculateIndexFromGridCoords(int x, int y, Grid grid) {
+    return (y * grid.cells_qty.x) + x;
 }
 
 void drawGrid(Grid grid) {
@@ -28,7 +28,7 @@ void drawGrid(Grid grid) {
         for (int j = 0; j < grid.cells_qty.x; ++j) {
             float x = grid.pos.x + j*(grid.cell_size - 1);
             float y = grid.pos.y + i*(grid.cell_size - 1);
-            int index = calculateIndexFromCoords(j, i, grid.cells_qty.x);
+            int index = calculateIndexFromGridCoords(j, i, grid);
             int red = 255 * grid.cells[index].temperature / 100;
             DrawRectangle(x, y, grid.cell_size, grid.cell_size, (Color){red, 0, 0, 255});
             DrawRectangleLines(x, y, grid.cell_size, grid.cell_size, RED);
@@ -37,19 +37,20 @@ void drawGrid(Grid grid) {
 }
 
 Cell getCell_f(Vector2 mouseCoords, Plug plug) {
-    IVector2 gridCoords = screenToGrid(mouseCoords.x, mouseCoords.y, plug);
-    int index = calculateIndexFromCoords(gridCoords.x - 1, gridCoords.y - 1, plug.grid.cells_qty.x);
+    IVector2 gridCoords = screenToGrid(mouseCoords.x, mouseCoords.y, plug.grid);
+    int index = calculateIndexFromGridCoords(gridCoords.x - 1, gridCoords.y - 1, plug.grid);
     return plug.grid.cells[index];
 }
 
-Cell getCell(IVector2 gridCoords, Plug plug) {
-    int index = calculateIndexFromCoords(gridCoords.x - 1, gridCoords.y - 1, plug.grid.cells_qty.x);
-    return plug.grid.cells[index];
+Cell getCell(IVector2 gridCoords, Grid grid) {
+    int index = calculateIndexFromGridCoords(gridCoords.x - 1, gridCoords.y - 1, grid);
+    return grid.cells[index];
 }
 
-void setCellTemperature(Plug* plug) {
+void applyCellProps(Plug* plug) {
     char* endptr = NULL;
     float cellTemperature = strtof(plug->txtCellTemperature.text, &endptr);
+    int index = calculateIndexFromGridCoords(plug->grid.selectedCellCoords.x - 1, plug->grid.selectedCellCoords.y - 1, plug->grid);
 
     if (cellTemperature == 0 && strcmp(plug->txtCellTemperature.text, endptr) == 0) {
         // conversion error
@@ -57,9 +58,12 @@ void setCellTemperature(Plug* plug) {
     }
 
     if (cellTemperature > 0) {
-        int index = calculateIndexFromCoords(plug->grid.selectedCellCoords.x - 1, plug->grid.selectedCellCoords.y - 1, plug->grid.cells_qty.x);
         plug->grid.cells[index].temperature = cellTemperature;
     }
+
+    plug->grid.cells[index].active = plug->chkCellActive.checked;
+
+    
 }
 
 void drawMouseCoords() {
@@ -80,7 +84,7 @@ void drawGridCoords(Plug plug) {
             float x = plug.grid.pos.x + j*(plug.grid.cell_size) + 1;
             float y = plug.grid.pos.y + i*(plug.grid.cell_size) + 1;
             char coord[128] = {0};
-            IVector2 gcoord = screenToGrid(x, y, plug);
+            IVector2 gcoord = screenToGrid(x, y, plug.grid);
             Vector2 scoord = gridToScreen(gcoord.x, gcoord.y, plug);
             sprintf(coord, "(%d, %d)\n%4.2f, %4.2f", gcoord.x, gcoord.y, scoord.x, scoord.y);
             DrawText(coord, x+gap, y+gap, font_size, GREEN);
@@ -150,7 +154,7 @@ void plug_init(Plug* plug) {
     { // cellPropsWindow & Items
         plug->cellPropsWindow.visible = false;
         plug->cellPropsWindow.pos = (Vector2){ SCREEN_WIDTH/2, 3*SCREEN_HEIGHT/5};
-        plug->cellPropsWindow.size = (Vector2){150, 200};
+        plug->cellPropsWindow.size = (Vector2){100, 125};
 
         plug->txtCellTemperature.parent = &plug->cellPropsWindow;
         plug->txtCellTemperature.pos = (Vector2){ 5, 30 };
@@ -160,11 +164,40 @@ void plug_init(Plug* plug) {
         sprintf(plug->txtCellTemperature.text, "50");
 
         plug->btnSetTemperature.parent = &plug->cellPropsWindow;
-        plug->btnSetTemperature.pos = (Vector2){ 60, 25 };
-        plug->btnSetTemperature.text = "Set Temp";
+        plug->btnSetTemperature.pos = (Vector2){ 5, 75 };
+        plug->btnSetTemperature.text = "Apply";
         plug->btnSetTemperature.text_color = BLACK;
+
+        plug->chkCellActive.parent = &plug->cellPropsWindow;
+        plug->chkCellActive.checked = false;
+        plug->chkCellActive.pos = (Vector2){5, 50};
+        plug->chkCellActive.text_color = BLACK;
     }
 
+}
+
+void transferHeat(Grid* grid) {
+    // TODO: treat the borders properly
+    for (int i = 1; i < grid->cells_qty.y-1; ++i) {
+        for (int j = 1; j < grid->cells_qty.x-1; ++j) {
+            IVector2 currIndex    = (IVector2){j    , i    };
+            IVector2 upIndex      = (IVector2){j    , i - 1};
+            IVector2 downIndex    = (IVector2){j    , i + 1};
+            IVector2 leftIndex    = (IVector2){j - 1, i    };
+            IVector2 rightIndex   = (IVector2){j + 1, i    };
+            Cell currCell = getCell(currIndex, *grid);
+            Cell upCell = getCell(upIndex, *grid);
+            Cell downCell = getCell(downIndex, *grid);
+            Cell leftCell = getCell(leftIndex, *grid);
+            Cell rightCell = getCell(rightIndex, *grid);
+            (void) currCell;
+            (void) upCell;
+            (void) downCell;
+            (void) leftCell;
+            (void) rightCell;
+        }
+    }
+    
 }
 
 #define BACKGROUND_COLOR 0x252525FF
@@ -177,9 +210,12 @@ void plug_update(Plug* plug) {
     }
 
     if (plug->runningSimulation) {
-        // simulation things here
         plug->btnRunSimulation.text = "Stop Simulation";
         DrawText("Running simulation...", 5, 5, 5, RED);
+
+        // simulation things here
+        transferHeat(&plug->grid);
+
         goto nextFrame;
     }
     plug->btnRunSimulation.text = "Start Simulation";
@@ -188,11 +224,12 @@ void plug_update(Plug* plug) {
 
     // check if a cell is selected
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && is_hovered(plug->grid.pos, plug->grid.size)) {
-        Vector2 mouse_pos = GetMousePosition();
-        plug->grid.selectedCellCoords = screenToGrid(mouse_pos.x, mouse_pos.y, *plug);
-        Cell cell = getCell(plug->grid.selectedCellCoords, *plug);
-        sprintf(plug->txtCellTemperature.text, "%3.1f", cell.temperature);
         plug->cellPropsWindow.visible = true;
+        Vector2 mouse_pos = GetMousePosition();
+        plug->grid.selectedCellCoords = screenToGrid(mouse_pos.x, mouse_pos.y, plug->grid);
+        Cell cell = getCell(plug->grid.selectedCellCoords, plug->grid);
+        sprintf(plug->txtCellTemperature.text, "%3.1f", cell.temperature);
+        plug->chkCellActive.checked = cell.active;
     }
 
     // debug menu -----
@@ -216,14 +253,17 @@ void plug_update(Plug* plug) {
     // cellPropsWindow----
     if (IsKeyPressed(KEY_C)) plug->cellPropsWindow.visible = !plug->cellPropsWindow.visible;
     if (plug->cellPropsWindow.visible) {
-        mg_container(&plug->cellPropsWindow, "Cell Props");
+        mg_container(&plug->cellPropsWindow, "Cell");
         if (mg_textbox(&plug->txtCellTemperature) == KEY_ENTER) {
-            setCellTemperature(plug);
+            applyCellProps(plug);
         }
         if (mg_button(&plug->btnSetTemperature)) {
-            setCellTemperature(plug);
+            applyCellProps(plug);
             plug->txtCellTemperature.active = false;
         }
+        if (plug->chkMouseCoords.checked) applyCellProps(plug);
+        mg_checkbox(&plug->chkCellActive, "Active");
+
     }
     // -------------------
 

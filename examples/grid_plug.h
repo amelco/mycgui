@@ -36,6 +36,7 @@ typedef struct {
     Container cellPropsWindow;
     Textbox txtCellTemperature;
     Button btnSetTemperature;
+    Checkbox chkCellActive;
 } Plug;
 
 typedef void (*plug_init_t)(Plug* plug);
